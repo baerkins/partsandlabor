@@ -1,0 +1,45 @@
+// TRANSITIONS
+// -----------
+
+@mixin standard-trans($attr: all) {
+  transition: $attr 0.35s ease;
+}
+
+@mixin long-trans($attr: all) {
+  transition: $attr 0.5s ease;
+}
+
+
+//
+
+// Layout
+// ------
+@mixin cover() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin hidden() {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin bkg-cover() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
