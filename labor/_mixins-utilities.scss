@@ -1,0 +1,192 @@
+// Transitions
+// -----------
+
+/// Standard Transition
+/// @param {string} $attr [all] - Attribute to be transitioned
+/// @since 1.0.0
+@mixin standard-trans($attr: all) {
+  transition: $attr $standard-trans-time $standard-trans-timing-func;
+}
+
+/// Long Transition
+/// @param {string} $attr [all] - Attribute to be transitioned
+/// @since 1.0.0
+@mixin long-trans($attr: all) {
+  transition: $attr $long-trans-time $long-trans-timing-func;
+}
+
+
+// Layout
+// ------
+
+///
+/// Clearfix - your run of the mill modern clearfix
+///
+/// @link https://css-tricks.com/snippets/css/clear-fix/
+///
+/// @since 1.0.0
+///
+@mixin clearfix() {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/// Cover relative parent
+/// @since 1.0.0
+@mixin cover() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+///
+/// Centers item in relative parent
+///
+/// @param {string} $transform [translate(-50%,-50%)] - transform property
+///
+/// @example scss - Basic Usage Sass
+///   .centered-element {
+///     @include center();
+///   }
+///
+/// @example scss - Basic Usage Sass
+///   .centered-element-with-rotate {
+///     @include center( translate3d(-50%,-50%,0) scale(45deg) );
+///   }
+///
+/// @since 1.0.0
+///
+@mixin center( $transform: translate(-50%,-50%) ) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: $transform;
+}
+
+///
+/// Hide it. For serious.
+///
+/// @example scss - Basic Usage Sass
+///   .hide-for-serious {
+///     @include hidden();
+///   }
+///
+/// @since 1.0.0
+///
+@mixin hidden() {
+  display: none;
+  visibility: hidden;
+}
+
+///
+/// Hide an element visually, but allow access to screen readers
+///
+/// @link https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.tpuoch56u
+///
+/// @example scss - Basic Usage Sass
+///   .screen-reader-text {
+///     @include visually-hidden();
+///   }
+///
+/// @since 1.0.0
+///
+@mixin visually-hidden() {
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+///
+/// Fill background with image
+///
+/// @param {string} $pos [center]  A valid background position
+///
+/// @example scss - Basic Usage Sass
+///   .fill-image {
+///     background-image: url('../img/cool-image.jpg');
+///     @include bkg-cover();
+///   }
+///
+/// @since 1.0.0
+///
+@mixin bkg-cover( $pos: center ) {
+  background-position: $pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Fit image within space
+@mixin img-fit( $pos: center ) {
+  object-fit: cover;
+  object-position: $pos;
+}
+
+// FORMS --------------------------------------------------------------------->
+
+///
+/// Placeholder - use within input or on its own for global styles
+///
+/// @example scss - Basic Usage Sass
+///   input {
+///     @include placeholder {
+///       color: #bada55;
+///     }
+///  }
+///
+/// @since 1.0.0
+///
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+///
+/// Valid - for styling valid form fields
+///
+/// @example scss - Basic Usage Sass
+///   input {
+///     @include valid {
+///       border: 2px solid #bada55;
+///     }
+///  }
+///
+/// @since 1.0.0
+///
+@mixin valid {
+  &:valid,
+  &:empty:valid,
+  &:focus:empty:valid {
+    @content;
+  }
+}
+
+///
+/// Invalid - for styling invalid form fields
+///
+/// @example scss - Basic Usage Sass
+///   input {
+///     @include invalid {
+///       border: 2px solid #badbad;
+///     }
+///  }
+///
+/// @since 1.0.0
+///
+@mixin invalid {
+  &:invalid,
+  &:focus:invalid {
+    @content;
+  }
+}

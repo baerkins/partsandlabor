@@ -1,0 +1,18 @@
+// Container
+@mixin container( $fluid-width: 90% ) {
+  width: $fluid-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media($small) {
+    max-width: $small-container;
+  };
+
+  @include media($medium) {
+    max-width: $medium-container;
+  };
+
+  @include media($large) {
+    max-width: $large-container;
+  };
+}
