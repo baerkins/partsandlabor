@@ -1,11 +1,10 @@
-/**
- * Mixin Imports
- *
- */
+//
+// Mixin Imports
+//
 
 // Vars
-@include 'vars-utilities';
+@import 'vars-utilities';
 
 // Mixins
-@include 'mixins-utilities';
-@include 'mixins-typography';
+@import 'mixins-utilities';
+@import 'mixins-typography';

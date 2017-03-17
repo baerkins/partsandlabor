@@ -1,18 +1,36 @@
 // Transitions
 // -----------
 
+///
 /// Standard Transition
+///
 /// @param {string} $attr [all] - Attribute to be transitioned
+///
+/// @example scss - Basic Usage Sass
+///   a {
+///     @include standard-trans();
+///   }
+///
 /// @since 1.0.0
+///
 @mixin standard-trans($attr: all) {
-  transition: $attr $standard-trans-time $standard-trans-timing-func;
+  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;
 }
 
+///
 /// Long Transition
+///
 /// @param {string} $attr [all] - Attribute to be transitioned
+///
+/// @example scss - Basic Usage Sass
+///   a {
+///     @include long-trans();
+///   }
+///
 /// @since 1.0.0
+///
 @mixin long-trans($attr: all) {
-  transition: $attr $long-trans-time $long-trans-timing-func;
+  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;
 }
 
 
@@ -21,6 +39,11 @@
 
 ///
 /// Clearfix - your run of the mill modern clearfix
+///
+/// @example scss - Basic Usage Sass
+///   .float-container {
+///     @include long-trans();
+///   }
 ///
 /// @link https://css-tricks.com/snippets/css/clear-fix/
 ///
@@ -35,8 +58,16 @@
   }
 }
 
+///
 /// Cover relative parent
+///
+/// @example scss - Basic Usage Sass
+///   .cover {
+///     @include cover();
+///   }
+///
 /// @since 1.0.0
+///
 @mixin cover() {
   bottom: 0;
   left: 0;
@@ -97,12 +128,12 @@
 /// @since 1.0.0
 ///
 @mixin visually-hidden() {
-  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   width: 1px;
 }
 
