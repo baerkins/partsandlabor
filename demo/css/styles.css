@@ -1,0 +1,39 @@
+.grid__fill {
+  background-color: #4798B5;
+  height: 50px;
+  margin-bottom: 24px; }
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:before {
+    content: "440px"; }
+  @media only screen and (min-width: 480px) {
+    .container {
+      width: 440px; } }
+  .container:before {
+    content: "660px"; }
+  @media only screen and (min-width: 700px) {
+    .container {
+      width: 660px; } }
+  .container:before {
+    content: "880px"; }
+  @media only screen and (min-width: 920px) {
+    .container {
+      width: 880px; } }
+  .container:before {
+    content: "1160px"; }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      width: 1160px; } }
+  .container:before {
+    content: "1460px"; }
+  @media only screen and (min-width: 1500px) {
+    .container {
+      width: 1460px; } }
+
+.container-fluid {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }

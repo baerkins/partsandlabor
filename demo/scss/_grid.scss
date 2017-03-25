@@ -1,0 +1,24 @@
+
+
+.grid {
+
+  &__fill {
+    background-color: $blue;
+    height: 50px;
+    margin-bottom: 24px;
+  }
+
+  @for $num from 1 to 12 {
+    &__#{$num} {
+      @include grid_flexspan( #{$num} );
+    }
+  }
+}
+
+.container {
+  @include base-container( 90%, false );
+}
+
+.container-fluid {
+  @include base-container();
+}

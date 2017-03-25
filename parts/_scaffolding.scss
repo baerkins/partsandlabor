@@ -1,18 +1,37 @@
+// Breakpoints
+// -----------
+
+// Screen Min Width
+@mixin break( $size ) {
+  @media only screen and ( min-width: #{$size} ) {
+    @content;
+  }
+}
+
+// Row
+// ---
+@mixin row {
+  width: 100%;
+  @include clearfix();
+}
+
 // Container
-@mixin container( $fluid-width: 90% ) {
-  width: $fluid-width;
+// ---------
+@mixin base_container( $width: $fluid-container, $fluid: true ) {
+  width: $width;
   margin-left: auto;
   margin-right: auto;
 
-  @include media($small) {
-    max-width: $small-container;
-  };
+  @if $fluid == false {
 
-  @include media($medium) {
-    max-width: $medium-container;
-  };
+    @each $bp, $bpc in $active-breakpoints {
+      &:before {
+        content: '#{$bp}';
+      }
 
-  @include media($large) {
-    max-width: $large-container;
-  };
+      @include break( $bpc ) {
+        width: $bp;
+      }
+    }
+  }
 }

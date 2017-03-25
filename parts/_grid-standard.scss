@@ -1,61 +1,16 @@
-/**
- * Flexbox Columns
- *
- */
-$target_width: 1200;
-$grid_columns: 12;
-$gutter: 15;
-$calc: false; // True if gutter should always be same, false if squishy
-
-
-// Calculate Column Width
-// ----------------------
-// Get width of column with margins
-
-// @function calc_column_width( $columns, $m, $gc, $tw ) {
-
-//   // Column Width Value
-//   $cwv: $columns * ( ( $tw - ( $m * ( $gc - 1 ) ) ) / $gc );
-
-//   // Gutter Width Value
-//   $gwv: ( $columns - 1 ) * $m;
-
-//   // Target Column Width
-//   $tcw: $cwv + $gwv;
-
-//   @return percentage($tcw / $tw);
-
-// }
-
 @function calc_column_width( $columns ) {
   // Column Width Value
   // $tc = total columns
   $cwv: $columns * ( ( $target_w - ( $gutter_w * ( $total_col - 1 ) ) ) / $total_col );
 }
 
-// Parent Wrapper
-// --------------
-@mixin grid_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: $align_items;
-}
+
 
 // Column Calculator
 // -----------------
 @mixin grid_flexspan($columns: 1, $span_gutter: $gutter, $span_grid_columns: $grid_columns) {
 
-  width: calc_column_width( $columns, $span_gutter, $grid_columns, $target_width );
+  width: calc_column_width( $columns );
 
 }
-
-.flex-wrapper {
-  @include grid_wrapper;
-}
-
-.column {
-  @include grid_span(4);
-}
-
-
 

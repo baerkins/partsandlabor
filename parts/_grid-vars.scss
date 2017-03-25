@@ -1,0 +1,27 @@
+// Standard Grid Variables
+$target_width:      1200 !default;
+$grid_columns:      12px !default;
+$gutter:            15 !default;
+$calc:              false !default; // True if gutter should always be same, false if squishy
+
+// Breakpoint Values
+$fluid-container:   90% !default;
+$xsmall-container:  480px !default;
+$small-container:   700px !default;
+$medium-container:  920px !default;
+$large-container:   1200px !default;
+$xlarge-container:  1500px !default;
+$breakpoint-offset: 20px !default;
+
+// Breakpoints
+$xsmall: $xsmall-container - ( $breakpoint-offset * 2 );
+$small:  $small-container - ( $breakpoint-offset * 2 );
+$medium: $medium-container - ( $breakpoint-offset * 2 );
+$large:  $large-container - ( $breakpoint-offset * 2 );
+$xlarge: $xlarge-container - ( $breakpoint-offset * 2 );
+
+// Active Breakpoint List
+$active-breakpoints: ( $xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container );
+
+
+
