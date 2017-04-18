@@ -1,5 +1,4 @@
-// Transitions
-// -----------
+// ---TRANSITIONS------------------------------------------------------------->
 
 ///
 /// Standard Transition
@@ -12,6 +11,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin standard-trans($attr: all) {
   transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;
@@ -28,14 +28,14 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin long-trans($attr: all) {
   transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;
 }
 
 
-// Layout
-// ------
+// ---LAYOUT------------------------------------------------------------------>
 
 ///
 /// Clearfix - your run of the mill modern clearfix
@@ -48,6 +48,7 @@
 /// @link https://css-tricks.com/snippets/css/clear-fix/
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin clearfix() {
 
@@ -67,6 +68,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin cover() {
   bottom: 0;
@@ -92,6 +94,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin center( $transform: translate(-50%,-50%) ) {
   position: absolute;
@@ -109,6 +112,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin hidden() {
   display: none;
@@ -126,6 +130,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin visually-hidden() {
   clip: rect(1px 1px 1px 1px);
@@ -149,6 +154,7 @@
 ///   }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin bkg-cover( $pos: center ) {
   background-position: $pos;
@@ -162,7 +168,7 @@
   object-position: $pos;
 }
 
-// FORMS --------------------------------------------------------------------->
+// ---FORMS------------------------------------------------------------------->
 
 ///
 /// Placeholder - use within input or on its own for global styles
@@ -175,6 +181,7 @@
 ///  }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -194,6 +201,7 @@
 ///  }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin valid {
   &:valid,
@@ -214,10 +222,60 @@
 ///  }
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @mixin invalid {
   &:invalid,
   &:focus:invalid {
     @content;
+  }
+}
+
+// ---FONT-FACE--------------------------------------------------------------->
+
+///
+/// Font Face
+///
+/// @param {string} $name - Name for font-family
+/// @param {string} $path - Relative path to files from output css sheet
+/// @param {string} $weight [normal] - `font-weight`
+/// @param {string} $weight [normal] - 'font-style'
+/// @param {string} $exts [eot woff2 woff ttf svg] - List of file extensions to include, sep with a space
+///
+/// @link https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+///
+/// @example scss - Basic Usage Sass
+///   @include font-face { Circular, ../fonts/circular-book }
+///   @include font-face { Circular, ../fonts/circular-bold, 600 }
+///   @include font-face { Circular, ../fonts/circular-book-italic, 400, italic }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin font-face($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf svg) {
+
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
   }
 }

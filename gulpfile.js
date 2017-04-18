@@ -26,10 +26,10 @@ gulp.task('build_docs', function () {
       labor : 'Labor'
     }
   }
-  return gulp.src(['partsandlabor.scss', './labor/**/*.scss'])
+  return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
     .pipe( lint() )
     .pipe( lint.format() )
-    .pipe( lint.failOnError() )
+    // .pipe( lint.failOnError() )
     .pipe( sassdoc(options) );
 });
 
@@ -44,6 +44,6 @@ gulp.task('serve', function() {
   bSync.init( {
     server: "./demo"
   } );
-  gulp.watch( 'demo/scss/*.scss', ['demo_sass'] );
+  gulp.watch( '**/*.scss', ['demo_sass'] );
   gulp.watch( 'demo/*.html' ).on( 'change', bSync.reload );
 });

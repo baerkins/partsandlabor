@@ -1,4 +1,7 @@
-
+$total_cols:    12;
+$target_width:  1400px;
+$target_gutter: 20px;
+$calc:          false;
 
 .grid {
 
@@ -8,11 +11,44 @@
     margin-bottom: 24px;
   }
 
-  @for $num from 1 to 12 {
-    &__#{$num} {
-      @include grid_flexspan( #{$num} );
+
+    &__1 {
+      @include grid_col( 1 );
     }
-  }
+    &__2 {
+      @include grid_col( 2 );
+    }
+    &__3 {
+      @include grid_col( 3 );
+    }
+    &__4 {
+      @include grid_col( 4 );
+    }
+    &__5 {
+      @include grid_col( 5 );
+    }
+    &__6 {
+      @include grid_col( 6 );
+    }
+    &__7 {
+      @include grid_col( 7 );
+    }
+    &__8 {
+      @include grid_col( 8 );
+    }
+    &__9 {
+      @include grid_col( 9 );
+    }
+    &__10 {
+      @include grid_col( 10 );
+    }
+    &__11 {
+      @include grid_col( 11 );
+    }
+    &__12 {
+      @include grid_col( 12 );
+    }
+
 }
 
 .container {
@@ -21,4 +57,27 @@
 
 .container-fluid {
   @include base-container();
+}
+
+.row {
+  @include row();
+}
+
+.two-col {
+
+  ul {
+    @include grid-col(6);
+  }
+
+  .inline {
+    @include list-inline();
+  }
+
+  .unstyled {
+    @include list-unstyled();
+  }
+}
+
+ul.hover {
+  @include list-hover();
 }

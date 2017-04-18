@@ -1,0 +1,93 @@
+// Grid Variables
+// ==============
+
+/// Total number of columns in grid
+/// @type Integer
+/// @group parts
+$total-cols:    12 !default;
+
+/// Target width the grid should account for
+/// @type String
+/// @group parts
+$target-width:  1200px !default;
+
+/// Target gutter width the grid should account for
+/// @type String
+/// @group parts
+$target-gutter: 20px !default;
+
+/// Whether the gutter should be a percentage or a hard value (uses CSS `calc` value)
+/// @type Boolean
+/// @group parts
+$calc:          false !default;
+
+
+// Breakpoint Values
+// =================
+
+/// Width of fluid container, percentage
+/// @type String (percentage)
+/// @group parts
+$fluid-container:   90% !default;
+
+/// Container width at breakpoint
+/// @type String (pixel val)
+/// @group parts
+$xsmall-container:  480px !default;
+
+/// Container width at breakpoint
+/// @type String (pixel val)
+/// @group parts
+$small-container:   700px !default;
+
+/// Container width at breakpoint
+/// @type String (pixel val)
+/// @group parts
+$medium-container:  920px !default;
+
+/// Container width at breakpoint
+/// @type String (pixel val)
+/// @group parts
+$large-container:   1200px !default;
+
+/// Container width at breakpoint
+/// @type String (pixel val)
+/// @group parts
+$xlarge-container:  1500px !default;
+
+/// Extra value to pad out breakpoints
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset: 20px !default;
+
+// Breakpoints
+// ===========
+
+/// Breakpoint
+/// @group parts
+$xsmall: $xsmall-container - ( $breakpoint-offset * 2 );
+
+/// Breakpoint
+/// @group parts
+$small:  $small-container - ( $breakpoint-offset * 2 );
+
+/// Breakpoint
+/// @group parts
+$medium: $medium-container - ( $breakpoint-offset * 2 );
+
+/// Breakpoint
+/// @group parts
+$large:  $large-container - ( $breakpoint-offset * 2 );
+
+/// Breakpoint
+/// @group parts
+$xlarge: $xlarge-container - ( $breakpoint-offset * 2 );
+
+
+// Active Breakpoint List
+// ======================
+
+/// Sass List of Breakpoints for adaptive container, mapped as `breakpoint: container-size`
+/// @group parts
+$active-breakpoints: ( $xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container );
+

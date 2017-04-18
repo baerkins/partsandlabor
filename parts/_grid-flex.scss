@@ -1,56 +1,56 @@
-/**
- * Flexbox Columns
- *
- */
-$target_fwidth: 1200;
-$grid_fcolumns: 12;
-$fgutter: 15;
-$justify_content: space-between;
-$align_items: flex-start;
+// /**
+//  * Flexbox Columns
+//  *
+//  */
+// $target_fwidth: 1200;
+// $grid_fcolumns: 12;
+// $fgutter: 15;
+// $justify_content: space-between;
+// $align_items: flex-start;
 
 
-// Calculate Column Width
-// ----------------------
-// Get width of column with margins
+// // Calculate Column Width
+// // ----------------------
+// // Get width of column with margins
 
-@function calc_column_width( $columns, $m, $gc, $tw ) {
+// @function calc_column_width( $columns, $m, $gc, $tw ) {
 
-  // Column Width Value
-  $cwv: $columns * ( ( $tw - ( $m * ( $gc - 1 ) ) ) / $gc );
+//   // Column Width Value
+//   $cwv: $columns * ( ( $tw - ( $m * ( $gc - 1 ) ) ) / $gc );
 
-  // Gutter Width Value
-  $gwv: ( $columns - 1 ) * $m;
+//   // Gutter Width Value
+//   $gwv: ( $columns - 1 ) * $m;
 
-  // Target Column Width
-  $tcw: $cwv + $gwv;
+//   // Target Column Width
+//   $tcw: $cwv + $gwv;
 
-  @return percentage($tcw / $tw);
+//   @return percentage($tcw / $tw);
 
-}
+// }
 
-// Parent Wrapper
-// --------------
-@mixin grid_fwrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: $align_items;
-}
+// // Parent Wrapper
+// // --------------
+// @mixin grid_fwrapper {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: $align_items;
+// }
 
-// Column Calculator
-// -----------------
-@mixin grid_fspan($columns: 1, $span_gutter: $gutter, $span_grid_columns: $grid_columns) {
+// // Column Calculator
+// // -----------------
+// @mixin grid_fspan($columns: 1, $span_gutter: $gutter, $span_grid_columns: $grid_columns) {
 
-  width: calc_column_width( $columns, $span_gutter, $grid_columns, $target_width );
+//   width: calc_column_width( $columns, $span_gutter, $grid_columns, $target_width );
 
-}
+// }
 
-.flex-wrapper {
-  @include grid_fwrapper;
-}
+// .flex-wrapper {
+//   @include grid_fwrapper;
+// }
 
-.fcolumn {
-  @include grid_fspan(4);
-}
+// .fcolumn {
+//   @include grid_fspan(4);
+// }
 
 
 

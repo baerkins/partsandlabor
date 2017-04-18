@@ -1,35 +1,88 @@
-// Breakpoints
-// -----------
+// Media Breakpoints
+// =================
 
-// Screen Min Width
-@mixin break( $size ) {
-  @media only screen and ( min-width: #{$size} ) {
+///
+/// Create a new breakpoint. Use in conjunction with breakpoint variables.
+///
+/// @param {string} $size  - Breakpoint size
+/// @param {string} $attr [min-width] - Media break attribute (`min-width` or `max-width`)
+/// @param {string} $media [only screen] - Media type
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     font-size: 12px;
+///
+///     @include break($medium) {
+///       font-size: 16px;
+///     }
+///   }
+///
+///   div {
+///     font-size: 16px;
+///
+///     @include break($medium, max-width) {
+///       font-size: 10px;
+///     }
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
+@mixin break($size, $attr: min-width, $media: only screen ) {
+  @media #{$media} and (#{$attr}: #{$size}) {
     @content;
   }
 }
 
-// Row
-// ---
+// Grid Wrappers
+// =============
+
+///
+/// Create a wrapper for a row of grid elements
+///
+/// @example scss - Basic Usage Sass
+///   .row {
+///     @include row;
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
 @mixin row {
   width: 100%;
-  @include clearfix();
+  @include clearfix;
+
+  @if $calc {
+    margin-right: $target-gutter;
+  }
 }
 
-// Container
-// ---------
-@mixin base_container( $width: $fluid-container, $fluid: true ) {
-  width: $width;
+///
+/// Create a container for content
+///
+/// @param {string} $width [$fluid-container] - Width of the container
+/// @param {bool} $fluid [true] - Whether the container should always
+/// be fluid or be adaptive. If false, max-widths will be set according
+/// to `$active-breakpoints`
+///
+/// @example scss - Basic Usage Sass
+///   .container {
+///     @include container;
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
+@mixin base-container($width: $fluid-container, $fluid: true) {
   margin-left: auto;
   margin-right: auto;
+  width: $width;
 
   @if $fluid == false {
 
     @each $bp, $bpc in $active-breakpoints {
-      &:before {
-        content: '#{$bp}';
-      }
 
-      @include break( $bpc ) {
+      @include break($bpc) {
         width: $bp;
       }
     }

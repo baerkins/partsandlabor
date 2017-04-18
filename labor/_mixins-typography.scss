@@ -1,23 +1,104 @@
 // Typography Mixins
 // =================
 
-// LISTS
-// -----
-@mixin list-inline() {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none;
-}
+// ---LISTS------------------------------------------------------------------->
 
-
-@mixin list-unstyled() {
+///
+/// List - Style inline
+///
+/// @example scss - Basic Usage Sass
+///   ul {
+///     @include list-inline();
+///     margin-bottom: 10px;
+///  }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin list-inline {
+  margin: 0;
   padding-left: 0;
-  list-style: none;
 
   > li {
     display: inline-block;
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+///
+/// List - Style inline
+///
+/// @example scss - Basic Usage Sass
+///   ul {
+///     @include list-inline();
+///     margin-bottom: 10px;
+///  }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  > li {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+///
+/// List - Hover
+///
+/// @param {string} $sub-min-width [300px] - A valid min-width value
+/// @param {string} $sub-li-pad [10px] - A valid padding value
+/// @param {string} $sub-bkg [$labor-white] - A valid color value
+/// @param {string} $sub-transition-time [$standard-trans-time] - A valid transition time value
+///
+/// @example scss - Basic Usage Sass
+///   ul {
+///     @include list-hover( 5px 10px, #bada55, 0.4s );
+///  }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin list-hover($sub-min-width: 300px, $sub-li-pad: 10px, $sub-bkg: $labor-white, $sub-transition-time: $standard-trans-time) {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  li {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+
+    ul {
+      background-color: $sub-bkg;
+      left: 0;
+      margin: 0;
+      max-height: 0;
+      min-width: $sub-min-width;
+      overflow: hidden;
+      padding-left: 0;
+      position: absolute;
+      top: 100%;
+      transition: max-height $sub-transition-time $standard-trans-timing-func;
+      z-index: 5;
+    }
+
+    li {
+      padding: $sub-li-pad;
+    }
+
+    &:hover > ul {
+      max-height: 500px;
+    }
   }
 }
 
@@ -35,7 +116,7 @@
 //   @include button-reset();
 // }
 
-@mixin button-reset() {
+@mixin button-reset {
   box-sizing: content-box;
   background: none;
   border: 0;
@@ -44,12 +125,12 @@
   font: inherit;
   line-height: normal;
   overflow: visible;
+  display: inline-block;
   padding: 0;
   -webkit-appearance: button;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  display: inline-block;
   text-decoration: none;
   white-space: pre;
 

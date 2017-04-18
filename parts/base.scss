@@ -1,7 +1,10 @@
 // PARTS
 // -----
 
-// @import 'grid-functions';
-@import 'grid-vars';
+@import 'parts-vars';
+
+// Grid Parts
+@import 'grid-functions';
 @import 'scaffolding';
 @import 'grid-standard';
+

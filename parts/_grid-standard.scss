@@ -1,16 +1,55 @@
-@function calc_column_width( $columns ) {
-  // Column Width Value
-  // $tc = total columns
-  $cwv: $columns * ( ( $target_w - ( $gutter_w * ( $total_col - 1 ) ) ) / $total_col );
-}
+// Standard Grid Mixin
+// ===================
 
+///
+/// grid-col( $columns )
+///
+/// @param {integer} $columns - Number of columns to take up
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     @include grid-col( 3 );
+///   }
+///
+///   div {
+///     @include grid-col( 4, 15px );
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin grid-col($columns, $gutter-value: $target-gutter ) {
 
+  $gutter-width: calc-gutter-width($gutter-value);
 
-// Column Calculator
-// -----------------
-@mixin grid_flexspan($columns: 1, $span_gutter: $gutter, $span_grid_columns: $grid_columns) {
+  @if $calc {
+    $width: ( (100 / $total_cols) * $columns ) + %;
+    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );
+    $column-offset: $target-gutter - $column-percentage;
 
-  width: calc_column_width( $columns );
+    // Attrs
+    margin-right: $target-gutter;
+    width: calc(#{$width} - #{$column-offset});
+
+  } @else {
+
+    // Mixin vars
+    // $single: calc-single-col-width();
+    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );
+
+    // Attrs
+    margin-right: $gutter-width + %;
+    width: $width + %;
+
+  }
+
+  // Attrs
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
 }
 
