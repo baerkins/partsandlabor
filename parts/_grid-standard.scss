@@ -57,7 +57,7 @@
 ///
 /// Remove margin-right from target element and clear floats on the
 /// following element of that type. Can be used to target the last
-/// item in a row via `nth-child`.
+/// item in a row via `nth-child`. Modeled after Bourbon Neats `omega`
 ///
 /// @param {string} $nth [1] - Target `nth-child`
 ///
@@ -85,6 +85,30 @@
   }
 }
 
+
+///
+/// Remove the effects of a `grid-zed` include.
+///
+/// @param {string} $nth [1] - Target `nth-child`
+/// @param {string} $gutter-value [$target-gutter] - If you are using a different gutter than default
+///
+/// @example scss - Basic Usage Sass
+///
+///   /* Span 6 columns than 4 columns of 12 column grid */
+///   .post {
+///
+///     @include break($small) {
+///       @include grid-col(6);
+///       @include grid-zed(2n);
+///     }
+///
+///     @include break($medium) {
+///       @include grid-zed-reset(2n);
+///       @include grid-col(4);
+///       @include grid-zen(3n);
+///     }
+///   }
+///
 @mixin grid-zed-reset($nth: 1, $gutter-value: $target-gutter) {
 
   &:nth-child(#{$nth}) {
