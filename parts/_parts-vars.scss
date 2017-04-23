@@ -65,23 +65,23 @@ $breakpoint-offset: 20px !default;
 
 /// Breakpoint
 /// @group parts
-$xsmall: $xsmall-container - ( $breakpoint-offset * 2 );
+$xsmall: $xsmall-container + ( $breakpoint-offset * 2 );
 
 /// Breakpoint
 /// @group parts
-$small:  $small-container - ( $breakpoint-offset * 2 );
+$small:  $small-container + ( $breakpoint-offset * 2 );
 
 /// Breakpoint
 /// @group parts
-$medium: $medium-container - ( $breakpoint-offset * 2 );
+$medium: $medium-container + ( $breakpoint-offset * 2 );
 
 /// Breakpoint
 /// @group parts
-$large:  $large-container - ( $breakpoint-offset * 2 );
+$large:  $large-container + ( $breakpoint-offset * 2 );
 
 /// Breakpoint
 /// @group parts
-$xlarge: $xlarge-container - ( $breakpoint-offset * 2 );
+$xlarge: $xlarge-container + ( $breakpoint-offset * 2 );
 
 
 // Active Breakpoint List

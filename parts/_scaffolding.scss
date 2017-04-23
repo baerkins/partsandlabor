@@ -82,8 +82,8 @@
 
     @each $bp, $bpc in $active-breakpoints {
 
-      @include break($bpc) {
-        width: $bp;
+      @include break($bp) {
+        width: $bpc;
       }
     }
   }
