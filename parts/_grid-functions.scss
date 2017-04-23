@@ -28,13 +28,10 @@
 ///
 @function calc-single-col-width() {
 
-
     $gutter-width: calc-gutter-width();
     $gutter-area: ( $gutter-width * ( $total-cols - 1 ) );
     $remains: ( 100 - $gutter-area );
 
     @return ( $remains / $total-cols );
-
-  // }
 
 }
