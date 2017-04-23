@@ -1,0 +1,15 @@
+{
+  "generator-sassdoc-theme": {
+    "themeName": "partsandlabor",
+    "themeEngine": "handlebars",
+    "author": {
+      "name": "Shaun Baer"
+    },
+    "themeDesc": "Theme for Parts and Labor",
+    "version": "0.1.0",
+    "useExtras": true,
+    "useSass": true,
+    "useSassUtils": true,
+    "useTaskRunner": "gulp"
+  }
+}
