@@ -1,11 +1,11 @@
 {
   "generator-sassdoc-theme": {
     "themeName": "partsandlabor",
-    "themeEngine": "handlebars",
+    "themeEngine": "swig",
     "author": {
       "name": "Shaun Baer"
     },
-    "themeDesc": "Theme for Parts and Labor",
+    "themeDesc": "P&L",
     "version": "0.1.0",
     "useExtras": true,
     "useSass": true,

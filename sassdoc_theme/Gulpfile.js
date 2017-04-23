@@ -40,7 +40,7 @@ var dirs = {
   js: 'assets/js',
   tpl: 'views',
   src: project('sass'),
-  docs: project('sassdoc')
+  docs: project('docs')
 };
 
 
@@ -85,7 +85,7 @@ gulp.task('compile', function () {
 
   var sdStream = sassdoc(config);
 
-  gulp.src(path.join(dirs.src, '**/*.scss'))
+  gulp.src(['../parts/**/*.scss', '../labor/**/*.scss'])
     .pipe(sdStream);
 
   // Await for the full documentation process.
@@ -122,7 +122,7 @@ gulp.task('dumpCSS', ['styles'], function () {
 gulp.task('develop', ['compile', 'styles', 'browser-sync'], function () {
   gulp.watch('scss/**/*.scss', ['styles', 'dumpCSS']);
   gulp.watch('assets/js/**/*.js', ['dumpJS']);
-  gulp.watch('views/**/*.+{handlebars|hbs}', ['compile']);
+  gulp.watch('views/**/*.swig', ['compile']);
 });
 
 

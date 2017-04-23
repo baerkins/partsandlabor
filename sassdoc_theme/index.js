@@ -37,19 +37,11 @@ var theme = themeleon(__dirname, function (t) {
    */
   t.copy('assets');
 
-  var options = {
-    partials: {
-      // Add your partial files here.
-      // foo: 'views/foo.handlebars',
-      // 'foo/bar': 'views/foo/bar.handlebars',
-    },
-  };
-
   /**
-   * Render `views/index.handlebars` with the theme's context (`ctx` below)
+   * Render `views/index.swig` with the theme's context (`ctx` below)
    * as `index.html` in the destination directory.
    */
-  t.handlebars('views/index.handlebars', 'index.html', options);
+  t.swig('views/index.swig', 'index.html');
 });
 
 /**
@@ -142,11 +134,6 @@ module.exports = function (dest, ctx) {
    * templates to manipulate the indexed object.
    */
   ctx.data.byGroupAndType = extras.byGroupAndType(ctx.data);
-
-  // Avoid key collision with Handlebars default `data`.
-  // @see https://github.com/SassDoc/generator-sassdoc-theme/issues/22
-  ctx._data = ctx.data;
-  delete ctx.data;
 
   /**
    * Now we have prepared the data, we can proxy to the Themeleon

@@ -1,3 +1,3 @@
 # partsandlabor
 
-> Theme for Parts and Labor
+> P&L
