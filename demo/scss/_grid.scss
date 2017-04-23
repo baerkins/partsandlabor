@@ -80,7 +80,6 @@ $calc:          true; //false;
 }
 
 .two-col {
-
   ul {
     @include grid-col(6);
   }
