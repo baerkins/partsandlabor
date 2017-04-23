@@ -1,7 +1,7 @@
 $total_cols:    12;
 $target_width:  1400px;
 $target_gutter: 20px;
-$calc:          false;
+$calc:          true; //false;
 
 .grid {
 
@@ -11,44 +11,60 @@ $calc:          false;
     margin-bottom: 24px;
   }
 
+  &__1 {
+    @include grid_col( 1 );
+  }
+  &__2 {
+    @include grid_col( 2 );
+  }
+  &__3 {
+    @include grid_col( 3 );
+  }
+  &__4 {
+    @include grid_col( 4 );
+  }
+  &__5 {
+    @include grid_col( 5 );
+  }
+  &__6 {
+    @include grid_col( 6 );
+  }
+  &__7 {
+    @include grid_col( 7 );
+  }
+  &__8 {
+    @include grid_col( 8 );
+  }
+  &__9 {
+    @include grid_col( 9 );
+  }
+  &__10 {
+    @include grid_col( 10 );
+  }
+  &__11 {
+    @include grid_col( 11 );
+  }
+  &__12 {
+    @include grid_col( 12 );
+  }
 
-    &__1 {
-      @include grid_col( 1 );
-    }
-    &__2 {
-      @include grid_col( 2 );
-    }
-    &__3 {
-      @include grid_col( 3 );
-    }
-    &__4 {
-      @include grid_col( 4 );
-    }
-    &__5 {
-      @include grid_col( 5 );
-    }
-    &__6 {
-      @include grid_col( 6 );
-    }
-    &__7 {
-      @include grid_col( 7 );
-    }
-    &__8 {
-      @include grid_col( 8 );
-    }
-    &__9 {
-      @include grid_col( 9 );
-    }
-    &__10 {
-      @include grid_col( 10 );
-    }
-    &__11 {
-      @include grid_col( 11 );
-    }
-    &__12 {
-      @include grid_col( 12 );
+}
+
+.grid-multi {
+
+  .post {
+
+    @include break($small) {
+      @include grid-col(6);
+      @include grid-zed(2n);
     }
 
+    @include break($medium) {
+      @include grid-zed-reset(2n);
+      @include grid-col(4);
+      @include grid-zed(3n);
+    }
+  }
 }
 
 .container {
