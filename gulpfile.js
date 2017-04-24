@@ -24,11 +24,12 @@ gulp.task('build_docs', function () {
     groups: {
       parts : 'Parts',
       labor : 'Labor'
-    }
+    },
+    theme: 'partsandlabor'
   }
   return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
-    .pipe( lint() )
-    .pipe( lint.format() )
+    // .pipe( lint() )
+    // .pipe( lint.format() )
     // .pipe( lint.failOnError() )
     .pipe( sassdoc(options) );
 });
