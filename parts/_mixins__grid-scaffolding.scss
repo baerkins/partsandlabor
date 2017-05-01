@@ -51,10 +51,6 @@
 @mixin row {
   width: 100%;
   @include clearfix;
-
-  // @if $calc {
-  //   margin-right: $target-gutter;
-  // }
 }
 
 ///
@@ -112,8 +108,8 @@
 
     @each $bp, $bpc in $active-breakpoints {
 
-      @include break($bpc) {
-        width: $bp;
+      @include break($bp) {
+        width: $bpc;
       }
     }
   }

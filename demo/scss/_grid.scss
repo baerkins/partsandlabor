@@ -15,7 +15,6 @@ $calc:          true;
     margin-bottom: 24px;
   }
 
-
     &__1 {
       @include grid-col( 1 );
     }
@@ -52,7 +51,23 @@ $calc:          true;
     &__12 {
       @include grid-col( 12 );
     }
+}
 
+.grid-multi {
+
+  .post {
+
+    @include break($small) {
+      @include grid-col(6);
+      @include grid-zed(2n);
+    }
+
+    @include break($medium) {
+      @include grid-zed-reset(2n);
+      @include grid-col(4);
+      @include grid-zed(3n);
+    }
+  }
 }
 
 .container {
@@ -76,7 +91,6 @@ $calc:          true;
 }
 
 .two-col {
-
   ul {
     @include grid-col(6);
   }

@@ -104,22 +104,6 @@
 }
 
 ///
-/// Hide it. For serious.
-///
-/// @example scss - Basic Usage Sass
-///   .hide-for-serious {
-///     @include hidden();
-///   }
-///
-/// @since 1.0.0
-/// @group labor
-///
-@mixin hidden() {
-  display: none;
-  visibility: hidden;
-}
-
-///
 /// Hide an element visually, but allow access to screen readers
 ///
 /// @link https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.tpuoch56u

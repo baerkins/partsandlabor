@@ -147,25 +147,53 @@ h1 {
   .grid__12:last-child {
     margin-right: 0; }
 
+@media only screen and (min-width: 740px) {
+  .grid-multi .post {
+    margin-right: 20px;
+    width: calc(50% - 10px);
+    float: left; }
+    .grid-multi .post:last-child {
+      margin-right: 0; }
+    .grid-multi .post:nth-child(2n) {
+      margin-right: 0; }
+    .grid-multi .post:nth-child(2n+1) {
+      clear: left; } }
+
+@media only screen and (min-width: 960px) {
+  .grid-multi .post {
+    margin-right: 20px;
+    width: calc(33.33333% - 13.33333px);
+    float: left; }
+    .grid-multi .post:nth-child(2n) {
+      margin-right: 20px; }
+    .grid-multi .post:nth-child(2n+1) {
+      clear: none; }
+    .grid-multi .post:last-child {
+      margin-right: 0; }
+    .grid-multi .post:nth-child(3n) {
+      margin-right: 0; }
+    .grid-multi .post:nth-child(3n+1) {
+      clear: left; } }
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 90%; }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 520px) {
     .container {
-      width: 440px; } }
-  @media only screen and (min-width: 700px) {
+      width: 480px; } }
+  @media only screen and (min-width: 740px) {
     .container {
-      width: 660px; } }
-  @media only screen and (min-width: 920px) {
+      width: 700px; } }
+  @media only screen and (min-width: 960px) {
     .container {
-      width: 880px; } }
-  @media only screen and (min-width: 1200px) {
+      width: 920px; } }
+  @media only screen and (min-width: 1240px) {
     .container {
-      width: 1160px; } }
-  @media only screen and (min-width: 1500px) {
+      width: 1200px; } }
+  @media only screen and (min-width: 1540px) {
     .container {
-      width: 1460px; } }
+      width: 1500px; } }
 
 .container-fluid {
   margin-left: auto;
@@ -173,7 +201,8 @@ h1 {
   width: 90%; }
 
 .row {
-  width: 100%; }
+  width: 100%;
+  margin-right: 20px; }
   .row:after {
     content: "";
     display: table;

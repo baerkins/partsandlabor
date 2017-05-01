@@ -69,5 +69,36 @@
 }
 
 
+///
+/// Lighten a color
+///
+/// @param {string} $color - Valid color value to tint
+/// @param {string} $percentage - Percentage of `$color` in returned color
+///
+/// @return {string} Color value
+///
+/// @link https://css-tricks.com/snippets/sass/tint-shade-functions/
+///
+@function tint($color, $percentage) {
 
+  @return mix(white, $color, $percentage);
+
+}
+
+
+///
+/// Lighten a color
+///
+/// @param {string} $color - Valid color value to shade
+/// @param {string} $percentage - Percentage of `$color` in returned color
+///
+/// @return {string} Color value
+///
+/// @link https://css-tricks.com/snippets/sass/tint-shade-functions/
+///
+@function shade($color, $percentage) {
+
+  @return mix(black, $color, $percentage);
+
+}
 
