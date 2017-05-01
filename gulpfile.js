@@ -21,6 +21,7 @@ gulp.task( 'sass', function () {
 gulp.task('build_docs', function () {
   var options = {
     dest: 'docs',
+    sort: ['group>'],
     groups: {
       parts : 'Parts',
       labor : 'Labor'

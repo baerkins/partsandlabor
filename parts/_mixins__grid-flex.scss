@@ -1,0 +1,26 @@
+// Flex Grid Mixin
+// ===============
+
+///
+/// flex-grid-col( $columns )
+///
+/// @param {integer} $columns - Number of columns to take up
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     @include flex-grid-col( 3 );
+///   }
+///
+///   div {
+///     @include flex-grid-col( 4, 10px );
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin flex-grid-col($columns, $gutter-value: $target-gutter ) {
+
+  width: calc-grid-col-width($columns, $gutter-value);
+
+}

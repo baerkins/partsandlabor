@@ -1,88 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.25rem; }
+
+h1 {
+  font-size: 1.875rem; }
+
+* {
+  box-sizing: border-box; }
+
 .grid__fill {
   background-color: #2BB2DD;
   height: 50px;
   margin-bottom: 24px; }
 
 .grid__1 {
-  margin-right: 1.42857%;
-  width: 7.02381%;
+  margin-right: 20px;
+  width: calc(8.33333% - 18.33333px);
   float: left; }
   .grid__1:last-child {
     margin-right: 0; }
 
 .grid__2 {
-  margin-right: 1.42857%;
-  width: 15.47619%;
+  margin-right: 20px;
+  width: calc(16.66667% - 16.66667px);
   float: left; }
   .grid__2:last-child {
     margin-right: 0; }
 
 .grid__3 {
-  margin-right: 1.42857%;
-  width: 23.92857%;
+  margin-right: 20px;
+  width: calc(25% - 15px);
   float: left; }
   .grid__3:last-child {
     margin-right: 0; }
 
 .grid__4 {
-  margin-right: 1.42857%;
-  width: 32.38095%;
+  margin-right: 20px;
+  width: calc(33.33333% - 13.33333px);
   float: left; }
   .grid__4:last-child {
     margin-right: 0; }
 
 .grid__5 {
-  margin-right: 1.42857%;
-  width: 40.83333%;
+  margin-right: 20px;
+  width: calc(41.66667% - 11.66667px);
   float: left; }
   .grid__5:last-child {
     margin-right: 0; }
 
 .grid__6 {
-  margin-right: 1.42857%;
-  width: 49.28571%;
+  margin-right: 20px;
+  width: calc(50% - 10px);
   float: left; }
   .grid__6:last-child {
     margin-right: 0; }
 
 .grid__7 {
-  margin-right: 1.42857%;
-  width: 57.7381%;
+  margin-right: 20px;
+  width: calc(58.33333% - 8.33333px);
   float: left; }
   .grid__7:last-child {
     margin-right: 0; }
 
 .grid__8 {
-  margin-right: 1.42857%;
-  width: 66.19048%;
+  margin-right: 20px;
+  width: calc(66.66667% - 6.66667px);
   float: left; }
   .grid__8:last-child {
     margin-right: 0; }
 
 .grid__9 {
-  margin-right: 1.42857%;
-  width: 74.64286%;
+  margin-right: 20px;
+  width: calc(75% - 5px);
   float: left; }
   .grid__9:last-child {
     margin-right: 0; }
 
 .grid__10 {
-  margin-right: 1.42857%;
-  width: 83.09524%;
+  margin-right: 20px;
+  width: calc(83.33333% - 3.33333px);
   float: left; }
   .grid__10:last-child {
     margin-right: 0; }
 
 .grid__11 {
-  margin-right: 1.42857%;
-  width: 91.54762%;
+  margin-right: 20px;
+  width: calc(91.66667% - 1.66667px);
   float: left; }
   .grid__11:last-child {
     margin-right: 0; }
 
 .grid__12 {
-  margin-right: 1.42857%;
-  width: 100%;
+  margin-right: 20px;
+  width: calc(100% - 0px);
   float: left; }
   .grid__12:last-child {
     margin-right: 0; }
@@ -119,9 +179,22 @@
     display: table;
     clear: both; }
 
+.flex-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.flex-row-rev {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: wrap; }
+
 .two-col ul {
-  margin-right: 1.42857%;
-  width: 49.28571%;
+  margin-right: 20px;
+  width: calc(50% - 10px);
   float: left; }
   .two-col ul:last-child {
     margin-right: 0; }
@@ -142,6 +215,47 @@
     display: block;
     padding-left: 0;
     padding-right: 0; }
+
+.flex-grid__fill {
+  background-color: #1d92b8;
+  height: 50px;
+  margin-bottom: 24px; }
+
+.flex-grid__1 {
+  width: calc(8.33333% - 18.33333px); }
+
+.flex-grid__2 {
+  width: calc(16.66667% - 16.66667px); }
+
+.flex-grid__3 {
+  width: calc(25% - 15px); }
+
+.flex-grid__4 {
+  width: calc(33.33333% - 13.33333px); }
+
+.flex-grid__5 {
+  width: calc(41.66667% - 11.66667px); }
+
+.flex-grid__6 {
+  width: calc(50% - 10px); }
+
+.flex-grid__7 {
+  width: calc(58.33333% - 8.33333px); }
+
+.flex-grid__8 {
+  width: calc(66.66667% - 6.66667px); }
+
+.flex-grid__9 {
+  width: calc(75% - 5px); }
+
+.flex-grid__10 {
+  width: calc(83.33333% - 3.33333px); }
+
+.flex-grid__11 {
+  width: calc(91.66667% - 1.66667px); }
+
+.flex-grid__12 {
+  width: calc(100% - 0px); }
 
 ul.hover {
   list-style: none;

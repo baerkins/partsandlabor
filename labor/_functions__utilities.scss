@@ -1,0 +1,73 @@
+///
+/// String replace
+///
+/// @param {string} $string
+/// @param {string} $search - Needle
+/// @param {string} $replace - Haystack
+///
+/// @group labor
+/// @since 1.0.0
+///
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+
+///
+/// Convert px units to em units
+///
+/// @param {int} $px - Number representing px
+/// @param {string} $context - Pixel value
+///
+/// @example
+///   h1 {
+///     font-size: em(64);
+///   }
+///
+/// @link https://css-tricks.com/snippets/sass/px-to-em-functions/
+/// @since 1.0.0
+///
+@function em($pixels, $context: $em-base) {
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return ($pixels / $context) * 1em;
+
+}
+
+///
+/// Convert unit to REM unit
+///
+/// @param {int} $unit - Unti to convert
+///
+/// @since 1.0.0
+///
+@function rem($pixels, $context: $em-base) {
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return ($pixels / $context) * 1rem;
+
+}
+
+
+
+

@@ -1,7 +1,11 @@
 $total_cols:    12;
 $target_width:  1400px;
 $target_gutter: 20px;
-$calc:          false;
+$calc:          true;
+
+* {
+  box-sizing: border-box;
+}
 
 .grid {
 
@@ -13,40 +17,40 @@ $calc:          false;
 
 
     &__1 {
-      @include grid_col( 1 );
+      @include grid-col( 1 );
     }
     &__2 {
-      @include grid_col( 2 );
+      @include grid-col( 2 );
     }
     &__3 {
-      @include grid_col( 3 );
+      @include grid-col( 3 );
     }
     &__4 {
-      @include grid_col( 4 );
+      @include grid-col( 4 );
     }
     &__5 {
-      @include grid_col( 5 );
+      @include grid-col( 5 );
     }
     &__6 {
-      @include grid_col( 6 );
+      @include grid-col( 6 );
     }
     &__7 {
-      @include grid_col( 7 );
+      @include grid-col( 7 );
     }
     &__8 {
-      @include grid_col( 8 );
+      @include grid-col( 8 );
     }
     &__9 {
-      @include grid_col( 9 );
+      @include grid-col( 9 );
     }
     &__10 {
-      @include grid_col( 10 );
+      @include grid-col( 10 );
     }
     &__11 {
-      @include grid_col( 11 );
+      @include grid-col( 11 );
     }
     &__12 {
-      @include grid_col( 12 );
+      @include grid-col( 12 );
     }
 
 }
@@ -61,6 +65,14 @@ $calc:          false;
 
 .row {
   @include row();
+}
+
+.flex-row {
+  @include flex-row();
+}
+
+.flex-row-rev {
+  @include flex-row($reverse: true);
 }
 
 .two-col {
@@ -78,6 +90,55 @@ $calc:          false;
   }
 }
 
+.flex-grid {
+
+  &__fill {
+    background-color: darken($blue, 10%);
+    height: 50px;
+    margin-bottom: 24px;
+  }
+
+    &__1 {
+      @include flex-grid-col( 1 );
+    }
+    &__2 {
+      @include flex-grid-col( 2 );
+    }
+    &__3 {
+      @include flex-grid-col( 3 );
+    }
+    &__4 {
+      @include flex-grid-col( 4 );
+    }
+    &__5 {
+      @include flex-grid-col( 5 );
+    }
+    &__6 {
+      @include flex-grid-col( 6 );
+    }
+    &__7 {
+      @include flex-grid-col( 7 );
+    }
+    &__8 {
+      @include flex-grid-col( 8 );
+    }
+    &__9 {
+      @include flex-grid-col( 9 );
+    }
+    &__10 {
+      @include flex-grid-col( 10 );
+    }
+    &__11 {
+      @include flex-grid-col( 11 );
+    }
+    &__12 {
+      @include flex-grid-col( 12 );
+    }
+}
+
+
+
 ul.hover {
   @include list-hover();
 }
+

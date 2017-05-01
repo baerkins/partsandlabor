@@ -1,0 +1,76 @@
+// Grid Functions
+// ==============
+
+///
+/// calc-gutter-width()
+/// Calculate gutter width as a percentage based on target value
+///
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @return {integer} value of percentage ( add `+ %`)
+/// @since 1.0.0
+/// @group parts
+///
+@function calc-gutter-width($gutter-value: $target-gutter) {
+
+  // Get target gutter percentage
+  @return (($gutter-value / 1px) / ($target-width  / 1px)) * 100;
+
+}
+
+
+///
+/// calc-single-col-width()
+/// Calculate single column width
+///
+/// @return {integer} value of percentage ( add `+ %`)
+///
+/// @since 1.0.0
+/// @group parts
+///
+@function calc-single-col-width() {
+
+    $gutter-width: calc-gutter-width();
+    $gutter-area:  ($gutter-width * ($total-cols - 1));
+    $remains:      (100 - $gutter-area);
+
+    @return ( $remains / $total-cols );
+
+}
+
+
+///
+/// calc-grid-col-width()
+/// Calculate the width of X columns
+///
+/// @param {integer} $columns - Number of columns to take up
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @return {integer} value of percentage ( add `+ %`)
+///
+/// @since 1.0.0
+/// @group parts
+///
+@function calc-grid-col-width($columns, $gutter-value) {
+
+  $gutter-width: calc-gutter-width($gutter-value);
+
+  @if $calc {
+    $width: ( (100 / $total_cols) * $columns ) + %;
+    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );
+    $column-offset: $target-gutter - $column-percentage;
+
+    // Attrs
+    @return calc(#{$width} - #{$column-offset});
+
+  } @else {
+
+    // Mixin vars
+    // $single: calc-single-col-width();
+    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );
+
+    // Attrs
+    @return $width + %;
+
+  }
+}

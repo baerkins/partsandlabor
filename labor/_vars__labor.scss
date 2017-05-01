@@ -1,6 +1,5 @@
-// Mixin Variable
-
-// Transition Variables -------------------------------------------------------
+// Transition Variables
+// ====================
 
 /// Time for `standard-trans` mixin
 /// @group labor
@@ -19,8 +18,18 @@ $long-trans-time:            .35s !default;
 $long-trans-timing-func:     ease !default;
 /// Time delay for `long-trans` mixin
 /// @group labor
-$long-trans-time-delay:      0;
+$long-trans-time-delay:      0 !default;
 
+// Size Variables
+// ==============
+
+/// Base value for em calulations (best practice = 16px)
+/// @group labor
+$em-base: 16px !default;
+
+
+// Private & Placeholder Variables
+// ===============================
 
 // Gray Scale
 $labor-white:   #fff !default;

@@ -52,9 +52,39 @@
   width: 100%;
   @include clearfix;
 
-  @if $calc {
-    margin-right: $target-gutter;
+  // @if $calc {
+  //   margin-right: $target-gutter;
+  // }
+}
+
+///
+/// Create a wrapper for a row of flexbox grid elements
+///
+/// @example scss - Basic Usage Sass
+///   .flow-row {
+///     @include flex-row;
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
+@mixin flex-row( $align: false, $justify: space-between, $reverse: false, $wrap: true ) {
+  width: 100%;
+  display: flex;
+  justify-content: $justify;
+
+  @if $align {
+    align-items: $align;
   }
+
+  @if $reverse {
+    flex-direction: row-reverse;
+  }
+
+  @if $wrap {
+    flex-wrap: wrap;
+  }
+
 }
 
 ///

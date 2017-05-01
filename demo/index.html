@@ -12,8 +12,13 @@
     </div>
   </header>
   <main>
-    <div class="grid grid__standard">
+    <!-- Adpative container with standard grid demo -->
+    <section class="demo-section grid grid__standard">
       <div class="container">
+        <article class="demo-section__desc">
+          <h3>Standard Grid in Adaptive Container</h3>
+          <p>This grid uses the standard <code>grid-col()</code> mixin with a non-fluid (adaptive) container</p>
+        </article>
         <div class="row">
           <div class="grid__12 grid__fill"></div>
         </div>
@@ -78,10 +83,16 @@
           <div class="grid__8 grid__fill"></div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- END Adpative container with standard grid demo -->
 
-    <div class="grid grid__standard">
+    <!-- Fluid container with standard grid demo -->
+    <section class="demo-section grid grid__standard">
       <div class="container-fluid">
+        <article class="demo-section__desc">
+          <h3>Standard Grid in Fluid Container</h3>
+          <p>This grid uses the standard <code>grid-col()</code> mixin with a fluid container</p>
+        </article>
         <div class="row">
           <div class="grid__12 grid__fill"></div>
         </div>
@@ -133,81 +144,180 @@
           <div class="grid__12 grid__fill"></div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- END Fluid container with standard grid demo -->
 
-    <div class="lists">
-      <div class="two-col row">
-        <ul class="inline">
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ul>
-        <ol class="inline">
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ol>
+    <!-- Adpative container with standard grid demo -->
+    <section class="demo-section grid grid__flex">
+      <div class="container">
+        <article class="demo-section__desc">
+          <h3>Flexbox Grid</h3>
+          <p>This grid follows suit with <code>grid-col()</code>, but uses the <code>flex-grid-col()</code> mixin within a container that uses <code>flex-row()</code>, which can be configured to fit several flexbox configurations.</p>
+        </article>
+        <div class="flex-row">
+          <div class="flex-grid__12 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__11 flex-grid__fill"></div>
+          <div class="flex-grid__1 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__10 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__9 flex-grid__fill"></div>
+          <div class="flex-grid__3 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__8 flex-grid__fill"></div>
+          <div class="flex-grid__4 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__7 flex-grid__fill"></div>
+          <div class="flex-grid__5 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__6 flex-grid__fill"></div>
+          <div class="flex-grid__6 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__5 flex-grid__fill"></div>
+          <div class="flex-grid__7 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__4 flex-grid__fill"></div>
+          <div class="flex-grid__8 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__3 flex-grid__fill"></div>
+          <div class="flex-grid__9 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__10 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row flex-row-rev">
+          <div class="flex-grid__1 flex-grid__fill"></div>
+          <div class="flex-grid__11 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__12 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__2 flex-grid__fill"></div>
+          <div class="flex-grid__8 flex-grid__fill"></div>
+        </div>
       </div>
-      <div class="two-col row">
-        <ul class="unstyled">
+    </section>
+    <!-- END Adpative container with standard grid demo -->
+
+    <!-- List Mixins Demo -->
+    <section class="demo-section lists">
+      <div class="container-fluid">
+        <article class="demo-section__desc">
+          <h3>List Mixins</h3>
+          <p>Quickly format lists.</p>
+        </article>
+
+        <div class="two-col row">
+          <ul class="inline">
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+          </ul>
+          <ol class="inline">
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+          </ol>
+        </div>
+        <div class="two-col row">
+          <ul class="unstyled">
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+          </ul>
+          <ol class="unstyled">
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+          </ol>
+        </div>
+        <ul class="hover">
+          <li>Hi
+            <ul class="sub-menu">
+              <li>Sub</li>
+              <li>Sub</li>
+              <li>Sub</li>
+              <li>Sub</li>
+              <li>Sub</li>
+            </ul>
+          </li>
+          <li>Hi
+            <ul class="sub-menu">
+              <li>Sub Hi</li>
+              <li>Sub Hi</li>
+              <li>Sub Hi</li>
+              <li>Sub Hi</li>
+              <li>Sub Hi</li>
+            </ul>
+          </li>
+          <li>Hi
+            <ul class="sub-menu">
+              <li>Sub Hi Again</li>
+              <li>Sub Hi Again</li>
+              <li>Sub Hi Again</li>
+              <li>Sub Hi Again</li>
+              <li>Sub Hi Again</li>
+            </ul>
+          </li>
           <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
+          <li>Hi
+            <ul class="sub-menu">
+              <li>Last Sub</li>
+              <li>Last Sub</li>
+              <li>Last Sub</li>
+              <li>Last Sub</li>
+              <li>Last Sub</li>
+            </ul>
+          </li>
         </ul>
-        <ol class="unstyled">
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ol>
       </div>
-      <ul class="hover">
-        <li>Hi
-          <ul class="sub-menu">
-            <li>Sub</li>
-            <li>Sub</li>
-            <li>Sub</li>
-            <li>Sub</li>
-            <li>Sub</li>
-          </ul>
-        </li>
-        <li>Hi
-          <ul class="sub-menu">
-            <li>Sub Hi</li>
-            <li>Sub Hi</li>
-            <li>Sub Hi</li>
-            <li>Sub Hi</li>
-            <li>Sub Hi</li>
-          </ul>
-        </li>
-        <li>Hi
-          <ul class="sub-menu">
-            <li>Sub Hi Again</li>
-            <li>Sub Hi Again</li>
-            <li>Sub Hi Again</li>
-            <li>Sub Hi Again</li>
-            <li>Sub Hi Again</li>
-          </ul>
-        </li>
-        <li>Hi</li>
-        <li>Hi
-          <ul class="sub-menu">
-            <li>Last Sub</li>
-            <li>Last Sub</li>
-            <li>Last Sub</li>
-            <li>Last Sub</li>
-            <li>Last Sub</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    </section>
+    <!-- END List Mixins Demo -->
+
+    <!-- Em Function Demo -->
+    <section class="demo-section em">
+      <div class="container-fluid">
+        <article class="demo-section__desc">
+          <h3>Em Function</h3>
+          <p>Use the em function to easily calculate em values. Best practice is to set the body font-size to $body-base</p>
+        </article>
+
   </main>
   <footer>
     <div class="container">
