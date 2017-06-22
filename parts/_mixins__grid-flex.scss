@@ -24,3 +24,136 @@
   width: calc-grid-col-width($columns, $gutter-value);
 
 }
+
+// Standard Grid Mixin
+// ===================
+
+///
+/// grid-col( $columns )
+///
+/// @param {integer} $columns - Number of columns to take up
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     @include grid-col( 3 );
+///   }
+///
+///   div {
+///     @include grid-col( 4, 15px );
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin grid-col($columns, $gutter-value: $target-gutter) {
+
+  $gutter-width: calc-gutter-width($gutter-value);
+
+  @if $calc {
+    margin-right: $target-gutter;
+  } @else {
+    margin-right: $gutter-width + '%';
+  }
+
+  // Attrs
+  width: calc-grid-col-width($columns, $gutter-value);
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+
+///
+/// Remove margin-right from target element and clear floats on the
+/// following element of that type. Can be used to target the last
+/// item in a row via `nth-child`. Modeled after Bourbon Neats `omega`
+///
+/// @param {string} $nth [1] - Target `nth-child`
+///
+/// @example scss - Basic Usage Sass
+///
+///   .no-margin {
+///     @include grid-col(8);
+///     @include grid-zed();
+///   }
+///
+///   /* Span 3 columns of 12 column grid */
+///   .three-col {
+///     @include grid-col(4);
+///     @include grid-zed(3n);
+///   }
+///
+@mixin grid-zed($nth: 1) {
+
+  &:nth-child(#{$nth}) {
+    margin-right: 0;
+  }
+
+  &:nth-child(#{$nth}+1) { // sass-lint:disable-line Fatal
+    clear: left;
+  }
+}
+
+
+///
+/// Break flex items to a new line. Not always neccessary, but
+/// useful in some circumstances, such as a row of two column
+/// elements in a twelve column grid that should break after
+/// six elements.
+///
+/// @param {string} $nth [1] - Target `nth-child`
+///
+/// @example scss - Basic Usage Sass
+///
+///   /* Span 2 columns in 12 column grid */
+///   .post {
+///
+///     @include break($medium) {
+///       @include flex-grid-col(2);
+///       @include flex-grid-zed(6n);
+///     }
+///   }
+///
+@mixin flex-grid-zed($nth: 1) {
+
+  &:nth-child(#{$nth}+1) {
+    margin-left: .1px;
+  }
+}
+
+
+///
+/// Break flex items to a new line. Not always neccessary, but
+/// useful in some circumstances, such as a row of two column
+/// elements in a twelve column grid that should break after
+/// six elements.
+///
+/// @param {string} $nth [1] - Target `nth-child`
+///
+/// @example scss - Basic Usage Sass
+///
+///   .post {
+///
+///     /* Span 2 columns in 12 column grid */
+///     @include break($small) {
+///       @include flex-grid-col(2);
+///       @include flex-grid-zed(6n);
+///     }
+///
+///     /* Span 3 columns in 12 column grid */
+///     @include break($medium) {
+///       @include flex-grid-zed-reset(6n);
+///       @include flex-grid-col(3);
+///     }
+///   }
+///
+@mixin flex-grid-zed-reset($nth: 1) {
+
+  &:nth-child(#{$nth}+1) {
+    margin-left: 0;
+  }
+}

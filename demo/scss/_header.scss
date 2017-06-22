@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $serif;
+  color: $red;
+}
+
+h1 {
+  font-size: rem(48);
+  font-weight: 300;
+  margin: 15px 0 25px;
+}
+
+h2 {
+  font-size: rem(36);
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: rem(28);
+  font-family: $mono;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: rem(16);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: $mono;
+}

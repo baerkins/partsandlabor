@@ -28,7 +28,7 @@
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin break($size, $attr: min-width, $media: only screen ) {
+@mixin break($size, $attr: min-width, $media: only screen) {
   @media #{$media} and (#{$attr}: #{$size}) {
     @content;
   }
@@ -49,8 +49,8 @@
 /// @since 1.0.0
 ///
 @mixin row {
-  width: 100%;
   @include clearfix;
+  width: 100%;
 }
 
 ///
@@ -64,7 +64,7 @@
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin flex-row( $align: false, $justify: space-between, $reverse: false, $wrap: true ) {
+@mixin flex-row($align: false, $justify: space-between, $reverse: false, $wrap: true) {
   width: 100%;
   display: flex;
   justify-content: $justify;

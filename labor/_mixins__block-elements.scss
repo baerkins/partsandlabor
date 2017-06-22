@@ -1,7 +1,9 @@
-// Typography Mixins
-// =================
+// Block Level Element Mixins
+// ==========================
 
-// ---LISTS------------------------------------------------------------------->
+//
+// ==-----> LISTS <-----==
+//
 
 ///
 /// List - Style inline
@@ -67,7 +69,7 @@
 /// @since 1.0.0
 /// @group labor
 ///
-@mixin list-hover($sub-min-width: 300px, $sub-li-pad: 10px, $sub-bkg: $labor-white, $sub-transition-time: $standard-trans-time) {
+@mixin list-hover($sub-min-width: 300px, $sub-bkg: $labor-white, $sub-transition-time: $standard-trans-time) {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -92,52 +94,36 @@
       z-index: 5;
     }
 
-    li {
-      padding: $sub-li-pad;
-    }
-
     &:hover > ul {
       max-height: 500px;
     }
   }
 }
 
+//
+// ==-----> HEADERS <-----==
+//
 
-
-// BUTTONS
-// -------
-
-// Button Reset - Consider using with:
-// [role="button"],
-// input[type="submit"],
-// input[type="reset"],
-// input[type="button"],
-// button {
-//   @include button-reset();
-// }
-
-@mixin button-reset {
-  box-sizing: content-box;
-  background: none;
-  border: 0;
-  color: inherit;
-  cursor: default;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  display: inline-block;
+///
+/// Reset a header to basic body styles
+///
+/// @example scss - Basic Usage Sass
+///   h1 {
+///     @include header-reset();
+///     margin-bottom: 30px;
+///  }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin header-reset {
+  margin: 0;
   padding: 0;
-  -webkit-appearance: button;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  text-decoration: none;
-  white-space: pre;
-
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-    box-shadow: 0;
-  }
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }

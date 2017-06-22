@@ -19,14 +19,14 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin grid-col($columns, $gutter-value: $target-gutter ) {
+@mixin grid-col($columns, $gutter-value: $target-gutter) {
 
   $gutter-width: calc-gutter-width($gutter-value);
 
   @if $calc {
     margin-right: $target-gutter;
   } @else {
-    margin-right: $gutter-width + %;
+    margin-right: $gutter-width + '%';
   }
 
   // Attrs
@@ -91,7 +91,7 @@
 ///     @include break($medium) {
 ///       @include grid-zed-reset(2n);
 ///       @include grid-col(4);
-///       @include grid-zen(3n);
+///       @include grid-zed(3n);
 ///     }
 ///   }
 ///
@@ -102,7 +102,7 @@
       margin-right: $gutter-value;
     } @else {
       $gutter-width: calc-gutter-width($gutter-value);
-      margin-right: $gutter-width + %;
+      margin-right: $gutter-width + '%';
     }
   }
 

@@ -1,10 +1,15 @@
-$total_cols:    12;
+$total-cols:    12;
 $target_width:  1400px;
 $target_gutter: 20px;
 $calc:          true;
 
 * {
   box-sizing: border-box;
+}
+
+.container-example {
+  border: 1px solid tint($red, 80%);
+  padding-top: 20px;
 }
 
 .grid {
@@ -15,42 +20,53 @@ $calc:          true;
     margin-bottom: 24px;
   }
 
-    &__1 {
-      @include grid-col( 1 );
-    }
-    &__2 {
-      @include grid-col( 2 );
-    }
-    &__3 {
-      @include grid-col( 3 );
-    }
-    &__4 {
-      @include grid-col( 4 );
-    }
-    &__5 {
-      @include grid-col( 5 );
-    }
-    &__6 {
-      @include grid-col( 6 );
-    }
-    &__7 {
-      @include grid-col( 7 );
-    }
-    &__8 {
-      @include grid-col( 8 );
-    }
-    &__9 {
-      @include grid-col( 9 );
-    }
-    &__10 {
-      @include grid-col( 10 );
-    }
-    &__11 {
-      @include grid-col( 11 );
-    }
-    &__12 {
-      @include grid-col( 12 );
-    }
+  &__1 {
+    @include grid-col(1);
+  }
+
+  &__2 {
+    @include grid-col(2);
+  }
+
+  &__3 {
+    @include grid-col(3);
+  }
+
+  &__4 {
+    @include grid-col(4);
+  }
+
+  &__5 {
+    @include grid-col(5);
+  }
+
+  &__6 {
+    @include grid-col(6);
+  }
+
+  &__7 {
+    @include grid-col(7);
+  }
+
+  &__8 {
+    @include grid-col(8);
+  }
+
+  &__9 {
+    @include grid-col(9);
+  }
+
+  &__10 {
+    @include grid-col(10);
+  }
+
+  &__11 {
+    @include grid-col(11);
+  }
+
+  &__12 {
+    @include grid-col(12);
+  }
 }
 
 .grid-multi {
@@ -71,7 +87,7 @@ $calc:          true;
 }
 
 .container {
-  @include base-container( 90%, false );
+  @include base-container(90%, false);
 }
 
 .container-fluid {
@@ -91,7 +107,7 @@ $calc:          true;
 }
 
 .two-col {
-  ul {
+  &__col {
     @include grid-col(6);
   }
 
@@ -104,6 +120,12 @@ $calc:          true;
   }
 }
 
+
+
+.example {
+  margin-bottom: 30px;
+}
+
 .flex-grid {
 
   &__fill {
@@ -112,47 +134,55 @@ $calc:          true;
     margin-bottom: 24px;
   }
 
-    &__1 {
-      @include flex-grid-col( 1 );
-    }
-    &__2 {
-      @include flex-grid-col( 2 );
-    }
-    &__3 {
-      @include flex-grid-col( 3 );
-    }
-    &__4 {
-      @include flex-grid-col( 4 );
-    }
-    &__5 {
-      @include flex-grid-col( 5 );
-    }
-    &__6 {
-      @include flex-grid-col( 6 );
-    }
-    &__7 {
-      @include flex-grid-col( 7 );
-    }
-    &__8 {
-      @include flex-grid-col( 8 );
-    }
-    &__9 {
-      @include flex-grid-col( 9 );
-    }
-    &__10 {
-      @include flex-grid-col( 10 );
-    }
-    &__11 {
-      @include flex-grid-col( 11 );
-    }
-    &__12 {
-      @include flex-grid-col( 12 );
-    }
+  &__1 {
+    @include flex-grid-col(1);
+  }
+  &__2 {
+    @include flex-grid-col(2);
+  }
+  &__3 {
+    @include flex-grid-col(3);
+  }
+  &__4 {
+    @include flex-grid-col(4);
+  }
+  &__5 {
+    @include flex-grid-col(5);
+  }
+  &__6 {
+    @include flex-grid-col(6);
+  }
+  &__7 {
+    @include flex-grid-col(7);
+  }
+  &__8 {
+    @include flex-grid-col(8);
+  }
+  &__9 {
+    @include flex-grid-col(9);
+  }
+  &__10 {
+    @include flex-grid-col(10);
+  }
+  &__11 {
+    @include flex-grid-col(11);
+  }
+  &__12 {
+    @include flex-grid-col(12);
+  }
 }
 
 
 
 ul.hover {
-  @include list-hover();
+  @include list-hover(300px, $red);
+
+  ul li {
+    color: $labor-white;
+    padding: 10px;
+  }
 }
 
+.flex-row__multi .flex-grid__2 {
+  @include flex-grid-zed(6n);
+}

@@ -30,11 +30,11 @@
 ///
 @function calc-single-col-width() {
 
-    $gutter-width: calc-gutter-width();
-    $gutter-area:  ($gutter-width * ($total-cols - 1));
-    $remains:      (100 - $gutter-area);
+  $gutter-width: calc-gutter-width();
+  $gutter-area:  ($gutter-width * ($total-cols - 1));
+  $remains:      (100 - $gutter-area);
 
-    @return ( $remains / $total-cols );
+  @return ( $remains / $total-cols );
 
 }
 
@@ -56,8 +56,8 @@
   $gutter-width: calc-gutter-width($gutter-value);
 
   @if $calc {
-    $width: ( (100 / $total_cols) * $columns ) + %;
-    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );
+    $width: ((100 / $total-cols) * $columns) + '%';
+    $column-percentage: ($columns / $total-cols) * ($target-gutter / 1px);
     $column-offset: $target-gutter - $column-percentage;
 
     // Attrs
@@ -67,10 +67,10 @@
 
     // Mixin vars
     // $single: calc-single-col-width();
-    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );
+    $width: ((calc-single-col-width() * $columns) + ($gutter-width * ($columns - 1)));
 
     // Attrs
-    @return $width + %;
+    @return $width + '%';
 
   }
 }
