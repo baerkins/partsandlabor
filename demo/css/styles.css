@@ -69,6 +69,50 @@ h4 {
   letter-spacing: 2px;
   font-family: "Space Mono", monospace; }
 
+input {
+  padding: 15px;
+  font-family: "Space Mono", monospace;
+  display: inline-block;
+  color: #ff6868; }
+  input:invalid, input:focus:invalid {
+    background-color: #2bb2dd;
+    color: #fff; }
+    input:invalid ::placeholder, input:focus:invalid ::placeholder {
+      color: #fff; }
+
+button {
+  box-sizing: inherit;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: default;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  display: inline-block;
+  padding: 0;
+  appearance: button;
+  -webkit-appearance: button;
+  user-select: none;
+  text-decoration: none;
+  white-space: pre;
+  background-color: #ff6868;
+  color: #fff; }
+  button:hover, button:focus, button:active {
+    box-shadow: 0;
+    outline: none; }
+
+input, button {
+  padding: 0 20px;
+  border: 5px solid #ff6868;
+  height: 50px;
+  font-size: 16px;
+  margin-left: 0; }
+
+:invalid ::placeholder,
+:focus:invalid ::placeholder {
+  color: #fff; }
+
 html {
   font-size: 100%; }
 
@@ -322,33 +366,6 @@ section {
 
 .grid__shift-1 {
   margin-left: 33.80952%; }
-
-ul.hover {
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  ul.hover li {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    position: relative; }
-    ul.hover li ul {
-      background-color: #ff6868;
-      left: 0;
-      margin: 0;
-      max-height: 0;
-      min-width: 300px;
-      overflow: hidden;
-      padding-left: 0;
-      position: absolute;
-      top: 100%;
-      transition: max-height 0.35s ease;
-      z-index: 5; }
-    ul.hover li:hover > ul {
-      max-height: 500px; }
-  ul.hover ul li {
-    color: #fff;
-    padding: 10px; }
 
 .flex-row__multi .flex-grid__2:nth-child(6n+1) {
   margin-left: .1px; }

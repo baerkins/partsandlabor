@@ -63,8 +63,8 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin grid-zed($nth: 1) {
-
+@mixin grid-zed($nth: 1n) {
+  // sass-lint:disable
   &:nth-child(#{$nth}) {
     margin-right: 0;
   }
@@ -72,6 +72,7 @@
   &:nth-child(#{$nth}+1) {
     clear: left;
   }
+  // sass-lint:enable
 }
 
 
@@ -101,14 +102,14 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin grid-zed-reset($nth: 1, $gutter-value: $target-gutter) {
+@mixin grid-zed-reset($nth: 1n, $gutter-value: $target-gutter) {
 
   &:nth-child(#{$nth}) {
     @if $calc {
       margin-right: $gutter-value;
     } @else {
       $gutter-width: calc-gutter-width($gutter-value);
-      margin-right: $gutter-width * 1%;;
+      margin-right: $gutter-width * 1%;
     }
   }
 
@@ -119,18 +120,20 @@
 
 
 ///
-/// grid-col( $columns )
+/// grid-shift( $columns, $gutter-value )
 ///
 /// @param {integer} $columns - Number of columns to take up
 /// @param {string} $gutter-value - Width of gutter
 ///
 /// @example scss - Basic Usage Sass
-///   div {
-///     @include grid-col( 3 );
+///   .sidebar {
+///     @include grid-col( 4 );
 ///   }
 ///
-///   div {
-///     @include grid-col( 4, 15px );
+///   // Inset column by one column
+///   .main-content {
+///     @include grid-col( 7 );
+///     @include grid-shift( 1 );
 ///   }
 ///
 /// @since 1.0.0

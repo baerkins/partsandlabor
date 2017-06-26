@@ -53,53 +53,6 @@
   }
 }
 
-///
-/// List - Hover
-///
-/// @param {string} $sub-min-width [300px] - A valid min-width value
-/// @param {string} $sub-li-pad [10px] - A valid padding value
-/// @param {string} $sub-bkg [$labor-white] - A valid color value
-/// @param {string} $sub-transition-time [$standard-trans-time] - A valid transition time value
-///
-/// @example scss - Basic Usage Sass
-///   ul {
-///     @include list-hover( 5px 10px, #bada55, 0.4s );
-///  }
-///
-/// @since 1.0.0
-/// @group labor
-///
-@mixin list-hover($sub-min-width: 300px, $sub-bkg: $labor-white, $sub-transition-time: $standard-trans-time) {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-
-  li {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    position: relative;
-
-    ul {
-      background-color: $sub-bkg;
-      left: 0;
-      margin: 0;
-      max-height: 0;
-      min-width: $sub-min-width;
-      overflow: hidden;
-      padding-left: 0;
-      position: absolute;
-      top: 100%;
-      transition: max-height $sub-transition-time $standard-trans-timing-func;
-      z-index: 5;
-    }
-
-    &:hover > ul {
-      max-height: 500px;
-    }
-  }
-}
-
 //
 // ==-----> HEADERS <-----==
 //
@@ -117,13 +70,13 @@
 /// @group labor
 ///
 @mixin header-reset {
-  margin: 0;
-  padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
   font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  font-style: inherit;
+  padding: 0;
+  font-weight: inherit;
+  outline: 0;
   vertical-align: baseline;
 }

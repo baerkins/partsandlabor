@@ -65,9 +65,9 @@
 /// @since 1.0.0
 ///
 @mixin flex-row($align: false, $justify: space-between, $reverse: false, $wrap: true) {
-  width: 100%;
   display: flex;
   justify-content: $justify;
+  width: 100%;
 
   @if $align {
     align-items: $align;

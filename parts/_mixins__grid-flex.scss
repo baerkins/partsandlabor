@@ -20,9 +20,7 @@
 /// @group parts
 ///
 @mixin flex-grid-col($columns, $gutter-value: $target-gutter ) {
-
   width: calc-grid-col-width($columns, $gutter-value);
-
 }
 
 
@@ -48,7 +46,7 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin flex-grid-zed($nth: 1) {
+@mixin flex-grid-zed($nth: 1n) {
 
   &:nth-child(#{$nth}+1) {
     margin-left: .1px;
@@ -84,7 +82,7 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin flex-grid-zed-reset($nth: 1) {
+@mixin flex-grid-zed-reset($nth: 1n) {
 
   &:nth-child(#{$nth}+1) {
     margin-left: 0;

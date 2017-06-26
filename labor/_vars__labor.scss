@@ -3,13 +3,13 @@
 //
 /// Basic Systems Font stack
 /// @group labor
-$system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"  !default;
+$system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'  !default;
 /// Basic Sans Font stack
 /// @group labor
 $sans:         'Arial', $system-fonts, sans-serif !default;
 /// Basic Serif Font stack
 /// @group labor
-$serif:        TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif !default;
+$serif:        TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif !default;
 
 
 //

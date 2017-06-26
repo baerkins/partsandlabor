@@ -21,7 +21,7 @@
 /// @group labor
 ///
 @mixin button-reset {
-  box-sizing: content-box;
+  box-sizing: inherit;
   background: none;
   border: 0;
   color: inherit;

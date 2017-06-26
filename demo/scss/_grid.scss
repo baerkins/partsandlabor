@@ -176,17 +176,6 @@ $calc:          false;
   @include grid-shift(4);
 }
 
-
-
-ul.hover {
-  @include list-hover(300px, $red);
-
-  ul li {
-    color: $labor-white;
-    padding: 10px;
-  }
-}
-
 .flex-row__multi .flex-grid__2 {
   @include flex-grid-zed(6n);
 }
