@@ -31,7 +31,9 @@
 ///   }
 ///
 /// @link https://css-tricks.com/snippets/sass/px-to-em-functions/
+///
 /// @since 1.0.0
+/// @group labor
 ///
 @function em($pixels, $context: $em-base) {
 
@@ -53,6 +55,7 @@
 /// @param {int} $unit - Unti to convert
 ///
 /// @since 1.0.0
+/// @group labor
 ///
 @function rem($pixels, $context: $em-base) {
 
@@ -79,6 +82,9 @@
 ///
 /// @link https://css-tricks.com/snippets/sass/tint-shade-functions/
 ///
+/// @since 1.0.0
+/// @group labor
+///
 @function tint($color, $percentage) {
 
   @return mix($labor-white, $color, $percentage);
@@ -95,6 +101,9 @@
 /// @return {string} Color value
 ///
 /// @link https://css-tricks.com/snippets/sass/tint-shade-functions/
+///
+/// @since 1.0.0
+/// @group labor
 ///
 @function shade($color, $percentage) {
 

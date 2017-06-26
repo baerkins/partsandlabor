@@ -1,7 +1,7 @@
 $total-cols:    12;
 $target_width:  1400px;
 $target_gutter: 20px;
-$calc:          true;
+$calc:          false;
 
 * {
   box-sizing: border-box;
@@ -170,6 +170,10 @@ $calc:          true;
   &__12 {
     @include flex-grid-col(12);
   }
+}
+
+.grid__shift-1 {
+  @include grid-shift(4);
 }
 
 
