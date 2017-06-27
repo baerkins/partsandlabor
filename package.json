@@ -1,6 +1,6 @@
 {
   "name": "partsandlabor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Sass Utility Library",
   "main": "main.scss",
   "scripts": {
