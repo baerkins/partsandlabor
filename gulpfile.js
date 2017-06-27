@@ -17,15 +17,20 @@ var util          = require('gulp-util');
 var production    = args.production;
 
 
+/**
+ * Lint sass
+ *
+ */
 gulp.task('lint', function() {
   return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
     .pipe( lint() )
     .pipe( lint.format() )
-    .pipe( gulpif( production, lint.failOnError() ) )
+    // .pipe( gulpif( production, lint.failOnError() ) )
 });
 
+
 /**
- * Lint, build sass, check output size
+ * Build library sass
  *
  */
 gulp.task( 'build_sass', ['lint'], function () {
@@ -54,9 +59,17 @@ gulp.task('build_docs', function () {
 });
 
 
+/**
+ * Full build to ship
+ *
+ */
 gulp.task('build', sequence( ['build_sass', 'build_docs'] ) );
 
 
+/**
+ * Build out demo sass
+ *
+ */
 gulp.task('demo_sass', function () {
   return gulp.src('demo/scss/styles.scss')
   .pipe( sass().on( 'error', sass.logError ) )
@@ -65,13 +78,15 @@ gulp.task('demo_sass', function () {
 });
 
 
-
-
+/**
+ * Local server for demo build
+ *
+ */
 gulp.task('serve', function() {
   bSync.init( {
     server: "./demo"
   } );
-  gulp.watch( '**/*.scss', ['demo_sass'] );
+  gulp.watch( '**/*.scss', ['demo_sass', 'build_sass'] );
   gulp.watch( 'demo/*.html' ).on( 'change', bSync.reload );
 });
 
