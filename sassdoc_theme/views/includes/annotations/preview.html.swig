@@ -18,9 +18,7 @@
 <div class="item__code-wrapper">
   <pre class="item__code  language-scss"><code>${{ item.context.name }}: {{ item.context.value }}{% if item.context.scope !== "private" %} !{{ item.context.scope }}{% endif %};</code></pre>
 
-  {% if (item.type|lower).indexOf('color') > -1 and item.resolvedValue|is_color == true %}
-    <span class="color-preview--block" style="background: {{ item.resolvedValue }};"></span>
-  {% endif %}
+
 
   {% if basePath %}
     <a href="{{ basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="item__source-link" target="_blank">View source</a>

@@ -19,56 +19,46 @@
 
   {% include "includes/partials/header.html.swig" with project_title %}
 
+  <div class="container-fluid">
+    <div class="row">
 
-  {% for group_name, group in data.byGroupAndType %}
-    <section>
-        {# Retrieve group alias if any (else group name) #}
-        <h1>{{ groups[group_name] }}</h1>
+      {# Sidebar #}
+      <aside class="sidebar" role="nav">
+        {% include "includes/partials/sidebar.html.swig" %}
+      </aside>
 
-        {# 2. Loop over the types in the current group #}
-        {% for type, items in group %}
+      {# Main container #}
+      <article class="main" role="main">
 
-        {# If items to be displayed in type #}
-        {% if items.length > 0 %}
+        {# Include description #}
+        {% include "includes/partials/description.html.swig" %}
+
+        {% for group_name, group in data.byGroupAndType %}
         <section>
-            <h2>{{ type }}</h2>
+            {# Retrieve group alias if any (else group name) #}
+            <h1>{{ groups[group_name] }}</h1>
 
-            {# 3. Loop over the items in the current type #}
-            {% for item in items %}
+            {# 2. Loop over the types in the current group #}
+            {% for type, items in group %}
 
-              {# At this point it is up to you to display whatever you want from your items. #}
-              <h3>{{ item.context.name }}</h3>
-              {% if item.description.length > 0 %}
-              <p>{{ item.description | safe }}</p>
-              {% endif %}
-              {% if item.context.length > 0 %}
-              <pre class="language-css">{{ item.context | safe }}</pre>
-              {% endif %}
-              <pre class="language-html">{{ item | json_encode }}</pre>
+            {# If items to be displayed in type #}
+            {% if items.length > 0 %}
+            <section>
+              <h2>{{ type }}</h2>
+              {# 3. Loop over the items in the current type #}
+              {% for item in items %}
+                {% include "includes/partials/item.html.swig" with item %}
+              {% endfor %}
+            </section>
+            {% endif %}
 
             {% endfor %}
+
         </section>
-        {% endif %}
-
         {% endfor %}
-
-    </section>
-  {% endfor %}
-
-  {# Sidebar #}
-  <aside class="sidebar" role="nav">
-    {% include "includes/partials/sidebar.html.swig" %}
-  </aside>
-
-  {# Main container #}
-  <article class="main" role="main">
-
-    {# Include description #}
-    {% include "includes/partials/description.html.swig" %}
-
-    {% block content %}{% endblock %}
-
-  </article>
+      </article>
+    </div>
+  </div>
 
   {# Include footer #}
   {% include "includes/partials/footer.html.swig" with project_title %}

@@ -3,7 +3,7 @@
     <span class="item__access">[{{ item.access }}]</span>
   {% endif %}
 
-  <a class="item__name" href="#{{ item.context.type }}-{{ item.context.name }}">{{ item.context.name }}</a>
+  {{ item.context.name }}
 
   {% if display.alias and item.aliased.length > 0 %}
     <span class="item__aliased">(aliased as
@@ -19,5 +19,5 @@
 </h3>
 
 {% if item.since.length == 1 %}
-  <span class="item__since">Since {{ item.since[0].version }}{% if item.since[0].description %} &mdash; {{ item.since[0].description }}{% endif %}</span>
+  <p class="item__since">Since {{ item.since[0].version }}{% if item.since[0].description %} &mdash; {{ item.since[0].description }}{% endif %}</p>
 {% endif %}

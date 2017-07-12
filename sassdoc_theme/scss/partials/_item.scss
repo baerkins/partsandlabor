@@ -1,0 +1,34 @@
+.item {
+
+  &__heading {
+    font-family: $serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__since {
+    color: lighten($black, 20%);
+  }
+
+  &__description {
+    font-family: $serif;
+  }
+
+  &__sub-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  & + & {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid $brand-color;
+  }
+
+  pre + pre {
+    margin-top: 15px;
+  }
+}

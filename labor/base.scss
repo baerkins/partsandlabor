@@ -3,11 +3,12 @@
 //
 
 // Vars
-@import 'labor-vars';
+@import 'vars__labor';
 
 // Functions
-@import 'functions-utilities';
+@import 'functions__utilities';
 
 // Mixins
-@import 'mixins-utilities';
-@import 'mixins-typography';
+@import 'mixins__utilities';
+@import 'mixins__block-elements';
+@import 'mixins__inline-elements';

@@ -17,3 +17,5 @@
 {% endif %}
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/prism/1.6.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/prism/1.6.0/components/prism-scss.min.js"></script>
+<script src="https://cdn.jsdelivr.net/prism/1.6.0/components/prism-json.min.js"></script>

@@ -28,7 +28,7 @@
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin break($size, $attr: min-width, $media: only screen ) {
+@mixin break($size, $attr: min-width, $media: only screen) {
   @media #{$media} and (#{$attr}: #{$size}) {
     @content;
   }
@@ -49,12 +49,38 @@
 /// @since 1.0.0
 ///
 @mixin row {
-  width: 100%;
   @include clearfix;
+  width: 100%;
+}
 
-  @if $calc {
-    margin-right: $target-gutter;
+///
+/// Create a wrapper for a row of flexbox grid elements
+///
+/// @example scss - Basic Usage Sass
+///   .flow-row {
+///     @include flex-row;
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
+@mixin flex-row($align: false, $justify: space-between, $reverse: false, $wrap: true) {
+  display: flex;
+  justify-content: $justify;
+  width: 100%;
+
+  @if $align {
+    align-items: $align;
   }
+
+  @if $reverse {
+    flex-direction: row-reverse;
+  }
+
+  @if $wrap {
+    flex-wrap: wrap;
+  }
+
 }
 
 ///
@@ -83,7 +109,7 @@
     @each $bp, $bpc in $active-breakpoints {
 
       @include break($bp) {
-        width: $bpc;
+        max-width: $bpc;
       }
     }
   }

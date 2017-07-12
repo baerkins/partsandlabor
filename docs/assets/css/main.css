@@ -63,19 +63,19 @@ body {
   width: 90%; }
   @media only screen and (min-width: 520px) {
     .container {
-      width: 480px; } }
+      max-width: 480px; } }
   @media only screen and (min-width: 740px) {
     .container {
-      width: 700px; } }
+      max-width: 700px; } }
   @media only screen and (min-width: 960px) {
     .container {
-      width: 920px; } }
+      max-width: 920px; } }
   @media only screen and (min-width: 1240px) {
     .container {
-      width: 1200px; } }
+      max-width: 1200px; } }
   @media only screen and (min-width: 1540px) {
     .container {
-      width: 1500px; } }
+      max-width: 1500px; } }
 
 .container-fluid {
   margin-left: auto;
@@ -84,10 +84,27 @@ body {
 
 .row {
   width: 100%; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
+  .row::after {
+    clear: both;
+    content: '';
+    display: table; }
+
+@media only screen and (min-width: 960px) {
+  .sidebar {
+    margin-right: 1.66667%;
+    width: 15.27778%;
+    float: left; }
+    .sidebar:last-child {
+      margin-right: 0; } }
+
+@media only screen and (min-width: 960px) {
+  .main {
+    margin-right: 1.66667%;
+    width: 74.58333%;
+    float: left;
+    margin-left: 8.47222%; }
+    .main:last-child {
+      margin-right: 0; } }
 
 .header {
   padding: 20px 0;
@@ -110,6 +127,32 @@ body {
       float: left; }
       .header__content:last-child {
         margin-right: 0; } }
+
+.item__heading {
+  font-family: "Brawler", serif;
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+.item__since {
+  color: #545454; }
+
+.item__description {
+  font-family: "Brawler", serif; }
+
+.item__sub-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 15px; }
+
+.item + .item {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #D84315; }
+
+.item pre + pre {
+  margin-top: 15px; }
 
 /**
  * Material prism theme by Mitch Jackson (http://mitchelljackson.co.uk)

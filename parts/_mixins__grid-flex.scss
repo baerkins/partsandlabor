@@ -1,0 +1,90 @@
+// Flex Grid Mixins
+// ================
+
+///
+/// flex-grid-col( $columns )
+///
+/// @param {integer} $columns - Number of columns to take up
+/// @param {string} $gutter-value - Width of gutter
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     @include flex-grid-col( 3 );
+///   }
+///
+///   div {
+///     @include flex-grid-col( 4, 10px );
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin flex-grid-col($columns, $gutter-value: $target-gutter ) {
+  width: calc-grid-col-width($columns, $gutter-value);
+}
+
+
+///
+/// Break flex items to a new line. Not always neccessary, but
+/// useful in some circumstances, such as a row of two column
+/// elements in a twelve column grid that should break after
+/// six elements.
+///
+/// @param {string} $nth [1] - Target `nth-child`
+///
+/// @example scss - Basic Usage Sass
+///
+///   /* Span 2 columns in 12 column grid */
+///   .post {
+///
+///     @include break($medium) {
+///       @include flex-grid-col(2);
+///       @include flex-grid-zed(6n);
+///     }
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin flex-grid-zed($nth: 1n) {
+
+  &:nth-child(#{$nth}+1) {
+    margin-left: .1px;
+  }
+}
+
+
+///
+/// Break flex items to a new line. Not always neccessary, but
+/// useful in some circumstances, such as a row of two column
+/// elements in a twelve column grid that should break after
+/// six elements.
+///
+/// @param {string} $nth [1] - Target `nth-child`
+///
+/// @example scss - Basic Usage Sass
+///
+///   .post {
+///
+///     /* Span 2 columns in 12 column grid */
+///     @include break($small) {
+///       @include flex-grid-col(2);
+///       @include flex-grid-zed(6n);
+///     }
+///
+///     /* Span 3 columns in 12 column grid */
+///     @include break($medium) {
+///       @include flex-grid-zed-reset(6n);
+///       @include flex-grid-col(3);
+///     }
+///   }
+///
+/// @since 1.0.0
+/// @group parts
+///
+@mixin flex-grid-zed-reset($nth: 1n) {
+
+  &:nth-child(#{$nth}+1) {
+    margin-left: 0;
+  }
+}

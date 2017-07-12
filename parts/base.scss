@@ -1,10 +1,11 @@
 // PARTS
 // -----
 
-@import 'parts-vars';
+@import 'vars__parts';
 
 // Grid Parts
-@import 'grid-functions';
-@import 'scaffolding';
-@import 'grid-standard';
+@import 'functions__grid';
+@import 'mixins__grid-scaffolding';
+@import 'mixins__grid-standard';
+@import 'mixins__grid-flex';
 

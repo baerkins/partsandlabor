@@ -9,3 +9,18 @@
 .row {
   @include row();
 }
+
+.sidebar {
+
+  @include break($medium) {
+    @include grid-col(2);
+  }
+}
+
+.main {
+
+  @include break($medium) {
+    @include grid-col(9);
+    @include grid-shift(1);
+  }
+}
