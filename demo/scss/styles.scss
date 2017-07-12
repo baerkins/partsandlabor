@@ -25,12 +25,14 @@ html {
 
 body {
   font-family: $mono;
-  font-size: rem(20);
+  font-size: rem(18);
   line-height: 1.5;
 }
 
 p {
   margin-bottom: 10px;
+  font-family: $sans;
+  font-weight: 300;
 }
 
 section {
