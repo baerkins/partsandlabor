@@ -15,7 +15,8 @@
 
 <title>Name - v0.1.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,500,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Brawler|Droid+Sans+Mono|Source+Sans+Pro:400,600" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width">
 <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
 
@@ -33,39 +34,1223 @@
 
 </head>
 <body>
-HELLO
+
+  <header class="header" role="banner">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="header__logo">
+        <h1 class="header__logo-type">Parts and Labor</h1>
+      </div>
+
+      <div class="header__content">
+        <div class="header__search">
+          <label for="js-search-input" class="visually-hidden">Search</label>
+          <div class="header__search-input" id="js-search">
+            <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+            <i class="fa fa-search"></i>
+            <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+  
+    <section>
+        
+        <h1>labor</h1>
+
+        
+        
+
+        
+        
+        <section>
+            <h2>variable</h2>
+
+            
+            
+
+              
+              <h3>standard-trans-time</h3>
+              
+              <p><p>Time for <code>standard-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Time for &lt;code&gt;standard-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:5,&quot;end&quot;:6},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-time&quot;,&quot;value&quot;:&quot;.35s&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:7,&quot;end&quot;:7}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Standard Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;standard-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:16,&quot;end&quot;:18}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>standard-trans-timing-func</h3>
+              
+              <p><p>Timing function for <code>standard-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Timing function for &lt;code&gt;standard-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:8,&quot;end&quot;:9},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-timing-func&quot;,&quot;value&quot;:&quot;ease&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:10,&quot;end&quot;:10}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;List - Hover&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;list-hover&quot;,&quot;code&quot;:&quot;\n  list-style: none;\n  margin: 0;\n  padding-left: 0;\n\n  li {\n    display: block;\n    padding-left: 0;\n    padding-right: 0;\n    position: relative;\n\n    ul {\n      background-color: $sub-bkg;\n      left: 0;\n      margin: 0;\n      max-height: 0;\n      min-width: $sub-min-width;\n      overflow: hidden;\n      padding-left: 0;\n      position: absolute;\n      top: 100%;\n      transition: max-height $sub-transition-time $standard-trans-timing-func;\n      z-index: 5;\n    }\n\n    li {\n      padding: $sub-li-pad;\n    }\n\n    &amp;:hover &gt; ul {\n      max-height: 500px;\n    }\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:70,&quot;end&quot;:103}}},{&quot;description&quot;:&quot;&lt;p&gt;Standard Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;standard-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:16,&quot;end&quot;:18}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>standard-trans-time-delay</h3>
+              
+              <p><p>Time delay for <code>standard-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Time delay for &lt;code&gt;standard-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:11,&quot;end&quot;:12},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-time-delay&quot;,&quot;value&quot;:&quot;0&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:13,&quot;end&quot;:13}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Standard Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;standard-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:16,&quot;end&quot;:18}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>long-trans-time</h3>
+              
+              <p><p>Time for <code>long-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Time for &lt;code&gt;long-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:14,&quot;end&quot;:15},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-time&quot;,&quot;value&quot;:&quot;.35s&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:16,&quot;end&quot;:16}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Long Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;long-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:33,&quot;end&quot;:35}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>long-trans-timing-func</h3>
+              
+              <p><p>Timing function for <code>long-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Timing function for &lt;code&gt;long-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:17,&quot;end&quot;:18},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-timing-func&quot;,&quot;value&quot;:&quot;ease&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:19,&quot;end&quot;:19}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Long Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;long-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:33,&quot;end&quot;:35}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>long-trans-time-delay</h3>
+              
+              <p><p>Time delay for <code>long-trans</code> mixin</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Time delay for &lt;code&gt;long-trans&lt;/code&gt; mixin&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:20,&quot;end&quot;:21},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-time-delay&quot;,&quot;value&quot;:&quot;0&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:22}},&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_labor-vars.scss&quot;,&quot;name&quot;:&quot;_labor-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Long Transition&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;long-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:33,&quot;end&quot;:35}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+        
+        
+        <section>
+            <h2>mixin</h2>
+
+            
+            
+
+              
+              <h3>list-inline</h3>
+              
+              <p><p>List - Style inline</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;List - Style inline&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:6,&quot;end&quot;:17},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;list-inline&quot;,&quot;code&quot;:&quot;\n  margin: 0;\n  padding-left: 0;\n\n  &gt; li {\n    display: inline-block;\n    padding-left: 0;\n    padding-right: 0;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:18,&quot;end&quot;:27}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; ul {\n   @include list-inline();\n   margin-bottom: 10px;\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-typography.scss&quot;,&quot;name&quot;:&quot;_mixins-typography.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>list-unstyled</h3>
+              
+              <p><p>List - Style inline</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;List - Style inline&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:30,&quot;end&quot;:41},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;list-unstyled&quot;,&quot;code&quot;:&quot;\n  list-style: none;\n  margin: 0;\n  padding-left: 0;\n\n  &gt; li {\n    display: block;\n    padding-left: 0;\n    padding-right: 0;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:42,&quot;end&quot;:52}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; ul {\n   @include list-inline();\n   margin-bottom: 10px;\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-typography.scss&quot;,&quot;name&quot;:&quot;_mixins-typography.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>list-hover</h3>
+              
+              <p><p>List - Hover</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;List - Hover&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:54,&quot;end&quot;:69},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;list-hover&quot;,&quot;code&quot;:&quot;\n  list-style: none;\n  margin: 0;\n  padding-left: 0;\n\n  li {\n    display: block;\n    padding-left: 0;\n    padding-right: 0;\n    position: relative;\n\n    ul {\n      background-color: $sub-bkg;\n      left: 0;\n      margin: 0;\n      max-height: 0;\n      min-width: $sub-min-width;\n      overflow: hidden;\n      padding-left: 0;\n      position: absolute;\n      top: 100%;\n      transition: max-height $sub-transition-time $standard-trans-timing-func;\n      z-index: 5;\n    }\n\n    li {\n      padding: $sub-li-pad;\n    }\n\n    &amp;:hover &gt; ul {\n      max-height: 500px;\n    }\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:70,&quot;end&quot;:103}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;sub-min-width&quot;,&quot;default&quot;:&quot;300px&quot;,&quot;description&quot;:&quot;&lt;p&gt;A valid min-width value&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;sub-li-pad&quot;,&quot;default&quot;:&quot;10px&quot;,&quot;description&quot;:&quot;&lt;p&gt;A valid padding value&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;sub-bkg&quot;,&quot;default&quot;:&quot;$labor-white&quot;,&quot;description&quot;:&quot;&lt;p&gt;A valid color value&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;sub-transition-time&quot;,&quot;default&quot;:&quot;$standard-trans-time&quot;,&quot;description&quot;:&quot;&lt;p&gt;A valid transition time value&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; ul {\n   @include list-hover( 5px 10px, #bada55, 0.4s );\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-timing-func&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-typography.scss&quot;,&quot;name&quot;:&quot;_mixins-typography.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>standard-trans</h3>
+              
+              <p><p>Standard Transition</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Standard Transition&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:3,&quot;end&quot;:15},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;standard-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:16,&quot;end&quot;:18}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;attr&quot;,&quot;default&quot;:&quot;all&quot;,&quot;description&quot;:&quot;&lt;p&gt;Attribute to be transitioned&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;a {\n  @include standard-trans();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-time&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-timing-func&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;standard-trans-time-delay&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>long-trans</h3>
+              
+              <p><p>Long Transition</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Long Transition&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:20,&quot;end&quot;:32},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;long-trans&quot;,&quot;code&quot;:&quot;\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n&quot;,&quot;line&quot;:{&quot;start&quot;:33,&quot;end&quot;:35}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;attr&quot;,&quot;default&quot;:&quot;all&quot;,&quot;description&quot;:&quot;&lt;p&gt;Attribute to be transitioned&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;a {\n  @include long-trans();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-time&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-timing-func&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;long-trans-time-delay&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>clearfix</h3>
+              
+              <p><p>Clearfix - your run of the mill modern clearfix</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Clearfix - your run of the mill modern clearfix&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:40,&quot;end&quot;:52},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;clearfix&quot;,&quot;code&quot;:&quot;\n\n  &amp;:after {\n    content: \&quot;\&quot;;\n    display: table;\n    clear: both;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:53,&quot;end&quot;:60}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.float-container {\n  @include long-trans();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;link&quot;:[{&quot;url&quot;:&quot;https://css-tricks.com/snippets/css/clear-fix/&quot;,&quot;caption&quot;:&quot;&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Create a wrapper for a row of grid elements&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;row&quot;,&quot;code&quot;:&quot;\n  width: 100%;\n  @include clearfix;\n\n  @if $calc {\n    margin-right: $target-gutter;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:51,&quot;end&quot;:58}}}],&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>cover</h3>
+              
+              <p><p>Cover relative parent</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Cover relative parent&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:62,&quot;end&quot;:72},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;cover&quot;,&quot;code&quot;:&quot;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n&quot;,&quot;line&quot;:{&quot;start&quot;:73,&quot;end&quot;:79}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.cover {\n  @include cover();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>center</h3>
+              
+              <p><p>Centers item in relative parent</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Centers item in relative parent&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:81,&quot;end&quot;:98},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;center&quot;,&quot;code&quot;:&quot;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: $transform;\n&quot;,&quot;line&quot;:{&quot;start&quot;:99,&quot;end&quot;:104}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;transform&quot;,&quot;default&quot;:&quot;translate(-50%,-50%)&quot;,&quot;description&quot;:&quot;&lt;p&gt;transform property&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.centered-element {\n  @include center();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.centered-element-with-rotate {\n  @include center( translate3d(-50%,-50%,0) scale(45deg) );\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>visually-hidden</h3>
+              
+              <p><p>Hide an element visually, but allow access to screen readers</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Hide an element visually, but allow access to screen readers&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:106,&quot;end&quot;:118},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;visually-hidden&quot;,&quot;code&quot;:&quot;\n  clip: rect(1px 1px 1px 1px);\n  clip: rect(1px, 1px, 1px, 1px);\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  white-space: nowrap;\n  width: 1px;\n&quot;,&quot;line&quot;:{&quot;start&quot;:119,&quot;end&quot;:127}},&quot;link&quot;:[{&quot;url&quot;:&quot;https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.tpuoch56u&quot;,&quot;caption&quot;:&quot;&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.screen-reader-text {\n  @include visually-hidden();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>bkg-cover</h3>
+              
+              <p><p>Fill background with image</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Fill background with image&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:129,&quot;end&quot;:142},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;bkg-cover&quot;,&quot;code&quot;:&quot;\n  background-position: $pos;\n  background-repeat: no-repeat;\n  background-size: cover;\n&quot;,&quot;line&quot;:{&quot;start&quot;:143,&quot;end&quot;:147}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;pos&quot;,&quot;default&quot;:&quot;center&quot;,&quot;description&quot;:&quot;&lt;p&gt;A valid background position&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.fill-image {\n  background-image: url(&#39;../img/cool-image.jpg&#39;);\n  @include bkg-cover();\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>placeholder</h3>
+              
+              <p><p>Placeholder - use within input or on its own for global styles</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Placeholder - use within input or on its own for global styles&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:157,&quot;end&quot;:169},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;placeholder&quot;,&quot;code&quot;:&quot;\n  ::-webkit-input-placeholder {@content}\n  :-moz-placeholder           {@content}\n  ::-moz-placeholder          {@content}\n  :-ms-input-placeholder      {@content}\n&quot;,&quot;line&quot;:{&quot;start&quot;:170,&quot;end&quot;:175}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; input {\n   @include placeholder {\n     color: #bada55;\n   }\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;content&quot;:&quot;&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>valid</h3>
+              
+              <p><p>Valid - for styling valid form fields</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Valid - for styling valid form fields&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:177,&quot;end&quot;:189},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;valid&quot;,&quot;code&quot;:&quot;\n  &amp;:valid,\n  &amp;:empty:valid,\n  &amp;:focus:empty:valid {\n    @content;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:190,&quot;end&quot;:196}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; input {\n   @include valid {\n     border: 2px solid #bada55;\n   }\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;content&quot;:&quot;&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>invalid</h3>
+              
+              <p><p>Invalid - for styling invalid form fields</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Invalid - for styling invalid form fields&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:198,&quot;end&quot;:210},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;invalid&quot;,&quot;code&quot;:&quot;\n  &amp;:invalid,\n  &amp;:focus:invalid {\n    @content;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:211,&quot;end&quot;:216}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot; input {\n   @include invalid {\n     border: 2px solid #badbad;\n   }\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;content&quot;:&quot;&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+
+              
+              <h3>font-face</h3>
+              
+              <p><p>Font Face</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Font Face&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:220,&quot;end&quot;:238},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;font-face&quot;,&quot;code&quot;:&quot;\n\n  $src: null;\n\n  $extmods: (\n    eot: \&quot;?\&quot;,\n    svg: \&quot;#\&quot; + str-replace($name, \&quot; \&quot;, \&quot;_\&quot;)\n  );\n\n  $formats: (\n    otf: \&quot;opentype\&quot;,\n    ttf: \&quot;truetype\&quot;\n  );\n\n  @each $ext in $exts {\n    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);\n    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);\n    $src: append($src, url(quote($path + \&quot;.\&quot; + $extmod)) format(quote($format)), comma);\n  }\n\n  @font-face {\n    font-family: quote($name);\n    font-style: $style;\n    font-weight: $weight;\n    src: $src;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:239,&quot;end&quot;:265}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;name&quot;,&quot;description&quot;:&quot;&lt;p&gt;Name for font-family&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;path&quot;,&quot;description&quot;:&quot;&lt;p&gt;Relative path to files from output css sheet&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;weight&quot;,&quot;default&quot;:&quot;normal&quot;,&quot;description&quot;:&quot;&lt;p&gt;&lt;code&gt;font-weight&lt;/code&gt;&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;weight&quot;,&quot;default&quot;:&quot;normal&quot;,&quot;description&quot;:&quot;&lt;p&gt;&#39;font-style&#39;&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;exts&quot;,&quot;default&quot;:&quot;eot woff2 woff ttf svg&quot;,&quot;description&quot;:&quot;&lt;p&gt;List of file extensions to include, sep with a space&lt;/p&gt;\n&quot;}],&quot;link&quot;:[{&quot;url&quot;:&quot;https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6&quot;,&quot;caption&quot;:&quot;&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;@include font-face { Circular, ../fonts/circular-book }\n@include font-face { Circular, ../fonts/circular-bold, 600 }\n@include font-face { Circular, ../fonts/circular-book-italic, 400, italic }&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;labor&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;str-replace&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_mixins-utilities.scss&quot;,&quot;name&quot;:&quot;_mixins-utilities.scss&quot;},&quot;groupName&quot;:{&quot;labor&quot;:&quot;labor&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+    </section>
+  
+    <section>
+        
+        <h1>parts</h1>
+
+        
+        
+
+        
+        
+        <section>
+            <h2>function</h2>
+
+            
+            
+
+              
+              <h3>calc-gutter-width</h3>
+              
+              <p><p>calc-gutter-width()
+Calculate gutter width as a percentage based on target value</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;calc-gutter-width()\nCalculate gutter width as a percentage based on target value&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:4,&quot;end&quot;:11},&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-gutter-width&quot;,&quot;code&quot;:&quot;\n\n  // Get target gutter percentage\n  @return ( ( $gutter-width / 1px ) / ( $target-width  / 1px) ) * 100;\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:12,&quot;end&quot;:17}},&quot;return&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;description&quot;:&quot;&lt;p&gt;value of percentage ( add &lt;code&gt;+ %&lt;/code&gt;)&lt;/p&gt;\n&quot;},&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-width&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_grid-functions.scss&quot;,&quot;name&quot;:&quot;_grid-functions.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;calc-single-col-width()\nCalculate single column width&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;,&quot;code&quot;:&quot;\n\n    $gutter-width: calc-gutter-width();\n    $gutter-area: ( $gutter-width * ( $total-cols - 1 ) );\n    $remains: ( 100 - $gutter-area );\n\n    @return ( $remains / $total-cols );\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:29,&quot;end&quot;:37}}},{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>calc-single-col-width</h3>
+              
+              <p><p>calc-single-col-width()
+Calculate single column width</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;calc-single-col-width()\nCalculate single column width&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:20,&quot;end&quot;:28},&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;,&quot;code&quot;:&quot;\n\n    $gutter-width: calc-gutter-width();\n    $gutter-area: ( $gutter-width * ( $total-cols - 1 ) );\n    $remains: ( 100 - $gutter-area );\n\n    @return ( $remains / $total-cols );\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:29,&quot;end&quot;:37}},&quot;return&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;description&quot;:&quot;&lt;p&gt;value of percentage ( add &lt;code&gt;+ %&lt;/code&gt;)&lt;/p&gt;\n&quot;},&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-gutter-width&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;total-cols&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;total-cols&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_grid-functions.scss&quot;,&quot;name&quot;:&quot;_grid-functions.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}},{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+        
+        
+        <section>
+            <h2>mixin</h2>
+
+            
+            
+
+              
+              <h3>grid-col</h3>
+              
+              <p><p>grid-col( $columns )</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:4,&quot;end&quot;:21},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;integer&quot;,&quot;name&quot;:&quot;columns&quot;,&quot;description&quot;:&quot;&lt;p&gt;Number of columns to take up&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;gutter-value&quot;,&quot;description&quot;:&quot;&lt;p&gt;Width of gutter&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;div {\n  @include grid-col( 3 );\n}\n\ndiv {\n  @include grid-col( 4, 15px );\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-gutter-width&quot;},{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;},{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;calc&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-gutter&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-gutter&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_grid-standard.scss&quot;,&quot;name&quot;:&quot;_grid-standard.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>break</h3>
+              
+              <p><p>Create a new breakpoint. Use in conjunction with breakpoint variables.</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Create a new breakpoint. Use in conjunction with breakpoint variables.&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:4,&quot;end&quot;:30},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;break&quot;,&quot;code&quot;:&quot;\n  @media #{$media} and (#{$attr}: #{$size}) {\n    @content;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:31,&quot;end&quot;:35}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;size&quot;,&quot;description&quot;:&quot;&lt;p&gt;Breakpoint size&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;attr&quot;,&quot;default&quot;:&quot;min-width&quot;,&quot;description&quot;:&quot;&lt;p&gt;Media break attribute (&lt;code&gt;min-width&lt;/code&gt; or &lt;code&gt;max-width&lt;/code&gt;)&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;media&quot;,&quot;default&quot;:&quot;only screen&quot;,&quot;description&quot;:&quot;&lt;p&gt;Media type&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;div {\n  font-size: 12px;\n\n  @include break($medium) {\n    font-size: 16px;\n  }\n}\n\ndiv {\n  font-size: 16px;\n\n  @include break($medium, max-width) {\n    font-size: 10px;\n  }\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;content&quot;:&quot;&quot;,&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_scaffolding.scss&quot;,&quot;name&quot;:&quot;_scaffolding.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Create a container for content&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;base-container&quot;,&quot;code&quot;:&quot;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n\n    @each $bp, $bpc in $active-breakpoints {\n\n      @include break($bp) {\n        width: $bpc;\n      }\n    }\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:76,&quot;end&quot;:90}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>row</h3>
+              
+              <p><p>Create a wrapper for a row of grid elements</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Create a wrapper for a row of grid elements&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:40,&quot;end&quot;:50},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;row&quot;,&quot;code&quot;:&quot;\n  width: 100%;\n  @include clearfix;\n\n  @if $calc {\n    margin-right: $target-gutter;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:51,&quot;end&quot;:58}},&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.row {\n  @include row;\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;clearfix&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;calc&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-gutter&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_scaffolding.scss&quot;,&quot;name&quot;:&quot;_scaffolding.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>base-container</h3>
+              
+              <p><p>Create a container for content</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Create a container for content&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:60,&quot;end&quot;:75},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;base-container&quot;,&quot;code&quot;:&quot;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n\n    @each $bp, $bpc in $active-breakpoints {\n\n      @include break($bp) {\n        width: $bpc;\n      }\n    }\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:76,&quot;end&quot;:90}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;width&quot;,&quot;default&quot;:&quot;$fluid-container&quot;,&quot;description&quot;:&quot;&lt;p&gt;Width of the container&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;bool&quot;,&quot;name&quot;:&quot;fluid&quot;,&quot;default&quot;:&quot;true&quot;,&quot;description&quot;:&quot;&lt;p&gt;Whether the container should always\nbe fluid or be adaptive. If false, max-widths will be set according\nto &lt;code&gt;$active-breakpoints&lt;/code&gt;&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.container {\n  @include container;\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;group&quot;:[&quot;parts&quot;],&quot;since&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;require&quot;:[{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;break&quot;},{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;active-breakpoints&quot;}],&quot;file&quot;:{&quot;path&quot;:&quot;_scaffolding.scss&quot;,&quot;name&quot;:&quot;_scaffolding.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+        
+        
+        <section>
+            <h2>variable</h2>
+
+            
+            
+
+              
+              <h3>total-cols</h3>
+              
+              <p><p>Total number of columns in grid</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Total number of columns in grid&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:4,&quot;end&quot;:6},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;total-cols&quot;,&quot;value&quot;:&quot;12&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:7,&quot;end&quot;:7}},&quot;type&quot;:&quot;Integer&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;calc-single-col-width()\nCalculate single column width&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;,&quot;code&quot;:&quot;\n\n    $gutter-width: calc-gutter-width();\n    $gutter-area: ( $gutter-width * ( $total-cols - 1 ) );\n    $remains: ( 100 - $gutter-area );\n\n    @return ( $remains / $total-cols );\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:29,&quot;end&quot;:37}}},{&quot;description&quot;:&quot;&lt;p&gt;calc-single-col-width()\nCalculate single column width&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-single-col-width&quot;,&quot;code&quot;:&quot;\n\n    $gutter-width: calc-gutter-width();\n    $gutter-area: ( $gutter-width * ( $total-cols - 1 ) );\n    $remains: ( 100 - $gutter-area );\n\n    @return ( $remains / $total-cols );\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:29,&quot;end&quot;:37}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>target-width</h3>
+              
+              <p><p>Target width the grid should account for</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Target width the grid should account for&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:9,&quot;end&quot;:11},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-width&quot;,&quot;value&quot;:&quot;1200px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:12,&quot;end&quot;:12}},&quot;type&quot;:&quot;String&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;calc-gutter-width()\nCalculate gutter width as a percentage based on target value&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;calc-gutter-width&quot;,&quot;code&quot;:&quot;\n\n  // Get target gutter percentage\n  @return ( ( $gutter-width / 1px ) / ( $target-width  / 1px) ) * 100;\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:12,&quot;end&quot;:17}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>target-gutter</h3>
+              
+              <p><p>Target gutter width the grid should account for</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Target gutter width the grid should account for&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:14,&quot;end&quot;:16},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;target-gutter&quot;,&quot;value&quot;:&quot;20px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:17,&quot;end&quot;:17}},&quot;type&quot;:&quot;String&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}},{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}},{&quot;description&quot;:&quot;&lt;p&gt;Create a wrapper for a row of grid elements&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;row&quot;,&quot;code&quot;:&quot;\n  width: 100%;\n  @include clearfix;\n\n  @if $calc {\n    margin-right: $target-gutter;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:51,&quot;end&quot;:58}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>calc</h3>
+              
+              <p><p>Whether the gutter should be a percentage or a hard value (uses CSS <code>calc</code> value)</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Whether the gutter should be a percentage or a hard value (uses CSS &lt;code&gt;calc&lt;/code&gt; value)&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:19,&quot;end&quot;:21},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;calc&quot;,&quot;value&quot;:&quot;false&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:22}},&quot;type&quot;:&quot;Boolean&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;grid-col( $columns )&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-col&quot;,&quot;code&quot;:&quot;\n\n  $gutter-width: calc-gutter-width($gutter-value);\n\n  @if $calc {\n    $width: ( (100 / $total_cols) * $columns ) + %;\n    $column-percentage: ($columns / $total_cols) * ( $target-gutter / 1px );\n    $column-offset: $target-gutter - $column-percentage;\n\n    // Attrs\n    margin-right: $gutter-value;\n    width: calc(#{$width} - #{$column-offset});\n\n  } @else {\n\n    // Mixin vars\n    // $single: calc-single-col-width();\n    $width: ( ( calc-single-col-width() * $columns ) + ( $gutter-width * ( $columns - 1 ) ) );\n\n    // Attrs\n    margin-right: $gutter-width + %;\n    width: $width + %;\n\n  }\n\n  // Attrs\n  float: left;\n\n  &amp;:last-child {\n    margin-right: 0;\n  }\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:22,&quot;end&quot;:54}}},{&quot;description&quot;:&quot;&lt;p&gt;Create a wrapper for a row of grid elements&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;row&quot;,&quot;code&quot;:&quot;\n  width: 100%;\n  @include clearfix;\n\n  @if $calc {\n    margin-right: $target-gutter;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:51,&quot;end&quot;:58}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>fluid-container</h3>
+              
+              <p><p>Width of fluid container, percentage</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Width of fluid container, percentage&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:28,&quot;end&quot;:30},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;fluid-container&quot;,&quot;value&quot;:&quot;90%&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:31,&quot;end&quot;:31}},&quot;type&quot;:&quot;String (percentage)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>xsmall-container</h3>
+              
+              <p><p>Container width at breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Container width at breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:33,&quot;end&quot;:35},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;xsmall-container&quot;,&quot;value&quot;:&quot;480px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:36,&quot;end&quot;:36}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>small-container</h3>
+              
+              <p><p>Container width at breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Container width at breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:38,&quot;end&quot;:40},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;small-container&quot;,&quot;value&quot;:&quot;700px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:41,&quot;end&quot;:41}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>medium-container</h3>
+              
+              <p><p>Container width at breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Container width at breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:43,&quot;end&quot;:45},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;medium-container&quot;,&quot;value&quot;:&quot;920px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:46,&quot;end&quot;:46}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>large-container</h3>
+              
+              <p><p>Container width at breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Container width at breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:48,&quot;end&quot;:50},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;large-container&quot;,&quot;value&quot;:&quot;1200px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:51,&quot;end&quot;:51}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>xlarge-container</h3>
+              
+              <p><p>Container width at breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Container width at breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:53,&quot;end&quot;:55},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;xlarge-container&quot;,&quot;value&quot;:&quot;1500px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:56,&quot;end&quot;:56}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>breakpoint-offset</h3>
+              
+              <p><p>Extra value to pad out breakpoints</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Extra value to pad out breakpoints&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:58,&quot;end&quot;:60},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;breakpoint-offset&quot;,&quot;value&quot;:&quot;20px&quot;,&quot;scope&quot;:&quot;default&quot;,&quot;line&quot;:{&quot;start&quot;:61,&quot;end&quot;:61}},&quot;type&quot;:&quot;String (pixel val)&quot;,&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>xsmall</h3>
+              
+              <p><p>Breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:66,&quot;end&quot;:67},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;xsmall&quot;,&quot;value&quot;:&quot;$xsmall-container + ( $breakpoint-offset * 2 )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:68,&quot;end&quot;:68}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>small</h3>
+              
+              <p><p>Breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:70,&quot;end&quot;:71},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;small&quot;,&quot;value&quot;:&quot;$small-container + ( $breakpoint-offset * 2 )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:72,&quot;end&quot;:72}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>medium</h3>
+              
+              <p><p>Breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:74,&quot;end&quot;:75},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;medium&quot;,&quot;value&quot;:&quot;$medium-container + ( $breakpoint-offset * 2 )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:76,&quot;end&quot;:76}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>large</h3>
+              
+              <p><p>Breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:78,&quot;end&quot;:79},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;large&quot;,&quot;value&quot;:&quot;$large-container + ( $breakpoint-offset * 2 )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:80,&quot;end&quot;:80}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>xlarge</h3>
+              
+              <p><p>Breakpoint</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Breakpoint&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:82,&quot;end&quot;:83},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;xlarge&quot;,&quot;value&quot;:&quot;$xlarge-container + ( $breakpoint-offset * 2 )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:84,&quot;end&quot;:84}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+
+              
+              <h3>active-breakpoints</h3>
+              
+              <p><p>Sass List of Breakpoints for adaptive container, mapped as <code>breakpoint: container-size</code></p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Sass List of Breakpoints for adaptive container, mapped as &lt;code&gt;breakpoint: container-size&lt;/code&gt;&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:90,&quot;end&quot;:91},&quot;context&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;name&quot;:&quot;active-breakpoints&quot;,&quot;value&quot;:&quot;( $xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container )&quot;,&quot;scope&quot;:&quot;private&quot;,&quot;line&quot;:{&quot;start&quot;:92,&quot;end&quot;:92}},&quot;group&quot;:[&quot;parts&quot;],&quot;access&quot;:&quot;public&quot;,&quot;file&quot;:{&quot;path&quot;:&quot;_parts-vars.scss&quot;,&quot;name&quot;:&quot;_parts-vars.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Create a container for content&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;base-container&quot;,&quot;code&quot;:&quot;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n\n    @each $bp, $bpc in $active-breakpoints {\n\n      @include break($bp) {\n        width: $bpc;\n      }\n    }\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:76,&quot;end&quot;:90}}}],&quot;groupName&quot;:{&quot;parts&quot;:&quot;parts&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+    </section>
+  
+    <section>
+        
+        <h1>General</h1>
+
+        
+        
+
+        
+        
+        <section>
+            <h2>function</h2>
+
+            
+            
+
+              
+              <h3>tint</h3>
+              
+              <p><p>Lighten a color</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Lighten a color&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:1,&quot;end&quot;:10},&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;tint&quot;,&quot;code&quot;:&quot;\n\n  @return mix(white, $color, $percentage);\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:11,&quot;end&quot;:15}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;color&quot;,&quot;description&quot;:&quot;&lt;p&gt;Valid color value to tint&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;percentage&quot;,&quot;description&quot;:&quot;&lt;p&gt;Percentage of &lt;code&gt;$color&lt;/code&gt; in returned color&lt;/p&gt;\n&quot;}],&quot;return&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;&lt;p&gt;Color value&lt;/p&gt;\n&quot;},&quot;link&quot;:[{&quot;url&quot;:&quot;https://css-tricks.com/snippets/sass/tint-shade-functions/&quot;,&quot;caption&quot;:&quot;&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;group&quot;:[&quot;undefined&quot;],&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_functions-utilities.scss&quot;,&quot;name&quot;:&quot;_functions-utilities.scss&quot;},&quot;groupName&quot;:{&quot;undefined&quot;:&quot;General&quot;}}</pre>
+
+            
+
+              
+              <h3>shade</h3>
+              
+              <p><p>Lighten a color</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Lighten a color&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:18,&quot;end&quot;:27},&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;shade&quot;,&quot;code&quot;:&quot;\n\n  @return mix(black, $color, $percentage);\n\n&quot;,&quot;line&quot;:{&quot;start&quot;:28,&quot;end&quot;:32}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;color&quot;,&quot;description&quot;:&quot;&lt;p&gt;Valid color value to shade&lt;/p&gt;\n&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;percentage&quot;,&quot;description&quot;:&quot;&lt;p&gt;Percentage of &lt;code&gt;$color&lt;/code&gt; in returned color&lt;/p&gt;\n&quot;}],&quot;return&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;&lt;p&gt;Color value&lt;/p&gt;\n&quot;},&quot;link&quot;:[{&quot;url&quot;:&quot;https://css-tricks.com/snippets/sass/tint-shade-functions/&quot;,&quot;caption&quot;:&quot;&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;group&quot;:[&quot;undefined&quot;],&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_functions-utilities.scss&quot;,&quot;name&quot;:&quot;_functions-utilities.scss&quot;},&quot;groupName&quot;:{&quot;undefined&quot;:&quot;General&quot;}}</pre>
+
+            
+
+              
+              <h3>str-replace</h3>
+              
+              <p><p>Replace a string value</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Replace a string value&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:35,&quot;end&quot;:37},&quot;context&quot;:{&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;str-replace&quot;,&quot;code&quot;:&quot;\n  $index: str-index($needle, $haystck);\n\n  @if $index {\n    @return str-slice($needle, 1, $index - 1) + $replace + str-replace(str-slice($needle, $index + str-length($haystck)), $haystck, $replace);\n  }\n\n  @return $needle;\n&quot;,&quot;line&quot;:{&quot;start&quot;:38,&quot;end&quot;:46}},&quot;access&quot;:&quot;public&quot;,&quot;group&quot;:[&quot;undefined&quot;],&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_functions-utilities.scss&quot;,&quot;name&quot;:&quot;_functions-utilities.scss&quot;},&quot;usedBy&quot;:[{&quot;description&quot;:&quot;&lt;p&gt;Font Face&lt;/p&gt;\n&quot;,&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;font-face&quot;,&quot;code&quot;:&quot;\n\n  $src: null;\n\n  $extmods: (\n    eot: \&quot;?\&quot;,\n    svg: \&quot;#\&quot; + str-replace($name, \&quot; \&quot;, \&quot;_\&quot;)\n  );\n\n  $formats: (\n    otf: \&quot;opentype\&quot;,\n    ttf: \&quot;truetype\&quot;\n  );\n\n  @each $ext in $exts {\n    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);\n    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);\n    $src: append($src, url(quote($path + \&quot;.\&quot; + $extmod)) format(quote($format)), comma);\n  }\n\n  @font-face {\n    font-family: quote($name);\n    font-style: $style;\n    font-weight: $weight;\n    src: $src;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:239,&quot;end&quot;:265}}}],&quot;groupName&quot;:{&quot;undefined&quot;:&quot;General&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+        
+        
+        <section>
+            <h2>mixin</h2>
+
+            
+            
+
+              
+              <h3>grid-zed</h3>
+              
+              <p><p>Remove margin-right from target element and clear floats on the
+following element of that type. Can be used to target the last
+item in a row via <code>nth-child</code>.</p>
+</p>
+              
+              
+              <pre class="language-html">{&quot;description&quot;:&quot;&lt;p&gt;Remove margin-right from target element and clear floats on the\nfollowing element of that type. Can be used to target the last\nitem in a row via &lt;code&gt;nth-child&lt;/code&gt;.&lt;/p&gt;\n&quot;,&quot;commentRange&quot;:{&quot;start&quot;:57,&quot;end&quot;:76},&quot;context&quot;:{&quot;type&quot;:&quot;mixin&quot;,&quot;name&quot;:&quot;grid-zed&quot;,&quot;code&quot;:&quot;\n\n  &amp;:nth-child(#{$nth}) {\n    margin-right: 0;\n  }\n\n  &amp;:nth-child(#{$nth}+1) {\n    clear: left;\n  }\n&quot;,&quot;line&quot;:{&quot;start&quot;:77,&quot;end&quot;:86}},&quot;parameter&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;name&quot;:&quot;nth&quot;,&quot;default&quot;:&quot;1&quot;,&quot;description&quot;:&quot;&lt;p&gt;Target &lt;code&gt;nth-child&lt;/code&gt;&lt;/p&gt;\n&quot;}],&quot;example&quot;:[{&quot;type&quot;:&quot;scss&quot;,&quot;code&quot;:&quot;.no-margin {\n  @include grid-col(8);\n  @include grid-zed();\n}\n\n/* Span 3 columns of 12 column grid */\n.three-col {\n  @include grid-col(4);\n  @include grid-zed(3n);\n}&quot;,&quot;description&quot;:&quot;&lt;p&gt;Basic Usage Sass&lt;/p&gt;\n&quot;}],&quot;access&quot;:&quot;public&quot;,&quot;group&quot;:[&quot;undefined&quot;],&quot;require&quot;:[],&quot;file&quot;:{&quot;path&quot;:&quot;_grid-standard.scss&quot;,&quot;name&quot;:&quot;_grid-standard.scss&quot;},&quot;groupName&quot;:{&quot;undefined&quot;:&quot;General&quot;}}</pre>
+
+            
+        </section>
+        
+
+        
+
+    </section>
+  
+
   
   <aside class="sidebar" role="nav">
+    <div class="sidebar__header">
+  <h1 class="sidebar__title">
     
+      Name - 0.1.0
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="labor"><a href="#labor">labor</a></p>
+
+      
+      
+        <div>
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="labor-variable"><a href="#labor-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="standard-trans-time" data-type="variable">
+              <a href="#labor-variable-standard-trans-time">standard-trans-time
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="standard-trans-timing-func" data-type="variable">
+              <a href="#labor-variable-standard-trans-timing-func">standard-trans-timing-func
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="standard-trans-time-delay" data-type="variable">
+              <a href="#labor-variable-standard-trans-time-delay">standard-trans-time-delay
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="long-trans-time" data-type="variable">
+              <a href="#labor-variable-long-trans-time">long-trans-time
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="long-trans-timing-func" data-type="variable">
+              <a href="#labor-variable-long-trans-timing-func">long-trans-timing-func
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="long-trans-time-delay" data-type="variable">
+              <a href="#labor-variable-long-trans-time-delay">long-trans-time-delay
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="labor-mixin"><a href="#labor-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="list-inline" data-type="mixin">
+              <a href="#labor-mixin-list-inline">list-inline
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="list-unstyled" data-type="mixin">
+              <a href="#labor-mixin-list-unstyled">list-unstyled
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="list-hover" data-type="mixin">
+              <a href="#labor-mixin-list-hover">list-hover
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="standard-trans" data-type="mixin">
+              <a href="#labor-mixin-standard-trans">standard-trans
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="long-trans" data-type="mixin">
+              <a href="#labor-mixin-long-trans">long-trans
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="clearfix" data-type="mixin">
+              <a href="#labor-mixin-clearfix">clearfix
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="cover" data-type="mixin">
+              <a href="#labor-mixin-cover">cover
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="center" data-type="mixin">
+              <a href="#labor-mixin-center">center
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="visually-hidden" data-type="mixin">
+              <a href="#labor-mixin-visually-hidden">visually-hidden
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="bkg-cover" data-type="mixin">
+              <a href="#labor-mixin-bkg-cover">bkg-cover
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="placeholder" data-type="mixin">
+              <a href="#labor-mixin-placeholder">placeholder
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="valid" data-type="mixin">
+              <a href="#labor-mixin-valid">valid
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="invalid" data-type="mixin">
+              <a href="#labor-mixin-invalid">invalid
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="labor" data-name="font-face" data-type="mixin">
+              <a href="#labor-mixin-font-face">font-face
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="parts"><a href="#parts">parts</a></p>
+
+      
+      
+        <div>
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="parts-function"><a href="#parts-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="calc-gutter-width" data-type="function">
+              <a href="#parts-function-calc-gutter-width">calc-gutter-width
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="calc-single-col-width" data-type="function">
+              <a href="#parts-function-calc-single-col-width">calc-single-col-width
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="parts-mixin"><a href="#parts-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="grid-col" data-type="mixin">
+              <a href="#parts-mixin-grid-col">grid-col
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="break" data-type="mixin">
+              <a href="#parts-mixin-break">break
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="row" data-type="mixin">
+              <a href="#parts-mixin-row">row
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="base-container" data-type="mixin">
+              <a href="#parts-mixin-base-container">base-container
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="parts-variable"><a href="#parts-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="total-cols" data-type="variable">
+              <a href="#parts-variable-total-cols">total-cols
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="target-width" data-type="variable">
+              <a href="#parts-variable-target-width">target-width
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="target-gutter" data-type="variable">
+              <a href="#parts-variable-target-gutter">target-gutter
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="calc" data-type="variable">
+              <a href="#parts-variable-calc">calc
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="fluid-container" data-type="variable">
+              <a href="#parts-variable-fluid-container">fluid-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="xsmall-container" data-type="variable">
+              <a href="#parts-variable-xsmall-container">xsmall-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="small-container" data-type="variable">
+              <a href="#parts-variable-small-container">small-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="medium-container" data-type="variable">
+              <a href="#parts-variable-medium-container">medium-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="large-container" data-type="variable">
+              <a href="#parts-variable-large-container">large-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="xlarge-container" data-type="variable">
+              <a href="#parts-variable-xlarge-container">xlarge-container
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="breakpoint-offset" data-type="variable">
+              <a href="#parts-variable-breakpoint-offset">breakpoint-offset
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="xsmall" data-type="variable">
+              <a href="#parts-variable-xsmall">xsmall
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="small" data-type="variable">
+              <a href="#parts-variable-small">small
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="medium" data-type="variable">
+              <a href="#parts-variable-medium">medium
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="large" data-type="variable">
+              <a href="#parts-variable-large">large
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="xlarge" data-type="variable">
+              <a href="#parts-variable-xlarge">xlarge
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="parts" data-name="active-breakpoints" data-type="variable">
+              <a href="#parts-variable-active-breakpoints">active-breakpoints
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p>
+
+      
+      
+        <div>
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="undefined" data-name="tint" data-type="function">
+              <a href="#undefined-function-tint">tint
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="undefined" data-name="shade" data-type="function">
+              <a href="#undefined-function-shade">shade
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-group="undefined" data-name="str-replace" data-type="function">
+              <a href="#undefined-function-str-replace">str-replace
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-group="undefined" data-name="grid-zed" data-type="mixin">
+              <a href="#undefined-mixin-grid-zed">grid-zed
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
   </aside>
 
   
   <article class="main" role="main">
 
     
-    <header class="header" role="banner">
-  <div class="container">
-    <div class="sassdoc__searchbar  searchbar">
-       <label for="js-search-input" class="visually-hidden">Search</label>
-       <div class="searchbar__form" id="js-search">
-         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
-         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
-       </div>
-     </div>
-  </div>
-</header>
-
-
-    
     
 
 
     
 
-    
-    
+  </article>
+
+  
+  
   <footer class="footer" role="contentinfo">
-    <div class="container">
+    <div class="container-fluid">
       
         <div class="footer__project-info  project-info">
           <!-- Name and URL -->
@@ -80,25 +1265,18 @@ HELLO
           
         </div>
       
-
-      
-        <a class="footer__watermark" href="http://sassdoc.com">
-          <img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo" />
-        </a>
-      
     </div>
   </footer>
 
 
-  </article>
-
 
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 
-<script src="assets/js/main.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/prism/1.6.0/prism.js"></script>
 
 </body>
 </html>
