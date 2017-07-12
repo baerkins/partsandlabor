@@ -28,6 +28,7 @@
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
     "imagemin-pngcrush": "^5.1.0",
+    "material-prism-theme": "^0.1.0",
     "sassdoc": "^2.2.2"
   }
 }

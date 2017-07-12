@@ -2,6 +2,8 @@
 
 {% block content %}
 
+  HI
+
   {# No item documented #}
   {% if data.length == 0 %}
     <section class="main__section">

@@ -1,0 +1,23 @@
+.header {
+  padding: 20px 0;
+  background-color: $background-dark;
+
+  &__logo {
+
+    @include break($medium) {
+      @include grid-col(6);
+    }
+
+    &-type {
+      font-family: 'Brawler', serif;
+      font-size: 30px;
+      color: $brand-color;
+    }
+  }
+
+  &__content {
+    @include break($medium) {
+      @include grid-col(6);
+    }
+  }
+}

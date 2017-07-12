@@ -5,6 +5,7 @@
 @import "utils/functions";
 @import "utils/mixins";
 @import "utils/helpers";
+@import "../../partsandlabor";
 
 //
 // Vendors
@@ -20,3 +21,5 @@
 // Partials
 //
 @import "partials/main";
+
+@import "../node_modules/material-prism-theme/material-prism";

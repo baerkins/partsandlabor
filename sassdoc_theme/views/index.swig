@@ -16,27 +16,62 @@
   {% include "includes/partials/head.html.swig" with project_title %}
 </head>
 <body>
-HELLO
+
+  {% include "includes/partials/header.html.swig" with project_title %}
+
+
+  {% for group_name, group in data.byGroupAndType %}
+    <section>
+        {# Retrieve group alias if any (else group name) #}
+        <h1>{{ groups[group_name] }}</h1>
+
+        {# 2. Loop over the types in the current group #}
+        {% for type, items in group %}
+
+        {# If items to be displayed in type #}
+        {% if items.length > 0 %}
+        <section>
+            <h2>{{ type }}</h2>
+
+            {# 3. Loop over the items in the current type #}
+            {% for item in items %}
+
+              {# At this point it is up to you to display whatever you want from your items. #}
+              <h3>{{ item.context.name }}</h3>
+              {% if item.description.length > 0 %}
+              <p>{{ item.description | safe }}</p>
+              {% endif %}
+              {% if item.context.length > 0 %}
+              <pre class="language-css">{{ item.context | safe }}</pre>
+              {% endif %}
+              <pre class="language-html">{{ item | json_encode }}</pre>
+
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {% endfor %}
+
+    </section>
+  {% endfor %}
+
   {# Sidebar #}
   <aside class="sidebar" role="nav">
-    {% block sidebar %}{% endblock %}
+    {% include "includes/partials/sidebar.html.swig" %}
   </aside>
 
   {# Main container #}
   <article class="main" role="main">
-
-    {# Include top navbar #}
-    {% include "includes/partials/header.html.swig" with project_title %}
 
     {# Include description #}
     {% include "includes/partials/description.html.swig" %}
 
     {% block content %}{% endblock %}
 
-    {# Include footer #}
-    {% include "includes/partials/footer.html.swig" with project_title %}
   </article>
 
+  {# Include footer #}
+  {% include "includes/partials/footer.html.swig" with project_title %}
 
   {# Include scripts #}
   {% include "includes/partials/scripts.html.swig" %}

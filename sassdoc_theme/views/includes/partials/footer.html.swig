@@ -1,6 +1,6 @@
 {% if project_title or display.watermark %}
   <footer class="footer" role="contentinfo">
-    <div class="container">
+    <div class="container-fluid">
       {% if project_title %}
         <div class="footer__project-info  project-info">
           <!-- Name and URL -->
@@ -28,12 +28,6 @@
             </span>
           {% endif %}
         </div>
-      {% endif %}
-
-      {% if display.watermark %}
-        <a class="footer__watermark" href="http://sassdoc.com">
-          <img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo" />
-        </a>
       {% endif %}
     </div>
   </footer>
