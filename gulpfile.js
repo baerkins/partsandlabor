@@ -52,7 +52,10 @@ gulp.task('build_docs', function () {
     groups: {
       parts : 'Parts',
       labor : 'Labor'
-    }
+    },
+    theme: 'partsandlabor',
+    title: 'Parts and Labor',
+    version: '1.1.0'
   }
   return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
     .pipe( sassdoc(options) );

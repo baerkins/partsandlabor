@@ -1,56 +1,34 @@
-/* global document */
+(function($) {
 
-(function ($, global) {
-  'use strict';
+  var speed = 350;
 
-  // Constructor
-  var App = function (conf) {
-    this.conf = $.extend({
-      // Search module
-      search: new global.Search(),
+  $(document).ready( function() {
 
-      // Sidebar module
-      sidebar: new global.Sidebar(),
+    console.log('hi');
 
-      // Initialisation
-      init: true
-    }, conf || {});
 
-    // Launch the module
-    if (this.conf.init !== false) {
-      this.initialize();
-    }
-  };
+    $('.sidebar__item').on('click', function(event) {
+      event.preventDefault();
 
-  // Initialisation method
-  App.prototype.initialize = function () {
-    this.codePreview();
-  };
+      var $this = $(this);
 
-  // Toggle code preview collapsed/expanded modes
-  App.prototype.codePreview = function () {
-    var $item;
-    var $code;
-    var switchTo;
+      if ( $this.hasClass('sidebar__item-toggle') ) {
+        $this.toggleClass('open').next('.sidebar__item-submenu').slideToggle(speed);
+        return;
+      }
 
-    $('.item__code--togglable').on('click', function () {
-      $item = $(this);
-      $code = $item.find('code');
-      switchTo = $item.attr('data-current-state') === 'expanded' ? 'collapsed' : 'expanded';
+      var target = $this.attr('href');
+      var offset = ( $(target).offset().top - 120 );
 
-      $item.attr('data-current-state', switchTo);
-      $code.html($item.attr('data-' + switchTo));
-      Prism.highlightElement($code[0]);
+      history.replaceState(undefined, undefined, target);
+
+      $('html, body').animate({
+        scrollTop: offset
+      }, 500);
+
+
+
     });
-  };
 
-  global.App = App;
-}(window.jQuery, window));
-
-(function ($, global) {
-
-  $(document).ready(function () {
-    var app = new global.App();
   });
-
-}(window.jQuery, window));
+})(jQuery); // Fully reference jQuery after this point.
