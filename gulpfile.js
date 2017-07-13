@@ -53,7 +53,9 @@ gulp.task('build_docs', function () {
       parts : 'Parts',
       labor : 'Labor'
     },
-    theme: 'partsandlabor'
+    theme: 'partsandlabor',
+    title: 'Parts and Labor',
+    version: '1.1.0'
   }
   return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
     // .pipe( lint() )

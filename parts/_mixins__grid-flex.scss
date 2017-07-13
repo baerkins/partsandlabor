@@ -4,8 +4,14 @@
 ///
 /// flex-grid-col( $columns )
 ///
+/// @content Set the number of columns the grid item should take up
+/// in a flex row.
+///
 /// @param {integer} $columns - Number of columns to take up
 /// @param {string} $gutter-value - Width of gutter
+///
+/// @access public
+/// @alias grid-col
 ///
 /// @example scss - Basic Usage Sass
 ///   div {
