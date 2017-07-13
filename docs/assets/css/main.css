@@ -268,7 +268,8 @@ pre {
 
 .header {
   padding: 20px 0;
-  background-color: #0055ff; }
+  background-color: #0055ff;
+  color: #FFFFFF; }
   @media only screen and (min-width: 960px) {
     .header {
       position: fixed;
@@ -290,13 +291,20 @@ pre {
     text-decoration: none;
     font-weight: 200;
     letter-spacing: 0.5px; }
-  @media only screen and (min-width: 960px) {
-    .header__content {
-      margin-right: 1.66667%;
-      width: 49.16667%;
-      float: left; }
-      .header__content:last-child {
-        margin-right: 0; } }
+  .header__content {
+    text-align: right; }
+    @media only screen and (min-width: 960px) {
+      .header__content {
+        margin-right: 1.66667%;
+        width: 49.16667%;
+        float: left; }
+        .header__content:last-child {
+          margin-right: 0; } }
+    .header__content p {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-top: 17px; }
 
 .sidebar {
   max-width: 275px; }
