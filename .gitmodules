@@ -1,0 +1,3 @@
+[submodule "sassdoc-theme-partsandlabor"]
+	path = sassdoc-theme-partsandlabor
+	url = https://github.com/iamhexcoder/partsandlabor-sassdoc
