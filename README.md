@@ -2,6 +2,8 @@
 
 A sass library of utilities and grid systems.
 
+Documentation: https://iamhexcoder.github.io/partsandlabor/
+
 ## Parts
 
 Grid layout systems:
