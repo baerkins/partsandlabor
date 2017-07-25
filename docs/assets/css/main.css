@@ -199,7 +199,7 @@ html {
 
 body {
   min-height: 100%;
-  font-family: "europa", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   -webkit-font-kerning: normal;
           font-kerning: normal; }
@@ -285,11 +285,10 @@ pre {
         margin-right: 0; } }
   .header__logo-type,
   .header__logo-type a {
-    font-family: "ff-tisa-web-pro", serif;
+    font-family: "PT Serif", serif;
     font-size: 30px;
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: 200;
     letter-spacing: 0.5px; }
   .header__content {
     text-align: right; }
@@ -356,7 +355,7 @@ pre {
 
 .item-section__group-header {
   font-size: 50px;
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   text-transform: capitalize;
   margin-bottom: 40px; }
 
@@ -376,7 +375,7 @@ pre {
   display: inline-block; }
 
 .item__heading {
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   font-size: 30px;
   margin-bottom: 15px;
   color: #0055ff; }
@@ -400,7 +399,7 @@ pre {
     color: #0055ff; }
 
 .item__description {
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   margin: -10px 0 30px;
   font-size: 18px; }
 
