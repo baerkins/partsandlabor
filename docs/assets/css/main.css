@@ -208,16 +208,26 @@ pre,
 code {
   background-color: #f2f2f2;
   color: #0055ff;
-  font-family: 'Droid Sans Mono', monospaced; }
+  font-family: 'Droid Sans Mono', monospaced;
+  overflow: auto;
+  white-space: pre-wrap;
+  line-height: 1.5; }
   pre code,
   code code {
     background-color: transparent;
     padding: 0; }
 
+p.mono {
+  font-family: 'Droid Sans Mono', monospaced;
+  color: #0055ff; }
+
 pre {
   padding: 15px; }
   pre + pre {
     margin-top: 15px; }
+
+.underline {
+  text-decoration: underline; }
 
 .container {
   margin-left: auto;
@@ -366,13 +376,13 @@ pre {
   margin-top: 80px; }
 
 .item-section__type-header {
-  font-size: 14px;
-  font-family: "Space Mono", monospace;
-  padding: 10px;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-family: "PT Serif", serif;
+  padding: 15px;
   margin-bottom: 40px;
   background-color: #0055ff;
-  color: #FFFFFF;
-  display: inline-block; }
+  color: #FFFFFF; }
 
 .item__heading {
   font-family: "PT Serif", serif;
@@ -417,6 +427,9 @@ pre {
 
 .item__parameters {
   margin-bottom: 30px; }
+
+.item__path {
+  margin-bottom: 20px; }
 
 table {
   width: 100%;

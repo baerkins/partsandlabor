@@ -35,7 +35,7 @@
     "gulp-util": "^3.0.8",
     "run-sequence": "^1.2.2",
     "sassdoc": "^2.2.0",
-    "sassdoc-theme-partsandlabor": "^1.0.3",
+    "sassdoc-theme-partsandlabor": "^1.1.3",
     "yargs": "^8.0.2"
   }
 }
