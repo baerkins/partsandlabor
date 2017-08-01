@@ -3,13 +3,13 @@
 //
 /// Basic Systems Font stack
 /// @group labor
-$system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'  !default;
+$system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 /// Basic Sans Font stack
 /// @group labor
-$sans:         'Arial', $system-fonts, sans-serif !default;
+$sans:         'Arial', $system-fonts, sans-serif;
 /// Basic Serif Font stack
 /// @group labor
-$serif:        TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif !default;
+$serif:        TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 
 
 //
@@ -17,34 +17,34 @@ $serif:        TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, se
 //
 /// Time for `standard-trans` mixin
 /// @group labor
-$standard-trans-time:        .35s !default;
+$standard-trans-time:        .35s;
 /// Timing function for `standard-trans` mixin
 /// @group labor
-$standard-trans-timing-func: ease !default;
+$standard-trans-timing-func: ease;
 /// Time delay for `standard-trans` mixin
 /// @group labor
 $standard-trans-time-delay:  0;
 /// Time for `long-trans` mixin
 /// @group labor
-$long-trans-time:            .35s !default;
+$long-trans-time:            .35s;
 /// Timing function for `long-trans` mixin
 /// @group labor
-$long-trans-timing-func:     ease !default;
+$long-trans-timing-func:     ease;
 /// Time delay for `long-trans` mixin
 /// @group labor
-$long-trans-time-delay:      0 !default;
+$long-trans-time-delay:      0;
 
 // Size Variables
 // ==============
 
 /// Base value for em calulations (best practice = 16px)
 /// @group labor
-$em-base: 16px !default;
+$em-base: 16px;
 
 
 // Private & Placeholder Variables
 // ===============================
 
 // Gray Scale
-$labor-white:   #fff !default;
-$labor-black:   #090909 !default;
+$labor-white:   #fff;
+$labor-black:   #090909;

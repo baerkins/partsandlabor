@@ -199,7 +199,7 @@ html {
 
 body {
   min-height: 100%;
-  font-family: "europa", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   -webkit-font-kerning: normal;
           font-kerning: normal; }
@@ -208,16 +208,26 @@ pre,
 code {
   background-color: #f2f2f2;
   color: #0055ff;
-  font-family: 'Droid Sans Mono', monospaced; }
+  font-family: 'Droid Sans Mono', monospaced;
+  overflow: auto;
+  white-space: pre-wrap;
+  line-height: 1.5; }
   pre code,
   code code {
     background-color: transparent;
     padding: 0; }
 
+p.mono {
+  font-family: 'Droid Sans Mono', monospaced;
+  color: #0055ff; }
+
 pre {
   padding: 15px; }
   pre + pre {
     margin-top: 15px; }
+
+.underline {
+  text-decoration: underline; }
 
 .container {
   margin-left: auto;
@@ -268,7 +278,8 @@ pre {
 
 .header {
   padding: 20px 0;
-  background-color: #0055ff; }
+  background-color: #0055ff;
+  color: #FFFFFF; }
   @media only screen and (min-width: 960px) {
     .header {
       position: fixed;
@@ -284,19 +295,25 @@ pre {
         margin-right: 0; } }
   .header__logo-type,
   .header__logo-type a {
-    font-family: "ff-tisa-web-pro", serif;
+    font-family: "PT Serif", serif;
     font-size: 30px;
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: 200;
     letter-spacing: 0.5px; }
-  @media only screen and (min-width: 960px) {
-    .header__content {
-      margin-right: 1.66667%;
-      width: 49.16667%;
-      float: left; }
-      .header__content:last-child {
-        margin-right: 0; } }
+  .header__content {
+    text-align: right; }
+    @media only screen and (min-width: 960px) {
+      .header__content {
+        margin-right: 1.66667%;
+        width: 49.16667%;
+        float: left; }
+        .header__content:last-child {
+          margin-right: 0; } }
+    .header__content p {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-top: 17px; }
 
 .sidebar {
   max-width: 275px; }
@@ -348,7 +365,7 @@ pre {
 
 .item-section__group-header {
   font-size: 50px;
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   text-transform: capitalize;
   margin-bottom: 40px; }
 
@@ -359,16 +376,16 @@ pre {
   margin-top: 80px; }
 
 .item-section__type-header {
-  font-size: 14px;
-  font-family: "Space Mono", monospace;
-  padding: 10px;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-family: "PT Serif", serif;
+  padding: 15px;
   margin-bottom: 40px;
   background-color: #0055ff;
-  color: #FFFFFF;
-  display: inline-block; }
+  color: #FFFFFF; }
 
 .item__heading {
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   font-size: 30px;
   margin-bottom: 15px;
   color: #0055ff; }
@@ -392,7 +409,7 @@ pre {
     color: #0055ff; }
 
 .item__description {
-  font-family: "ff-tisa-web-pro", serif;
+  font-family: "PT Serif", serif;
   margin: -10px 0 30px;
   font-size: 18px; }
 
@@ -410,6 +427,9 @@ pre {
 
 .item__parameters {
   margin-bottom: 30px; }
+
+.item__path {
+  margin-bottom: 20px; }
 
 table {
   width: 100%;
