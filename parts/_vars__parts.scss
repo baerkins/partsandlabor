@@ -4,22 +4,22 @@
 /// Total number of columns in grid
 /// @type Integer
 /// @group parts
-$total-cols:    12 !default;
+$total-cols:    12;
 
 /// Target width the grid should account for
 /// @type String
 /// @group parts
-$target-width:  1200px !default;
+$target-width:  1200px;
 
 /// Target gutter width the grid should account for
 /// @type String
 /// @group parts
-$target-gutter: 20px !default;
+$target-gutter: 20px;
 
 /// Whether the gutter should be a percentage or a hard value (uses CSS `calc` value)
 /// @type Boolean
 /// @group parts
-$calc:          false !default;
+$calc:          false;
 
 
 // Breakpoint Values
@@ -28,37 +28,37 @@ $calc:          false !default;
 /// Width of fluid container, percentage
 /// @type String (percentage)
 /// @group parts
-$fluid-container:   90% !default;
+$fluid-container:   90%;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$xsmall-container:  480px !default;
+$xsmall-container:  480px;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$small-container:   700px !default;
+$small-container:   700px;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$medium-container:  920px !default;
+$medium-container:  920px;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$large-container:   1200px !default;
+$large-container:   1200px;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$xlarge-container:  1500px !default;
+$xlarge-container:  1500px;
 
 /// Extra value to pad out breakpoints
 /// @type String (pixel val)
 /// @group parts
-$breakpoint-offset: $target-gutter !default;
+$breakpoint-offset: $target-gutter;
 
 // Breakpoints
 // ===========
