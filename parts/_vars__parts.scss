@@ -19,7 +19,15 @@ $target-gutter: 20px !default;
 /// Whether the gutter should be a percentage or a hard value (uses CSS `calc` value)
 /// @type Boolean
 /// @group parts
-$calc:          false;
+$calc:          false !default;
+
+
+$default-grid: (
+  cols:   $total-cols,
+  width:  $target-width,
+  gutter: $target-gutter,
+  calc:   $calc
+);
 
 
 // Breakpoint Values

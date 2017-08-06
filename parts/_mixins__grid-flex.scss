@@ -19,8 +19,9 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin flex-grid-col($columns, $gutter-value: $target-gutter ) {
-  width: calc-grid-col-width($columns, $gutter-value);
+@mixin flex-grid-col($columns, $grid: $default-grid) {
+
+  width: calc-grid-col-width($columns, map-get($grid, gutter));
 }
 
 
