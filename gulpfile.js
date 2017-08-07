@@ -54,7 +54,8 @@ gulp.task('build_docs', function () {
     },
     theme: 'partsandlabor',
     title: 'Parts and Labor',
-    version: '1.1.0'
+    version: '1.1.0',
+    verbose: false
   }
   return gulp.src('./lib/**/*.scss')
     .pipe( sassdoc(options) );
