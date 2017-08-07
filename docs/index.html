@@ -13,7 +13,7 @@
   
   <meta charset="utf-8" />
 
-<title>Parts and Labor - v1.1.0</title>
+<title>Parts and Labor - v1.3.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href="https://fonts.googleapis.com/css?family=Space+Mono|Droid+Sans+Mono" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="header__content">
-        <p class="header__version">version 1.1.0</p>
+        <p class="header__version">version 1.3.0</p>
         
       </div>
 
@@ -80,6 +80,13 @@
           
           
             <div class="sidebar__item-submenu">
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="labor" data-name="strip-unit" data-type="function" href="#labor-function-strip-unit">strip-unit
+              
+              
+            </a>
+            
+          
+            
             <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="labor" data-name="str-replace" data-type="function" href="#labor-function-str-replace">str-replace
               
               
@@ -347,20 +354,6 @@
               
               
             </a>
-            
-          
-            
-            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="calc-gutter-width" data-type="function" href="#parts-function-calc-gutter-width">calc-gutter-width
-              
-              
-            </a>
-            
-          
-            
-            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="calc-single-col-width" data-type="function" href="#parts-function-calc-single-col-width">calc-single-col-width
-              
-              
-            </a>
             </div>
           
         
@@ -484,7 +477,7 @@
             
           
             
-            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="calc" data-type="variable" href="#parts-variable-calc">calc
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="default-grid" data-type="variable" href="#parts-variable-default-grid">default-grid
               
               
             </a>
@@ -598,7 +591,6 @@
         
 
 
-
         
         <section id="Labor" class="item-section__group">
             
@@ -612,9 +604,94 @@
               <h2 class="item-section__type-header">function</h2>
               
               
+                <section class="item" id="labor-function-strip-unit">
+  <h3 class="item__heading">
+  strip-unit()
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> labor</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+    <span class="item__since"><span>Since:</span> 1.4.0</p>
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Remove the unit of a length</p>
+
+  </div>
+
+
+  
+
+
+
+  
+  <h3 class="item__sub-heading">Parameters</h3>
+  <div class="item__parameters">
+    <table>
+      <thead>
+        <tr>
+          <th class="param-name" scope="col">Name</th>
+          <th class="param-desc" scope="col">Description</th>
+          <th class="param-type" scope="col">Type</th>
+          <th class="param-def" scope="col">Default value</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr class="item__parameter">
+            <td class="param-name" scope="row" data-label="name"><code>$number</code></td>
+            <td class="param-desc" data-label="desc"><p>Number to remove unit from</p>
+</td>
+            <td class="param-type" data-label="type">
+              
+                <code>Number</code>
+              
+            </td>
+            <td class="param-def" data-label="default">
+            
+              &mdash;
+            
+            </td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 7</p>
+  </div>
+
+
+
+
+  
+</section>
+              
                 <section class="item" id="labor-function-str-replace">
   <h3 class="item__heading">
-  str-replace
+  str-replace()
 </h3>
 
 
@@ -719,7 +796,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_functions__utilities.scss, starting on line 11</p>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 25</p>
   </div>
 
 
@@ -730,7 +807,7 @@
               
                 <section class="item" id="labor-function-em">
   <h3 class="item__heading">
-  em
+  em()
 </h3>
 
 
@@ -829,7 +906,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_functions__utilities.scss, starting on line 38</p>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 52</p>
   </div>
 
 
@@ -840,7 +917,7 @@
               
                 <section class="item" id="labor-function-rem">
   <h3 class="item__heading">
-  rem
+  rem()
 </h3>
 
 
@@ -914,7 +991,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_functions__utilities.scss, starting on line 60</p>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 74</p>
   </div>
 
 
@@ -925,7 +1002,7 @@
               
                 <section class="item" id="labor-function-tint">
   <h3 class="item__heading">
-  tint
+  tint()
 </h3>
 
 
@@ -1015,7 +1092,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_functions__utilities.scss, starting on line 88</p>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 102</p>
   </div>
 
 
@@ -1026,7 +1103,7 @@
               
                 <section class="item" id="labor-function-shade">
   <h3 class="item__heading">
-  shade
+  shade()
 </h3>
 
 
@@ -1116,7 +1193,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_functions__utilities.scss, starting on line 108</p>
+    <p class="mono">./lib/labor/labor/_functions__utilities.scss, starting on line 122</p>
   </div>
 
 
@@ -1189,7 +1266,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__block-elements.scss, starting on line 20</p>
+    <p class="mono">./lib/labor/labor/_mixins__block-elements.scss, starting on line 20</p>
   </div>
 
 
@@ -1251,7 +1328,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__block-elements.scss, starting on line 44</p>
+    <p class="mono">./lib/labor/labor/_mixins__block-elements.scss, starting on line 44</p>
   </div>
 
 
@@ -1313,7 +1390,7 @@
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__block-elements.scss, starting on line 72</p>
+    <p class="mono">./lib/labor/labor/_mixins__block-elements.scss, starting on line 72</p>
   </div>
 
 
@@ -1378,7 +1455,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__inline-elements.scss, starting on line 23</p>
+    <p class="mono">./lib/labor/labor/_mixins__inline-elements.scss, starting on line 23</p>
   </div>
 
 
@@ -1389,7 +1466,7 @@ button {
               
                 <section class="item" id="labor-mixin-standard-trans">
   <h3 class="item__heading">
-  standard-trans
+  standard-trans()
 </h3>
 
 
@@ -1472,7 +1549,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 16</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 16</p>
   </div>
 
 
@@ -1483,7 +1560,7 @@ button {
               
                 <section class="item" id="labor-mixin-long-trans">
   <h3 class="item__heading">
-  long-trans
+  long-trans()
 </h3>
 
 
@@ -1566,7 +1643,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 33</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 33</p>
   </div>
 
 
@@ -1627,7 +1704,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 53</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 53</p>
   </div>
 
 
@@ -1688,7 +1765,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 73</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 73</p>
   </div>
 
 
@@ -1699,7 +1776,7 @@ button {
               
                 <section class="item" id="labor-mixin-center">
   <h3 class="item__heading">
-  center
+  center()
 </h3>
 
 
@@ -1786,7 +1863,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 99</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 99</p>
   </div>
 
 
@@ -1847,7 +1924,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 119</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 119</p>
   </div>
 
 
@@ -1858,7 +1935,7 @@ button {
               
                 <section class="item" id="labor-mixin-bkg-img">
   <h3 class="item__heading">
-  bkg-img
+  bkg-img()
 </h3>
 
 
@@ -1942,7 +2019,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 142</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 142</p>
   </div>
 
 
@@ -2005,7 +2082,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 169</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 169</p>
   </div>
 
 
@@ -2068,7 +2145,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 186</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 186</p>
   </div>
 
 
@@ -2131,7 +2208,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 208</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 208</p>
   </div>
 
 
@@ -2142,7 +2219,7 @@ button {
               
                 <section class="item" id="labor-mixin-font-face">
   <h3 class="item__heading">
-  font-face
+  font-face()
 </h3>
 
 
@@ -2289,7 +2366,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_mixins__utilities.scss, starting on line 236</p>
+    <p class="mono">./lib/labor/labor/_mixins__utilities.scss, starting on line 236</p>
   </div>
 
 
@@ -2355,7 +2432,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 6</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 6</p>
   </div>
 
 
@@ -2410,7 +2487,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 9</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 9</p>
   </div>
 
 
@@ -2465,7 +2542,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 12</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 12</p>
   </div>
 
 
@@ -2520,7 +2597,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 20</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 20</p>
   </div>
 
 
@@ -2575,7 +2652,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 23</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 23</p>
   </div>
 
 
@@ -2630,7 +2707,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 26</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 26</p>
   </div>
 
 
@@ -2675,7 +2752,10 @@ button {
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$long-trans-time:</span> .35s;</pre>
+    <pre><span class="underline">$long-trans-time:</span> .35s !default
+/// Timing function for `long-trans` mixin
+/// @group labor
+$long-trans-timing-func:     ease;</pre>
   </div>
 
 
@@ -2685,7 +2765,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 29</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 29</p>
   </div>
 
 
@@ -2740,7 +2820,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 32</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 32</p>
   </div>
 
 
@@ -2795,7 +2875,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 35</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 35</p>
   </div>
 
 
@@ -2850,7 +2930,7 @@ button {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./labor/_vars__labor.scss, starting on line 42</p>
+    <p class="mono">./lib/labor/labor/_vars__labor.scss, starting on line 42</p>
   </div>
 
 
@@ -2880,7 +2960,7 @@ button {
               
                 <section class="item" id="parts-function-calc-gutter-width">
   <h3 class="item__heading">
-  calc-gutter-width
+  calc-gutter-width()
 </h3>
 
 
@@ -2906,8 +2986,7 @@ button {
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>calc-gutter-width()
-Calculate gutter width as a percentage based on target value</p>
+    <p>Calculate gutter width as a percentage based on target value</p>
 
   </div>
 
@@ -2955,7 +3034,7 @@ Calculate gutter width as a percentage based on target value</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_functions__grid.scss, starting on line 14</p>
+    <p class="mono">./lib/parts/parts/_functions__grid.scss, starting on line 13</p>
   </div>
 
 
@@ -2992,8 +3071,7 @@ Calculate gutter width as a percentage based on target value</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>calc-single-col-width()
-Calculate single column width</p>
+    <p>Calculate single column width</p>
 
   </div>
 
@@ -3008,7 +3086,7 @@ Calculate single column width</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_functions__grid.scss, starting on line 31</p>
+    <p class="mono">./lib/parts/parts/_functions__grid.scss, starting on line 29</p>
   </div>
 
 
@@ -3019,7 +3097,7 @@ Calculate single column width</p>
               
                 <section class="item" id="parts-function-calc-grid-col-width">
   <h3 class="item__heading">
-  calc-grid-col-width
+  calc-grid-col-width()
 </h3>
 
 
@@ -3045,8 +3123,7 @@ Calculate single column width</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>calc-grid-col-width()
-Calculate the width of X columns</p>
+    <p>Calculate the width of X columns</p>
 
   </div>
 
@@ -3110,113 +3187,7 @@ Calculate the width of X columns</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_functions__grid.scss, starting on line 54</p>
-  </div>
-
-
-
-
-  
-</section>
-              
-                <section class="item" id="parts-function-calc-gutter-width">
-  <h3 class="item__heading">
-  calc-gutter-width
-</h3>
-
-
-<p class="item__meta">
-
-  
-
-  
-
-  
-      <span class="item__group"><span>Group:</span> parts</span>
-  
-
-  
-    <span class="item__access"><span>Access:</span> public</span>
-  
-
-  
-    <span class="item__since"><span>Since:</span> 1.0.0</p>
-  
-</p>
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  <div class="item__description">
-    <p>calc-gutter-width()
-Calculate gutter width as a percentage based on target value</p>
-
-  </div>
-
-
-  
-
-
-
-  
-  
-
-  
-  <div class="item__path">
-    <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_grid-functions.scss, starting on line 12</p>
-  </div>
-
-
-
-
-  
-</section>
-              
-                <section class="item" id="parts-function-calc-single-col-width">
-  <h3 class="item__heading">
-  calc-single-col-width
-</h3>
-
-
-<p class="item__meta">
-
-  
-
-  
-
-  
-      <span class="item__group"><span>Group:</span> parts</span>
-  
-
-  
-    <span class="item__access"><span>Access:</span> public</span>
-  
-
-  
-    <span class="item__since"><span>Since:</span> 1.0.0</p>
-  
-</p>
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  <div class="item__description">
-    <p>calc-single-col-width()
-Calculate single column width</p>
-
-  </div>
-
-
-  
-
-
-
-  
-  
-
-  
-  <div class="item__path">
-    <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_grid-functions.scss, starting on line 29</p>
+    <p class="mono">./lib/parts/parts/_functions__grid.scss, starting on line 51</p>
   </div>
 
 
@@ -3238,7 +3209,7 @@ Calculate single column width</p>
               
                 <section class="item" id="parts-mixin-flex-grid-col">
   <h3 class="item__heading">
-  flex-grid-col
+  flex-grid-col()
 </h3>
 
 
@@ -3264,7 +3235,8 @@ Calculate single column width</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>flex-grid-col( $columns )</p>
+    <p>The amount of columns an element should take up in a flexbox
+grid. Element should be a child of an element with <code>@flex-row</code>.</p>
 
   </div>
 
@@ -3341,7 +3313,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-flex.scss, starting on line 22</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-flex.scss, starting on line 23</p>
   </div>
 
 
@@ -3352,7 +3324,7 @@ div {
               
                 <section class="item" id="parts-mixin-flex-grid-zed">
   <h3 class="item__heading">
-  flex-grid-zed
+  flex-grid-zed()
 </h3>
 
 
@@ -3443,7 +3415,7 @@ six elements.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-flex.scss, starting on line 49</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-flex.scss, starting on line 51</p>
   </div>
 
 
@@ -3454,7 +3426,7 @@ six elements.</p>
               
                 <section class="item" id="parts-mixin-flex-grid-zed-reset">
   <h3 class="item__heading">
-  flex-grid-zed-reset
+  flex-grid-zed-reset()
 </h3>
 
 
@@ -3551,7 +3523,7 @@ six elements.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-flex.scss, starting on line 85</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-flex.scss, starting on line 87</p>
   </div>
 
 
@@ -3562,7 +3534,7 @@ six elements.</p>
               
                 <section class="item" id="parts-mixin-break">
   <h3 class="item__heading">
-  break
+  break()
 </h3>
 
 
@@ -3689,7 +3661,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-scaffolding.scss, starting on line 31</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 31</p>
   </div>
 
 
@@ -3750,7 +3722,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-scaffolding.scss, starting on line 51</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 51</p>
   </div>
 
 
@@ -3811,7 +3783,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-scaffolding.scss, starting on line 67</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 67</p>
   </div>
 
 
@@ -3822,7 +3794,7 @@ div {
               
                 <section class="item" id="parts-mixin-base-container">
   <h3 class="item__heading">
-  base-container
+  base-container()
 </h3>
 
 
@@ -3923,7 +3895,7 @@ to <code>$active-breakpoints</code></p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-scaffolding.scss, starting on line 102</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 102</p>
   </div>
 
 
@@ -3934,7 +3906,7 @@ to <code>$active-breakpoints</code></p>
               
                 <section class="item" id="parts-mixin-grid-col">
   <h3 class="item__heading">
-  grid-col
+  grid-col()
 </h3>
 
 
@@ -3960,7 +3932,7 @@ to <code>$active-breakpoints</code></p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>grid-col( $columns )</p>
+    <p>The amount if columns an element should take up in a grid.</p>
 
   </div>
 
@@ -4037,7 +4009,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-standard.scss, starting on line 22</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-standard.scss, starting on line 22</p>
   </div>
 
 
@@ -4048,7 +4020,7 @@ div {
               
                 <section class="item" id="parts-mixin-grid-zed">
   <h3 class="item__heading">
-  grid-zed
+  grid-zed()
 </h3>
 
 
@@ -4140,7 +4112,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-standard.scss, starting on line 66</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-standard.scss, starting on line 60</p>
   </div>
 
 
@@ -4151,7 +4123,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
               
                 <section class="item" id="parts-mixin-grid-zed-reset">
   <h3 class="item__heading">
-  grid-zed-reset
+  grid-zed-reset()
 </h3>
 
 
@@ -4261,7 +4233,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-standard.scss, starting on line 105</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-standard.scss, starting on line 99</p>
   </div>
 
 
@@ -4272,7 +4244,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
               
                 <section class="item" id="parts-mixin-grid-shift">
   <h3 class="item__heading">
-  grid-shift
+  grid-shift()
 </h3>
 
 
@@ -4298,7 +4270,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>grid-shift( $columns, $gutter-value )</p>
+    <p>Shift an element by a number of grid elements</p>
 
   </div>
 
@@ -4377,7 +4349,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_mixins__grid-standard.scss, starting on line 142</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-standard.scss, starting on line 131</p>
   </div>
 
 
@@ -4443,7 +4415,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 7</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 7</p>
   </div>
 
 
@@ -4478,7 +4450,8 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Target width the grid should account for</p>
+    <p>Target width of grid. When the grid is at this width,
+the gutter value should match the $target-gutter variable</p>
 
   </div>
 
@@ -4498,7 +4471,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 12</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 13</p>
   </div>
 
 
@@ -4533,7 +4506,8 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Target gutter width the grid should account for</p>
+    <p>Target gutter width the grid. When the grid is at the width
+of $target-width, the gutter values will match this variable.</p>
 
   </div>
 
@@ -4553,7 +4527,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 17</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 19</p>
   </div>
 
 
@@ -4562,9 +4536,9 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
 </section>
               
-                <section class="item" id="parts-variable-calc">
+                <section class="item" id="parts-variable-default-grid">
   <h3 class="item__heading">
-  calc
+  default-grid
 </h3>
 
 
@@ -4583,12 +4557,16 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
 
   
+    <span class="item__since"><span>Since:</span> 1.4.0</p>
+  
 </p>
 
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Whether the gutter should be a percentage or a hard value (uses CSS <code>calc</code> value)</p>
+    <p>Grid Variable
+Default values of the grid map object. You can match this
+to create a custom grid to be used within <code>grid-col()</code></p>
 
   </div>
 
@@ -4598,7 +4576,11 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$calc:</span> false;</pre>
+    <pre><span class="underline">$default-grid:</span> (
+  cols:   $total-cols,
+  width:  $target-width,
+  gutter: $target-gutter
+);</pre>
   </div>
 
 
@@ -4608,7 +4590,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 22</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 28</p>
   </div>
 
 
@@ -4663,7 +4645,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 31</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 41</p>
   </div>
 
 
@@ -4718,7 +4700,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 36</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 46</p>
   </div>
 
 
@@ -4773,7 +4755,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 41</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 51</p>
   </div>
 
 
@@ -4828,7 +4810,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 46</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 56</p>
   </div>
 
 
@@ -4883,7 +4865,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 51</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 61</p>
   </div>
 
 
@@ -4938,7 +4920,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 56</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 66</p>
   </div>
 
 
@@ -4993,7 +4975,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 61</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 71</p>
   </div>
 
 
@@ -5048,7 +5030,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 68</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 78</p>
   </div>
 
 
@@ -5103,7 +5085,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 72</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 82</p>
   </div>
 
 
@@ -5158,7 +5140,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 76</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 86</p>
   </div>
 
 
@@ -5213,7 +5195,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 80</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 90</p>
   </div>
 
 
@@ -5268,7 +5250,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 84</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 94</p>
   </div>
 
 
@@ -5313,7 +5295,13 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$active-breakpoints:</span> ($xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container);</pre>
+    <pre><span class="underline">$active-breakpoints:</span> (
+  $xsmall: $xsmall-container,
+  $small:  $small-container,
+  $medium: $medium-container,
+  $large:  $large-container,
+  $xlarge: $xlarge-container
+);</pre>
   </div>
 
 
@@ -5323,7 +5311,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./parts/_vars__parts.scss, starting on line 92</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 102</p>
   </div>
 
 
@@ -5356,7 +5344,7 @@ item in a row via <code>nth-child</code>. Modeled after Bourbon Neats <code>omeg
             
 
             <!-- Version -->
-            <span class="project-info__version"> - v1.1.0</span>
+            <span class="project-info__version"> - v1.3.0</span>
 
             <!-- License -->
             

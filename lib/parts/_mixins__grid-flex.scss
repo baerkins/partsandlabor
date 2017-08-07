@@ -2,7 +2,8 @@
 // ================
 
 ///
-/// flex-grid-col( $columns )
+/// The amount of columns an element should take up in a flexbox
+/// grid. Element should be a child of an element with `@flex-row`.
 ///
 /// @param {integer} $columns - Number of columns to take up
 /// @param {string} $gutter-value - Width of gutter
@@ -19,8 +20,9 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@mixin flex-grid-col($columns, $gutter-value: $target-gutter ) {
-  width: calc-grid-col-width($columns, $gutter-value);
+@mixin flex-grid-col($columns, $grid: $default-grid) {
+
+  width: calc-grid-col-width($columns, $grid);
 }
 
 
