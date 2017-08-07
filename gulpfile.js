@@ -22,7 +22,7 @@ var production    = args.production;
  *
  */
 gulp.task('lint', function() {
-  return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
+  return gulp.src('./lib/**/*.scss')
     .pipe( lint() )
     .pipe( lint.format() )
     // .pipe( gulpif( production, lint.failOnError() ) )
@@ -56,7 +56,7 @@ gulp.task('build_docs', function () {
     title: 'Parts and Labor',
     version: '1.1.0'
   }
-  return gulp.src(['./parts/**/*.scss', './labor/**/*.scss'])
+  return gulp.src('./lib/**/*.scss')
     .pipe( sassdoc(options) );
 });
 
