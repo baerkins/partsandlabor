@@ -64,13 +64,9 @@ gulp.task('build_docs', function () {
  * Build Documentation
  *
  */
-gulp.task('build_docs_json', function () {
+gulp.task('build_docs_json_raw', function () {
   var options = {
-    groups: {
-      parts : 'Parts',
-      labor : 'Labor'
-    },
-    verbose: true
+    verbose: false
   }
 
   return sassdoc.parse('./lib/**/*.scss', { options })
