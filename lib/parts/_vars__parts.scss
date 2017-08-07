@@ -95,7 +95,7 @@ $xlarge: $xlarge-container + ($breakpoint-offset * 2) !default;
 
 
 /// Default Breakpoint Attribute
-/// $group parts
+/// @group parts
 $default-breakpoint-attr: min-width;
 
 
