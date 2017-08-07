@@ -4,33 +4,70 @@
 ///
 /// Create a new breakpoint. Use in conjunction with breakpoint variables.
 ///
-/// @param {string} $size  - Breakpoint size
-/// @param {string} $attr [min-width] - Media break attribute (`min-width` or `max-width`)
-/// @param {string} $media [only screen] - Media type
+/// @param {various} $size  - Either string (900px) or map (min-height: 900px), or false
+/// @param {string}  $media [only screen] - Media type
+///
+/// @require {variable} default-breakpoint-attr
 ///
 /// @example scss - Basic Usage Sass
 ///   div {
 ///     font-size: 12px;
 ///
+///     // Use a breakpoint variable
 ///     @include break($medium) {
+///       font-size: 16px;
+///     }
+///
+///     // Use a px, em, or rem value
+///     @include break(1024px) {
 ///       font-size: 16px;
 ///     }
 ///   }
 ///
+///
 ///   div {
 ///     font-size: 16px;
 ///
-///     @include break($medium, max-width) {
+///     // Use a map to include multiple breakpoint queries
+///     @include break((min-width: 1024px, min-height: 1031px)) {
+///       font-size: 10px;
+///     }
+///
+///     // Set $size to false to only query by media type
+///     @include break(false, print) {
 ///       font-size: 10px;
 ///     }
 ///   }
 ///
 /// @group parts
-/// @since 1.0.0
+/// @since 1.4.0
 ///
-@mixin break($size, $attr: min-width, $media: only screen) {
-  @media #{$media} and (#{$attr}: #{$size}) {
-    @content;
+///
+@mixin break($size, $media: only screen) {
+
+  $_set-point: '';
+
+  @if $size {
+    @if type-of($size) == 'map' { // ex. (max-width: 900px, max-height, 700px)
+
+      @each $attr, $val in $size {
+        $_set-point: $_set-point + 'and (#{$attr}: #{$val})';
+      }
+
+    } @else { // Assume it's a value for default break
+
+      $_set-point: 'and (#{$default-breakpoint-attr}: #{$size})';
+
+    }
+
+    @media #{$media} #{$_set-point} {
+      @content;
+    }
+
+  } @else {
+    @media #{$media} {
+      @content;
+    }
   }
 }
 
@@ -84,7 +121,10 @@
 }
 
 ///
-/// Create a container for content
+/// Create a container for content. If you wish not to use a breakpoint,
+/// set that breakpoint variable to false. You can also pass a custom
+/// map with specific custom breakpoints, just match the mapping of
+/// the default, `$active-breakpoints`
 ///
 /// @param {string} $width [$fluid-container] - Width of the container
 /// @param {bool} $fluid [true] - Whether the container should always
@@ -99,17 +139,19 @@
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin base-container($width: $fluid-container, $fluid: true) {
+@mixin base-container($width: $fluid-container, $fluid: true, $breakpoints: $active-breakpoints) {
   margin-left: auto;
   margin-right: auto;
   width: $width;
 
   @if $fluid == false {
 
-    @each $bp, $bpc in $active-breakpoints {
+    @each $bp, $bpc in $breakpoints {
 
-      @include break($bp) {
-        max-width: $bpc;
+      @if $bpc {
+        @include break($bp) {
+          max-width: $bpc;
+        }
       }
     }
   }

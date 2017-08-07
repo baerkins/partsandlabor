@@ -13,7 +13,7 @@
   
   <meta charset="utf-8" />
 
-<title>Parts and Labor - v1.3.0</title>
+<title>Parts and Labor - v1.4.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href="https://fonts.googleapis.com/css?family=Space+Mono|Droid+Sans+Mono" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="header__content">
-        <p class="header__version">version 1.3.0</p>
+        <p class="header__version">version 1.4.0</p>
         
       </div>
 
@@ -562,6 +562,13 @@
           
             
             <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="xlarge" data-type="variable" href="#parts-variable-xlarge">xlarge
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="default-breakpoint-attr" data-type="variable" href="#parts-variable-default-breakpoint-attr">default-breakpoint-attr
               
               
             </a>
@@ -3553,7 +3560,7 @@ six elements.</p>
   
 
   
-    <span class="item__since"><span>Since:</span> 1.0.0</p>
+    <span class="item__since"><span>Since:</span> 1.4.0</p>
   
 </p>
 
@@ -3585,32 +3592,16 @@ six elements.</p>
         
           <tr class="item__parameter">
             <td class="param-name" scope="row" data-label="name"><code>$size</code></td>
-            <td class="param-desc" data-label="desc"><p>Breakpoint size</p>
+            <td class="param-desc" data-label="desc"><p>Either string (900px) or map (min-height: 900px), or false</p>
 </td>
             <td class="param-type" data-label="type">
               
-                <code>string</code>
+                <code>various</code>
               
             </td>
             <td class="param-def" data-label="default">
             
               &mdash;
-            
-            </td>
-          </tr>
-        
-          <tr class="item__parameter">
-            <td class="param-name" scope="row" data-label="name"><code>$attr</code></td>
-            <td class="param-desc" data-label="desc"><p>Media break attribute (<code>min-width</code> or <code>max-width</code>)</p>
-</td>
-            <td class="param-type" data-label="type">
-              
-                <code>string</code>
-              
-            </td>
-            <td class="param-def" data-label="default">
-            
-              <code>min-width</code>
             
             </td>
           </tr>
@@ -3642,15 +3633,28 @@ six elements.</p>
       <pre class="example__code language-scss"><code>div {
   font-size: 12px;
 
+  // Use a breakpoint variable
   @include break($medium) {
+    font-size: 16px;
+  }
+
+  // Use a px, em, or rem value
+  @include break(1024px) {
     font-size: 16px;
   }
 }
 
+
 div {
   font-size: 16px;
 
-  @include break($medium, max-width) {
+  // Use a map to include multiple breakpoint queries
+  @include break((min-width: 1024px, min-height: 1031px)) {
+    font-size: 10px;
+  }
+
+  // Set $size to false to only query by media type
+  @include break(false, print) {
     font-size: 10px;
   }
 }</code></pre>
@@ -3661,7 +3665,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 31</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 46</p>
   </div>
 
 
@@ -3722,7 +3726,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 51</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 88</p>
   </div>
 
 
@@ -3783,7 +3787,7 @@ div {
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 67</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 104</p>
   </div>
 
 
@@ -3820,7 +3824,10 @@ div {
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Create a container for content</p>
+    <p>Create a container for content. If you wish not to use a breakpoint,
+set that breakpoint variable to false. You can also pass a custom
+map with specific custom breakpoints, just match the mapping of
+the default, <code>$active-breakpoints</code></p>
 
   </div>
 
@@ -3895,7 +3902,7 @@ to <code>$active-breakpoints</code></p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 102</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 142</p>
   </div>
 
 
@@ -5259,6 +5266,61 @@ to create a custom grid to be used within <code>grid-col()</code></p>
   
 </section>
               
+                <section class="item" id="parts-variable-default-breakpoint-attr">
+  <h3 class="item__heading">
+  default-breakpoint-attr
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Default Breakpoint Attribute</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$default-breakpoint-attr:</span> min-width;</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 99</p>
+  </div>
+
+
+
+
+  
+</section>
+              
                 <section class="item" id="parts-variable-active-breakpoints">
   <h3 class="item__heading">
   active-breakpoints
@@ -5285,7 +5347,8 @@ to create a custom grid to be used within <code>grid-col()</code></p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Sass List of Breakpoints for adaptive container, mapped as <code>breakpoint: container-size</code></p>
+    <p>Sass Map of Breakpoints for adaptive container, mapped as <code>breakpoint: container-size</code>
+If you want to remove a value, set it&#39;s -container value to <code>false</code>, such as <code>$xlarge-container: false</code></p>
 
   </div>
 
@@ -5311,7 +5374,7 @@ to create a custom grid to be used within <code>grid-col()</code></p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 102</p>
+    <p class="mono">./lib/parts/parts/_vars__parts.scss, starting on line 109</p>
   </div>
 
 
@@ -5344,7 +5407,7 @@ to create a custom grid to be used within <code>grid-col()</code></p>
             
 
             <!-- Version -->
-            <span class="project-info__version"> - v1.3.0</span>
+            <span class="project-info__version"> - v1.4.0</span>
 
             <!-- License -->
             
