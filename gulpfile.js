@@ -60,6 +60,25 @@ gulp.task('build_docs', function () {
     .pipe( sassdoc(options) );
 });
 
+/**
+ * Build Documentation
+ *
+ */
+gulp.task('build_docs_json', function () {
+  var options = {
+    groups: {
+      parts : 'Parts',
+      labor : 'Labor'
+    },
+    verbose: true
+  }
+
+  return sassdoc.parse('./lib/**/*.scss', { options })
+    .then(function (data) {
+      require('fs').writeFileSync('docs/raw.json', JSON.stringify(data));
+    });
+});
+
 
 /**
  * Full build to ship
