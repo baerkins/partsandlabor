@@ -2,7 +2,6 @@
 // ==============
 
 ///
-/// calc-gutter-width()
 /// Calculate gutter width as a percentage based on target value
 ///
 /// @param {string} $gutter-value - Width of gutter
@@ -20,7 +19,6 @@
 
 
 ///
-/// calc-single-col-width()
 /// Calculate single column width
 ///
 /// @return {integer} value of percentage ( add `+ %`)
@@ -40,7 +38,6 @@
 
 
 ///
-/// calc-grid-col-width()
 /// Calculate the width of X columns
 ///
 /// @param {integer} $columns - Number of columns to take up

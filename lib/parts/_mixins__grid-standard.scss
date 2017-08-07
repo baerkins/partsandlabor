@@ -2,7 +2,7 @@
 // ===================
 
 ///
-/// grid-col( $columns )
+/// The amount if columns an element should take up in a grid.
 ///
 /// @param {integer} $columns - Number of columns to take up
 /// @param {string} $gutter-value - Width of gutter
@@ -99,8 +99,7 @@
 @mixin grid-zed-reset($nth: 1n, $grid: $default-grid) {
 
   &:nth-child(#{$nth}) {
-    $gutter-width: calc-gutter-width($grid);
-    margin-right: $gutter-width * 1%;
+    margin-right: calc-gutter-width($grid) * 1%;
   }
 
   &:nth-child(#{$nth}+1) {
@@ -110,7 +109,7 @@
 
 
 ///
-/// grid-shift( $columns, $gutter-value )
+/// Shift an element by a number of grid elements
 ///
 /// @param {integer} $columns - Number of columns to take up
 /// @param {string} $gutter-value - Width of gutter

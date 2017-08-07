@@ -22,51 +22,51 @@ $new-grid: (
   }
 
   &__1 {
-    @include grid-col(1, $new-grid);
+    @include grid-col(1);
   }
 
   &__2 {
-    @include grid-col(2, $new-grid);
+    @include grid-col(2);
   }
 
   &__3 {
-    @include grid-col(3, $new-grid);
+    @include grid-col(3);
   }
 
   &__4 {
-    @include grid-col(4, $new-grid);
+    @include grid-col(4);
   }
 
   &__5 {
-    @include grid-col(5, $new-grid);
+    @include grid-col(5);
   }
 
   &__6 {
-    @include grid-col(6, $new-grid);
+    @include grid-col(6);
   }
 
   &__7 {
-    @include grid-col(7, $new-grid);
+    @include grid-col(7);
   }
 
   &__8 {
-    @include grid-col(8, $new-grid);
+    @include grid-col(8);
   }
 
   &__9 {
-    @include grid-col(9, $new-grid);
+    @include grid-col(9);
   }
 
   &__10 {
-    @include grid-col(10, $new-grid);
+    @include grid-col(10);
   }
 
   &__11 {
-    @include grid-col(11, $new-grid);
+    @include grid-col(11);
   }
 
   &__12 {
-    @include grid-col(12, $new-grid);
+    @include grid-col(12);
   }
 }
 
