@@ -88,5 +88,7 @@ $xlarge: $xlarge-container + ($breakpoint-offset * 2) !default;
 // ======================
 
 /// Sass List of Breakpoints for adaptive container, mapped as `breakpoint: container-size`
+/// If you want to remove a value, set it's -container value to `false`, such as `$xlarge-container: false`
+///
 /// @group parts
 $active-breakpoints: ($xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container) !default;

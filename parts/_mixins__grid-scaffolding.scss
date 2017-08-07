@@ -108,8 +108,10 @@
 
     @each $bp, $bpc in $active-breakpoints {
 
-      @include break($bp) {
-        max-width: $bpc;
+      @if $bpc {
+        @include break($bp) {
+          max-width: $bpc;
+        }
       }
     }
   }
