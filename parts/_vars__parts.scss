@@ -6,27 +6,29 @@
 /// @group parts
 $total-cols:    12 !default;
 
-/// Target width the grid should account for
+/// Target width of grid. When the grid is at this width,
+/// the gutter value should match the $target-gutter variable
 /// @type String
 /// @group parts
 $target-width:  1200px !default;
 
-/// Target gutter width the grid should account for
+/// Target gutter width the grid. When the grid is at the width
+/// of $target-width, the gutter values will match this variable.
 /// @type String
 /// @group parts
 $target-gutter: 20px !default;
 
-/// Whether the gutter should be a percentage or a hard value (uses CSS `calc` value)
-/// @type Boolean
-/// @group parts
-$calc:          false !default;
 
-
+/// Grid Variable
+/// Default values of the grid map object. You can match this
+/// to create a custom grid to be used within `grid-col()`
+/// @type Map
+/// @group Parts
+/// @since 1.4.0
 $default-grid: (
   cols:   $total-cols,
   width:  $target-width,
-  gutter: $target-gutter,
-  calc:   $calc
+  gutter: $target-gutter
 );
 
 
@@ -97,4 +99,10 @@ $xlarge: $xlarge-container + ($breakpoint-offset * 2) !default;
 
 /// Sass List of Breakpoints for adaptive container, mapped as `breakpoint: container-size`
 /// @group parts
-$active-breakpoints: ($xsmall: $xsmall-container, $small:  $small-container, $medium: $medium-container, $large:  $large-container, $xlarge: $xlarge-container) !default;
+$active-breakpoints: (
+  $xsmall: $xsmall-container,
+  $small:  $small-container,
+  $medium: $medium-container,
+  $large:  $large-container,
+  $xlarge: $xlarge-container
+) !default;

@@ -21,7 +21,7 @@
 ///
 @mixin flex-grid-col($columns, $grid: $default-grid) {
 
-  width: calc-grid-col-width($columns, map-get($grid, gutter));
+  width: calc-grid-col-width($columns, $grid);
 }
 
 

@@ -11,11 +11,11 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@function calc-gutter-width($gutter-value: $target-gutter) {
-
+@function calc-gutter-width($grid) {
+  $_gutter: map-get($grid, gutter);
+  $_width: map-get($grid, width);
   // Get target gutter percentage
-  @return (($gutter-value / 1px) / ($target-width  / 1px)) * 100;
-
+  @return (strip-unit($_gutter) / strip-unit($_width)) * 100;
 }
 
 
@@ -28,13 +28,13 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@function calc-single-col-width() {
+@function calc-single-col-width($grid) {
 
-  $gutter-width: calc-gutter-width();
-  $gutter-area:  ($gutter-width * ($total-cols - 1));
-  $remains:      (100 - $gutter-area);
+  $_gutter-width: calc-gutter-width($grid);
+  $_gutter-area:  ($_gutter-width * (map-get($grid, cols) - 1));
+  $_remains:      (100 - $_gutter-area);
 
-  @return ( $remains / $total-cols );
+  @return ($_remains / map-get($grid, cols));
 
 }
 
@@ -51,44 +51,15 @@
 /// @since 1.0.0
 /// @group parts
 ///
-@function calc-grid-col-width($columns, $gutter-value, $include-gutter: false) {
+@function calc-grid-col-width($columns, $grid, $include-gutter: false) {
 
-  $gutter-width: calc-gutter-width($gutter-value);
+  $_gutter-width: calc-gutter-width($grid);
+  $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));
 
-  @if $calc {
-
-    @if $include-gutter {
-
-      $width: ((100 / $total-cols) * $columns) * 1%;;
-      $column-offset: ($columns * $gutter-value) / ($total-cols);
-
-      @return calc(#{$width} + #{$column-offset});
-
-    } @else {
-
-      $width: ((100 / $total-cols) * $columns) * 1%;;
-      $column-percentage: ($columns / $total-cols) * ($target-gutter / 1px);
-      $column-offset: $target-gutter - $column-percentage;
-
-      @return calc(#{$width} - #{$column-offset});
-
-    }
-
-  } @else {
-
-    $width: ((calc-single-col-width() * $columns) + ($gutter-width * ($columns - 1)));
-
-    @if $include-gutter {
-
-      $width: $width + $gutter-width;
-
-    }
-
-
-    // Attrs
-    @return $width * 1%;
-
-
-
+  @if $include-gutter {
+    $_width: $_width + $_gutter-width;
   }
+
+  @return $_width * 1%;
+
 }
