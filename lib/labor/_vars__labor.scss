@@ -23,16 +23,16 @@ $standard-trans-time:        .35s !default;
 $standard-trans-timing-func: ease !default;
 /// Time delay for `standard-trans` mixin
 /// @group labor
-$standard-trans-time-delay:  0 !default;
+$standard-trans-time-delay:  0s !default;
 /// Time for `long-trans` mixin
 /// @group labor
-$long-trans-time:            .35s !default
+$long-trans-time:            .35s !default;
 /// Timing function for `long-trans` mixin
 /// @group labor
 $long-trans-timing-func:     ease !default;
 /// Time delay for `long-trans` mixin
 /// @group labor
-$long-trans-time-delay:      0 !default;
+$long-trans-time-delay:      0s !default;
 
 // Size Variables
 // ==============
