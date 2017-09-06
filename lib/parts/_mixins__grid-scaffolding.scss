@@ -130,27 +130,45 @@
 /// @param {bool} $fluid [true] - Whether the container should always
 /// be fluid or be adaptive. If false, max-widths will be set according
 /// to `$active-breakpoints`
+/// @param {string} $fluid-until [false] - Allows the container to be
+/// fluid until a point
+/// @param {map} $breakpoints [$active-breakpoints] - A sass map of
+/// breakpoints and their max-widths. See `$active-breakpoints`
 ///
 /// @example scss - Basic Usage Sass
-///   .container {
-///     @include container;
+///   .container-fluid {
+///     @include base-container(90%);
+///   }
+///
+///   .container-adaptive {
+///     @include base-container(90%, false);
+///   }
+///
+///   .container-fluid-until-medium {
+///     @include base-container(90%, false, $small);
 ///   }
 ///
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin base-container($width: $fluid-container, $fluid: true, $breakpoints: $active-breakpoints) {
+@mixin base-container($width: $fluid-container, $fluid: true, $fluid-until: false, $breakpoints: $active-breakpoints) {
   margin-left: auto;
   margin-right: auto;
   width: $width;
 
   @if $fluid == false {
-
     @each $bp, $bpc in $breakpoints {
-
-      @if $bpc {
-        @include break($bp) {
-          max-width: $bpc;
+      @if $fluid-until {
+        @if $bpc and $bpc >= $fluid-until {
+          @include break($bp) {
+            max-width: $bpc;
+          }
+        }
+      } @else {
+        @if $bpc {
+          @include break($bp) {
+            max-width: $bpc;
+          }
         }
       }
     }

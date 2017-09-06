@@ -1,11 +1,8 @@
 {
   "name": "partsandlabor",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A Sass Utility Library",
   "main": "main.scss",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iamhexcoder/partsandlabor.git"

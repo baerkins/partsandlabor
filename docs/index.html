@@ -13,7 +13,7 @@
   
   <meta charset="utf-8" />
 
-<title>Parts and Labor - v1.4.0</title>
+<title>Parts and Labor - v1.4.2</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href="https://fonts.googleapis.com/css?family=Space+Mono|Droid+Sans+Mono" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="header__content">
-        <p class="header__version">version 1.4.0</p>
+        <p class="header__version">version 1.4.2</p>
         
       </div>
 
@@ -2704,7 +2704,7 @@ button {
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$standard-trans-time-delay:</span> 0;</pre>
+    <pre><span class="underline">$standard-trans-time-delay:</span> 0s;</pre>
   </div>
 
 
@@ -2759,10 +2759,7 @@ button {
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$long-trans-time:</span> .35s !default
-/// Timing function for `long-trans` mixin
-/// @group labor
-$long-trans-timing-func:     ease;</pre>
+    <pre><span class="underline">$long-trans-time:</span> .35s;</pre>
   </div>
 
 
@@ -2872,7 +2869,7 @@ $long-trans-timing-func:     ease;</pre>
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$long-trans-time-delay:</span> 0;</pre>
+    <pre><span class="underline">$long-trans-time-delay:</span> 0s;</pre>
   </div>
 
 
@@ -3884,6 +3881,40 @@ to <code>$active-breakpoints</code></p>
             </td>
           </tr>
         
+          <tr class="item__parameter">
+            <td class="param-name" scope="row" data-label="name"><code>$fluid-until</code></td>
+            <td class="param-desc" data-label="desc"><p>Allows the container to be
+fluid until a point</p>
+</td>
+            <td class="param-type" data-label="type">
+              
+                <code>string</code>
+              
+            </td>
+            <td class="param-def" data-label="default">
+            
+              <code>false</code>
+            
+            </td>
+          </tr>
+        
+          <tr class="item__parameter">
+            <td class="param-name" scope="row" data-label="name"><code>$breakpoints</code></td>
+            <td class="param-desc" data-label="desc"><p>A sass map of
+breakpoints and their max-widths. See <code>$active-breakpoints</code></p>
+</td>
+            <td class="param-type" data-label="type">
+              
+                <code>map</code>
+              
+            </td>
+            <td class="param-def" data-label="default">
+            
+              <code>$active-breakpoints</code>
+            
+            </td>
+          </tr>
+        
       </tbody>
     </table>
   </div>
@@ -3892,8 +3923,16 @@ to <code>$active-breakpoints</code></p>
   <div class="item__example">
     <h3 class="item__sub-heading">Example Usage:</h3>
     
-      <pre class="example__code language-scss"><code>.container {
-  @include container;
+      <pre class="example__code language-scss"><code>.container-fluid {
+  @include base-container(90%);
+}
+
+.container-adaptive {
+  @include base-container(90%, false);
+}
+
+.container-fluid-until-medium {
+  @include base-container(90%, false, $small);
 }</code></pre>
     
   </div>
@@ -3902,7 +3941,7 @@ to <code>$active-breakpoints</code></p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 142</p>
+    <p class="mono">./lib/parts/parts/_mixins__grid-scaffolding.scss, starting on line 154</p>
   </div>
 
 
@@ -5407,7 +5446,7 @@ If you want to remove a value, set it&#39;s -container value to <code>false</cod
             
 
             <!-- Version -->
-            <span class="project-info__version"> - v1.4.0</span>
+            <span class="project-info__version"> - v1.4.2</span>
 
             <!-- License -->
             
