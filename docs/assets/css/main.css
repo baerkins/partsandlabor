@@ -207,7 +207,7 @@ body {
 pre,
 code {
   background-color: #f2f2f2;
-  color: #0055ff;
+  color: #1350b2;
   font-family: 'Droid Sans Mono', monospaced;
   overflow: auto;
   white-space: pre-wrap;
@@ -219,7 +219,7 @@ code {
 
 p.mono {
   font-family: 'Droid Sans Mono', monospaced;
-  color: #0055ff; }
+  color: #1350b2; }
 
 pre {
   padding: 15px; }
@@ -278,7 +278,7 @@ pre {
 
 .header {
   padding: 20px 0;
-  background-color: #0055ff;
+  background-color: #1350b2;
   color: #FFFFFF; }
   @media only screen and (min-width: 960px) {
     .header {
@@ -299,7 +299,8 @@ pre {
     font-size: 30px;
     color: #FFFFFF;
     text-decoration: none;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.5px;
+    font-weight: 400; }
   .header__content {
     text-align: right; }
     @media only screen and (min-width: 960px) {
@@ -324,9 +325,9 @@ pre {
     display: block;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #0055ff; }
+    border-bottom: 1px solid #1350b2; }
     .sidebar a.sidebar__item-subheading {
-      color: #0055ff;
+      color: #1350b2;
       padding-top: 8px;
       padding-bottom: 8px; }
   .sidebar__item-heading {
@@ -342,7 +343,7 @@ pre {
       content: '-'; }
   .sidebar__item-subheading {
     padding-left: 16px;
-    color: #0055ff; }
+    color: #1350b2; }
     .sidebar__item-subheading:before {
       content: '+';
       padding-right: 5px; }
@@ -381,22 +382,22 @@ pre {
   font-family: "PT Serif", serif;
   padding: 15px;
   margin-bottom: 40px;
-  background-color: #0055ff;
+  background-color: #1350b2;
   color: #FFFFFF; }
 
 .item__heading {
   font-family: "PT Serif", serif;
   font-size: 30px;
   margin-bottom: 15px;
-  color: #0055ff; }
+  color: #1350b2; }
 
 .item__meta {
-  color: #6699ff;
+  color: #4082eb;
   margin: 10px 0;
   text-transform: uppercase;
   font-size: 11px; }
   .item__meta > span {
-    border: 1px solid #6699ff;
+    border: 1px solid #4082eb;
     padding: 5px 8px;
     border-radius: 20px;
     display: inline-block; }
@@ -406,7 +407,7 @@ pre {
     margin-left: 5px; }
   .item__meta a {
     font-weight: 600;
-    color: #0055ff; }
+    color: #1350b2; }
 
 .item__description {
   font-family: "PT Serif", serif;
@@ -423,7 +424,7 @@ pre {
 .item + .item {
   margin-top: 60px;
   padding-top: 50px;
-  border-top: 1px solid #0055ff; }
+  border-top: 1px solid #1350b2; }
 
 .item__parameters {
   margin-bottom: 30px; }
@@ -434,7 +435,7 @@ pre {
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #0055ff;
+  border: 1px solid #1350b2;
   margin: 15px 0 30px;
   table-layout: fixed; }
   table code {
@@ -443,19 +444,19 @@ table {
   table th {
     text-align: left;
     padding: 10px;
-    background-color: #0055ff;
+    background-color: #1350b2;
     color: #FFFFFF;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px; }
   table .item__parameter {
-    border-bottom: 1px solid #3377ff; }
+    border-bottom: 1px solid #1865e0; }
   table td {
     padding: 15px 10px; }
 
 .footer {
-  background-color: #0055ff;
+  background-color: #1350b2;
   padding: 100px 0 50px;
   color: #FFFFFF;
   line-height: 1.5;
