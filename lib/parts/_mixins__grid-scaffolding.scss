@@ -93,6 +93,11 @@
 ///
 /// Create a wrapper for a row of flexbox grid elements
 ///
+/// @param {string}  $align   [false] - Value for align-items
+/// @param {string}  $justify [space-between] - Value for justify-content
+/// @param {bool}    $reverse [false] - Reverse the flexbox content
+/// @param {bool}    $wrap [true] - Should the contents wrap
+///
 /// @example scss - Basic Usage Sass
 ///   .flow-row {
 ///     @include flex-row;
