@@ -111,7 +111,7 @@
   justify-content: $justify;
   width: 100%;
 
-  @if $align {
+  @if $align != false {
     align-items: $align;
   }
 
