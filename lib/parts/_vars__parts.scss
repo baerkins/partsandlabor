@@ -31,6 +31,76 @@ $default-grid: (
   gutter: $target-gutter
 );
 
+/// Grid Variable
+/// Optional Grid variable to create a grid without gutters.
+/// @type Map
+/// @group Parts
+/// @since 1.4.0
+$default-grid: (
+  cols:   $total-cols,
+  width:  $target-width,
+  gutter: 0
+);
+
+// Breakpoints
+// ===========
+
+/// Breakpoint
+/// @group parts
+$xsmall: 480px !default;
+
+/// Breakpoint
+/// @group parts
+$small:  760px !default;
+
+/// Breakpoint
+/// @group parts
+$medium: 1024px !default;
+
+/// Breakpoint
+/// @group parts
+$large:  1200px !default;
+
+/// Breakpoint
+/// @group parts
+$xlarge: 1500px !default;
+
+
+/// Default Breakpoint Attribute
+/// @group parts
+$default-breakpoint-attr: min-width;
+
+
+/// Extra value to pad out breakpoints
+/// @type String (pixel val)
+/// @group parts
+$default-breakpoint-offset: $target-gutter !default;
+
+/// Extra value to pad out small breakpoint
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset-xsmall: $default-breakpoint-offset !default;
+
+/// Extra value to pad out small breakpoint
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset-small: $default-breakpoint-offset !default;
+
+/// Extra value to pad out breakpoints
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset-medium: $default-breakpoint-offset !default;
+
+/// Extra value to pad out breakpoints
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset-large: $default-breakpoint-offset !default;
+
+/// Extra value to pad out breakpoints
+/// @type String (pixel val)
+/// @group parts
+$breakpoint-offset-xlarge: $default-breakpoint-offset !default;
+
 
 // Breakpoint Values
 // =================
@@ -43,60 +113,28 @@ $fluid-container:   90% !default;
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$xsmall-container:  480px !default;
+$xsmall-container:  $xsmall - ($breakpoint-offset-xsmall * 2) !default;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$small-container:   700px !default;
+$small-container:   $small - ($breakpoint-offset-small * 2) !default;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$medium-container:  920px !default;
+$medium-container:  $medium - ($breakpoint-offset-medium * 2) !default;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$large-container:   1200px !default;
+$large-container:   $large - ($breakpoint-offset-large * 2) !default;
 
 /// Container width at breakpoint
 /// @type String (pixel val)
 /// @group parts
-$xlarge-container:  1500px !default;
+$xlarge-container:  $xlarge - ($breakpoint-offset-xlarge * 2) !default;
 
-/// Extra value to pad out breakpoints
-/// @type String (pixel val)
-/// @group parts
-$breakpoint-offset: $target-gutter !default;
-
-// Breakpoints
-// ===========
-
-/// Breakpoint
-/// @group parts
-$xsmall: $xsmall-container + ($breakpoint-offset * 2) !default;
-
-/// Breakpoint
-/// @group parts
-$small:  $small-container + ($breakpoint-offset * 2) !default;
-
-/// Breakpoint
-/// @group parts
-$medium: $medium-container + ($breakpoint-offset * 2) !default;
-
-/// Breakpoint
-/// @group parts
-$large:  $large-container + ($breakpoint-offset * 2) !default;
-
-/// Breakpoint
-/// @group parts
-$xlarge: $xlarge-container + ($breakpoint-offset * 2) !default;
-
-
-/// Default Breakpoint Attribute
-/// @group parts
-$default-breakpoint-attr: min-width;
 
 
 // Active Breakpoint List
