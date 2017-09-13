@@ -19,7 +19,7 @@ $target-width:  1200px !default;
 $target-gutter: 20px !default;
 
 
-/// Grid Variable
+/// Default Grid Variable
 /// Default values of the grid map object. You can match this
 /// to create a custom grid to be used within `grid-col()`
 /// @type Map
@@ -31,12 +31,12 @@ $default-grid: (
   gutter: $target-gutter
 );
 
-/// Grid Variable
+/// No Margin Grid Variable
 /// Optional Grid variable to create a grid without gutters.
 /// @type Map
 /// @group Parts
 /// @since 1.4.0
-$default-grid: (
+$no-margin-grid: (
   cols:   $total-cols,
   width:  $target-width,
   gutter: 0
@@ -45,7 +45,7 @@ $default-grid: (
 // Breakpoints
 // ===========
 
-/// Breakpoint
+/// Default Breakpoints
 /// @group parts
 $xsmall: 480px !default;
 
@@ -71,12 +71,34 @@ $xlarge: 1500px !default;
 $default-breakpoint-attr: min-width;
 
 
+
+/// Max Width Breakpoint - for use with break() mixin
+/// @group parts
+$xsmall-max: (max-width: $xsmall) !default;
+
+/// Max Width Breakpoint - for use with break() mixin
+/// @group parts
+$small-max:  (max-width: $small) !default;
+
+/// Max Width Breakpoint - for use with break() mixin
+/// @group parts
+$medium-max: (max-width: $medium) !default;
+
+/// Max Width Breakpoint - for use with break() mixin
+/// @group parts
+$large-max:  (max-width: $large) !default;
+
+/// Max Width Breakpoint - for use with break() mixin
+/// @group parts
+$xlarge-max: (max-width: $xlarge) !default;
+
+
 /// Extra value to pad out breakpoints
 /// @type String (pixel val)
 /// @group parts
 $default-breakpoint-offset: $target-gutter !default;
 
-/// Extra value to pad out small breakpoint
+/// Extra value to pad out xsmall breakpoint
 /// @type String (pixel val)
 /// @group parts
 $breakpoint-offset-xsmall: $default-breakpoint-offset !default;
@@ -86,12 +108,12 @@ $breakpoint-offset-xsmall: $default-breakpoint-offset !default;
 /// @group parts
 $breakpoint-offset-small: $default-breakpoint-offset !default;
 
-/// Extra value to pad out breakpoints
+/// Extra value to pad out medium breakpoint
 /// @type String (pixel val)
 /// @group parts
 $breakpoint-offset-medium: $default-breakpoint-offset !default;
 
-/// Extra value to pad out breakpoints
+/// Extra value to pad out large breakpoint
 /// @type String (pixel val)
 /// @group parts
 $breakpoint-offset-large: $default-breakpoint-offset !default;

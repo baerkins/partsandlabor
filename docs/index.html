@@ -13,7 +13,7 @@
   
   <meta charset="utf-8" />
 
-<title>Parts and Labor - v1.5.0</title>
+<title>Parts and Labor - v1.5.1</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href="https://fonts.googleapis.com/css?family=Space+Mono|Droid+Sans+Mono" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="header__content">
-        <p class="header__version">version 1.5.0</p>
+        <p class="header__version">version 1.5.1</p>
         
       </div>
 
@@ -484,7 +484,7 @@
             
           
             
-            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="default-grid" data-type="variable" href="#parts-variable-default-grid">default-grid
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="no-margin-grid" data-type="variable" href="#parts-variable-no-margin-grid">no-margin-grid
               
               
             </a>
@@ -527,6 +527,41 @@
           
             
             <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="default-breakpoint-attr" data-type="variable" href="#parts-variable-default-breakpoint-attr">default-breakpoint-attr
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="xsmall-max" data-type="variable" href="#parts-variable-xsmall-max">xsmall-max
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="small-max" data-type="variable" href="#parts-variable-small-max">small-max
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="medium-max" data-type="variable" href="#parts-variable-medium-max">medium-max
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="large-max" data-type="variable" href="#parts-variable-large-max">large-max
+              
+              
+            </a>
+            
+          
+            
+            <a class="sidebar__item sidebar__item-entry  sassdoc__item" data-group="parts" data-name="xlarge-max" data-type="variable" href="#parts-variable-xlarge-max">xlarge-max
               
               
             </a>
@@ -4733,7 +4768,7 @@ of $target-width, the gutter values will match this variable.</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Grid Variable
+    <p>Default Grid Variable
 Default values of the grid map object. You can match this
 to create a custom grid to be used within <code>grid-col()</code></p>
 
@@ -4768,9 +4803,9 @@ to create a custom grid to be used within <code>grid-col()</code></p>
   
 </section>
               
-                <section class="item" id="parts-variable-default-grid">
+                <section class="item" id="parts-variable-no-margin-grid">
   <h3 class="item__heading">
-  default-grid
+  no-margin-grid
 </h3>
 
 
@@ -4796,7 +4831,7 @@ to create a custom grid to be used within <code>grid-col()</code></p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Grid Variable
+    <p>No Margin Grid Variable
 Optional Grid variable to create a grid without gutters.</p>
 
   </div>
@@ -4807,7 +4842,7 @@ Optional Grid variable to create a grid without gutters.</p>
 
   <h3 class="item__sub-heading">Default Value</h3>
   <div class="item__variable-defaults">
-    <pre><span class="underline">$default-grid:</span> (
+    <pre><span class="underline">$no-margin-grid:</span> (
   cols:   $total-cols,
   width:  $target-width,
   gutter: 0
@@ -4856,7 +4891,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Breakpoint</p>
+    <p>Default Breakpoints</p>
 
   </div>
 
@@ -5160,6 +5195,281 @@ Optional Grid variable to create a grid without gutters.</p>
   
 </section>
               
+                <section class="item" id="parts-variable-xsmall-max">
+  <h3 class="item__heading">
+  xsmall-max
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Max Width Breakpoint - for use with break() mixin</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$xsmall-max:</span> (max-width: $xsmall);</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L77" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 77</p>
+  </div>
+
+
+
+
+  
+</section>
+              
+                <section class="item" id="parts-variable-small-max">
+  <h3 class="item__heading">
+  small-max
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Max Width Breakpoint - for use with break() mixin</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$small-max:</span> (max-width: $small);</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L81" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 81</p>
+  </div>
+
+
+
+
+  
+</section>
+              
+                <section class="item" id="parts-variable-medium-max">
+  <h3 class="item__heading">
+  medium-max
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Max Width Breakpoint - for use with break() mixin</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$medium-max:</span> (max-width: $medium);</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L85" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 85</p>
+  </div>
+
+
+
+
+  
+</section>
+              
+                <section class="item" id="parts-variable-large-max">
+  <h3 class="item__heading">
+  large-max
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Max Width Breakpoint - for use with break() mixin</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$large-max:</span> (max-width: $large);</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L89" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 89</p>
+  </div>
+
+
+
+
+  
+</section>
+              
+                <section class="item" id="parts-variable-xlarge-max">
+  <h3 class="item__heading">
+  xlarge-max
+</h3>
+
+
+<p class="item__meta">
+
+  
+
+  
+
+  
+      <span class="item__group"><span>Group:</span> parts</span>
+  
+
+  
+    <span class="item__access"><span>Access:</span> public</span>
+  
+
+  
+</p>
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description">
+    <p>Max Width Breakpoint - for use with break() mixin</p>
+
+  </div>
+
+
+  
+
+
+  <h3 class="item__sub-heading">Default Value</h3>
+  <div class="item__variable-defaults">
+    <pre><span class="underline">$xlarge-max:</span> (max-width: $xlarge);</pre>
+  </div>
+
+
+  
+  
+
+  
+  <div class="item__path">
+    <h3 class="item__sub-heading">File Location</h3>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L93" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 93</p>
+  </div>
+
+
+
+
+  
+</section>
+              
                 <section class="item" id="parts-variable-default-breakpoint-offset">
   <h3 class="item__heading">
   default-breakpoint-offset
@@ -5206,7 +5516,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L77" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 77</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L99" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 99</p>
   </div>
 
 
@@ -5241,7 +5551,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Extra value to pad out small breakpoint</p>
+    <p>Extra value to pad out xsmall breakpoint</p>
 
   </div>
 
@@ -5261,7 +5571,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L82" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 82</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L104" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 104</p>
   </div>
 
 
@@ -5316,7 +5626,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L87" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 87</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L109" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 109</p>
   </div>
 
 
@@ -5351,7 +5661,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Extra value to pad out breakpoints</p>
+    <p>Extra value to pad out medium breakpoint</p>
 
   </div>
 
@@ -5371,7 +5681,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L92" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 92</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L114" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 114</p>
   </div>
 
 
@@ -5406,7 +5716,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <h3 class="item__sub-heading">Description</h3>
   <div class="item__description">
-    <p>Extra value to pad out breakpoints</p>
+    <p>Extra value to pad out large breakpoint</p>
 
   </div>
 
@@ -5426,7 +5736,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L97" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 97</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L119" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 119</p>
   </div>
 
 
@@ -5481,7 +5791,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L102" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 102</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L124" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 124</p>
   </div>
 
 
@@ -5536,7 +5846,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L111" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 111</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L133" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 133</p>
   </div>
 
 
@@ -5591,7 +5901,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L116" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 116</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L138" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 138</p>
   </div>
 
 
@@ -5646,7 +5956,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L121" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 121</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L143" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 143</p>
   </div>
 
 
@@ -5701,7 +6011,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L126" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 126</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L148" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 148</p>
   </div>
 
 
@@ -5756,7 +6066,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L131" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 131</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L153" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 153</p>
   </div>
 
 
@@ -5811,7 +6121,7 @@ Optional Grid variable to create a grid without gutters.</p>
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L136" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 136</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L158" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 158</p>
   </div>
 
 
@@ -5873,7 +6183,7 @@ If you want to remove a value, set it&#39;s -container value to <code>false</cod
   
   <div class="item__path">
     <h3 class="item__sub-heading">File Location</h3>
-    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L147" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 147</p>
+    <p class="mono"><a href="https://github.com/iamhexcoder/partsandlabor/blob/master/lib/parts/_vars__parts.scss#L169" target="_blank" rel="noopener">./lib/parts/_vars__parts.scss</a>, starting on line 169</p>
   </div>
 
 
@@ -5906,7 +6216,7 @@ If you want to remove a value, set it&#39;s -container value to <code>false</cod
             
 
             <!-- Version -->
-            <span class="project-info__version"> - v1.5.0</span>
+            <span class="project-info__version"> - v1.5.1</span>
 
             <!-- License -->
             
