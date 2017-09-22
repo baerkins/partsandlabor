@@ -157,6 +157,7 @@
 /// @since 1.0.0
 ///
 @mixin base-container($width: $fluid-container, $fluid: true, $fluid-until: false, $breakpoints: $active-breakpoints) {
+  @include clearfix;
   margin-left: auto;
   margin-right: auto;
   width: $width;
@@ -164,13 +165,13 @@
   @if $fluid == false {
     @each $bp, $bpc in $breakpoints {
       @if $fluid-until {
-        @if $bpc and $bpc >= $fluid-until {
+        @if $bp and $bp >= $fluid-until {
           @include break($bp) {
             max-width: $bpc;
           }
         }
       } @else {
-        @if $bpc {
+        @if $bp {
           @include break($bp) {
             max-width: $bpc;
           }
