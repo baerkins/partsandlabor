@@ -1,0 +1,46 @@
+// Inline Elements
+// ===============
+
+//
+// ==-----> BUTTONS <-----==
+//
+
+///
+/// Start buttons with a clean slate
+///
+/// @example scss - Basic Usage Sass
+///   a[role="button"],
+///   input[type="submit"],
+///   input[type="reset"],
+///   input[type="button"],
+///   button {
+///     @include button-reset();
+///   }
+///
+/// @since 1.0.0
+/// @group labor
+///
+@mixin button-reset {
+  box-sizing: inherit;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: default;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  display: inline-block;
+  padding: 0;
+  appearance: button;
+  -webkit-appearance: button; // sass-lint:disable-line no-vendor-prefixes
+  user-select: none;
+  text-decoration: none;
+  white-space: pre;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0;
+    outline: none;
+  }
+}

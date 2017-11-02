@@ -1,0 +1,29 @@
+.footer {
+  background-color: $background-dark;
+  padding: 100px 0 50px;
+  color: $white;
+  line-height: 1.5;
+  margin-top: 100px;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__project-info {
+
+    @include break($medium) {
+      @include grid-col(6);
+    }
+  }
+
+  &__author {
+
+    @include break($medium) {
+      text-align: right;
+      @include grid-col(3);
+      @include grid-shift(3);
+    }
+
+  }
+}

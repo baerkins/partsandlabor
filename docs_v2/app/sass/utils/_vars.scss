@@ -1,0 +1,12 @@
+@include font-face('Hack', 'fonts/hack-regular', normal, normal, woff woff2);
+@include font-face('Hack', 'fonts/hack-bold', 600, normal, woff woff2);
+
+$white: #FFF;
+$black: #3a3a3d;
+$purple: #9063e0;
+$gray: #92a9b7;
+$gray-light: #ebf2f3;
+$gold: #ba9b61;
+
+// Fonts
+$base-font-family: 'Hack';

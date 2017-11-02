@@ -72,7 +72,14 @@ gulp.task('build_docs_json_raw', function () {
 
   return sassdoc.parse('./lib/**/*.scss', { options })
     .then(function (data) {
-      require('fs').writeFileSync('docs/raw.json', JSON.stringify(data));
+      var j = [];
+      var d = data;
+
+      for (var i in d ) {
+        j.push(d[i].group);
+      }
+
+      require('fs').writeFileSync('docs/raw.json', JSON.stringify(j));
     });
 });
 

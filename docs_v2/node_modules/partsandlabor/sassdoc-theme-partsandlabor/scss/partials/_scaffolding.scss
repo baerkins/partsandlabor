@@ -1,0 +1,32 @@
+.container {
+  @include base-container(90%, false);
+}
+
+.container-fluid {
+  @include base-container(90%, true);
+}
+
+.row {
+  @include row();
+}
+
+.sidebar {
+
+  @include break($medium) {
+    @include grid-col(3);
+    position: fixed;
+  }
+}
+
+.main {
+
+  @include break($medium) {
+    @include grid-col(8);
+    @include grid-shift(4);
+  }
+}
+
+.main-container {
+  margin-top: 120px;
+  position: relative;
+}
