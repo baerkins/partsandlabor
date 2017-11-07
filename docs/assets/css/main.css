@@ -51,6 +51,12 @@ table {
   font-weight: normal;
   src: url("../fonts/GTPressuraMono-Light.eot?") format("eot"), url("../fonts/GTPressuraMono-Light.woff2") format("woff2"), url("../fonts/GTPressuraMono-Light.woff") format("woff"), url("../fonts/GTPressuraMono-Light.ttf") format("truetype"), url("../fonts/GTPressuraMono-Light.svg#Range") format("svg"); }
 
+@font-face {
+  font-family: "Hack";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/hack-regular.woff") format("woff"), url("../fonts/hack-regular.woff2") format("woff2"); }
+
 /**
  * Darcula theme
  *
@@ -202,7 +208,7 @@ html {
 
 body {
   min-height: 100%;
-  font-family: "Fira Mono", sans-serif;
+  font-family: "Hack", sans-serif;
   font-size: 16px;
   -webkit-font-kerning: normal;
           font-kerning: normal; }
@@ -221,7 +227,7 @@ code {
     padding: 0; }
 
 p.mono {
-  font-family: "Fira Mono", sans-serif, monospaced;
+  font-family: "Hack", sans-serif, monospaced;
   font-weight: 200;
   color: #6c6c6c;
   font-size: 14px;
@@ -230,7 +236,7 @@ p.mono {
   p.mono a {
     font-size: 16px;
     color: #6c6c6c;
-    font-family: "Fira Mono", sans-serif, monospaced;
+    font-family: "Hack", sans-serif, monospaced;
     font-weight: 400; }
 
 pre {
@@ -319,7 +325,7 @@ pre {
         margin-right: 0; } }
   .header__logo-type,
   .header__logo-type a {
-    font-family: "Fira Mono", sans-serif;
+    font-family: "Hack", sans-serif;
     font-size: 30px;
     color: #edeced;
     text-decoration: none;
@@ -391,7 +397,7 @@ pre {
 
 .item-section__group-header {
   font-size: 28px;
-  font-family: "Fira Mono", serif;
+  font-family: "Hack", serif;
   font-weight: 400;
   margin-bottom: 40px;
   color: #202020;
@@ -406,7 +412,7 @@ pre {
 .item-section__type-header {
   font-size: 22px;
   text-transform: capitalize;
-  font-family: "Fira Mono", sans-serif;
+  font-family: "Hack", sans-serif;
   font-weight: 200;
   padding: 15px;
   margin-bottom: 40px;
@@ -415,7 +421,7 @@ pre {
   letter-spacing: 2px; }
 
 .item__heading {
-  font-family: "Fira Mono", serif;
+  font-family: "Hack", serif;
   font-size: 24px;
   margin-bottom: 15px;
   color: #6c6c6c; }
@@ -425,7 +431,7 @@ pre {
   margin: 10px 0;
   text-transform: uppercase;
   font-size: 11px;
-  font-family: "Fira Mono", sans-serif;
+  font-family: "Hack", sans-serif;
   font-weight: 600; }
   .item__meta > span {
     border: 1px solid #5c5c5c;
@@ -442,7 +448,7 @@ pre {
     color: #6c6c6c; }
 
 .item__description {
-  font-family: "Fira Mono", sans-serif;
+  font-family: "Hack", sans-serif;
   margin: -10px 0 30px;
   font-size: 16px;
   text-transform: uppercase; }
@@ -453,7 +459,7 @@ pre {
   letter-spacing: 1px;
   font-size: 10px;
   margin: 20px 0 25px;
-  font-family: "Fira Mono", sans-serif;
+  font-family: "Hack", sans-serif;
   color: #4c4c4c; }
 
 .item + .item {

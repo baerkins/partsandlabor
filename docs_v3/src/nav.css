@@ -1,0 +1,81 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav a {
+  display: block;
+  margin: 0 0 3px;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  direction: block;
+}
+
+nav > ul {
+  overflow: hidden;
+}
+
+li.nav__group {
+  float: left;
+  display: block;
+  width: 50%;
+}
+
+li.nav__group > a {
+  padding: 20px 30px;
+}
+
+li.nav__group > a {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Type Links */
+ul.nav__type-list {
+  overflow: hidden;
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 30px;
+  margin: 30px 0;
+}
+
+li.nav__group:hover {
+  background-color: gray;
+}
+
+li.nav__group:hover ul.nav__type-list {
+  display: block;
+}
+
+ul.nav__type-list > li {
+  width: 33%;
+  float: left;
+}
+
+li.nav__type > a {
+  text-transform: capitalize;
+}
+
+li.nav__type > a:after {
+  content: 's';
+}
+
+/* Item Links */
+ul.nav__item-list {
+  margin-top: 10px;
+}
+
+
