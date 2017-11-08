@@ -1,3 +1,32 @@
+@font-face {
+ font-family: "Hack";
+ font-weight: normal;
+ src: url("/assets/fonts/hack-regular-subset.woff2") format("woff2"),
+      url("/assets/fonts/hack-regular-subset.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Hack";
+ font-style: italic;
+ src: url("/assets/fonts/hack-italic-subset.woff2") format("woff2"),
+      url("/assets/fonts/hack-italic-subset.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Hack";
+ font-weight: 600;
+ src: url("/assets/fonts/hack-bold-subset.woff2") format("woff2"),
+      url("/assets/fonts/hack-bold-subset.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Hack";
+ font-weight: 600;
+ font-style: italic;
+ src: url("/assets/fonts/hack-bolditalic-subset.woff2") format("woff2"),
+      url("/assets/fonts/hack-bolditalic-subset.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,5 +34,56 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: 'Hack', monospace;
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+
+pre,
+code {
+  background-color: #e0e0e0;
+  font-family: 'Hack';
+}
+
+pre {
+  padding: 20px 30px;
+}
+
+/* Code Hightlighting */
+.hljs-selector-class {
+  font-weight: 600;
+}
+
+.hljs-comment {
+  color: gray;
+}
+
+.hljs-keyword {
+  font-style: italic;
+  color: #474747;
+}
+
+.hljs-variable {
+  font-weight: 600;
+  font-style: italic;
 }

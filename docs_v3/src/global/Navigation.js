@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import items from './raw.json';
-import './nav.css';
+import items from '../json/raw.json';
+import './Navigation.css';
 
 const sortedItems = items.sorted;
 
@@ -77,7 +77,7 @@ class GroupNode extends Component {
 }
 
 // Create the Navigation
-const ItemNav = () => {
+const Navigation = () => {
 
   let navItems = sortedItems.map(function(group, i) {
     return (
@@ -86,12 +86,10 @@ const ItemNav = () => {
   });
 
   return (
-    <nav className="nav">
-      <ul>
-        {navItems}
-      </ul>
-    </nav>
+    <ul>
+      {navItems}
+    </ul>
   );
 };
 
-export default ItemNav;
+export default Navigation;
