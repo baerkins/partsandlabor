@@ -188,9 +188,10 @@ gulp.task('build_docs_json_raw', function () {
 
       }
 
+      docs.sorted.reverse();
+
       // Write raw json
-      require('fs').writeFileSync('docs_v2/raw.json', JSON.stringify(docs, null, '\t'));
-      require('fs').writeFileSync('docs_v3/src/raw.json', JSON.stringify(docs, null, '\t'));
+      require('fs').writeFileSync('docs_react/src/json/raw.json', JSON.stringify(docs, null, '\t'));
 
     });
 });
