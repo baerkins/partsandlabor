@@ -1,0 +1,3041 @@
+{
+	"ver": "1.5.2",
+	"sorted": [
+		{
+			"groupName": "parts",
+			"groupTypes": [
+				{
+					"typeName": "function",
+					"items": [
+						{
+							"description": "\nCalculate gutter width as a percentage based on target value\n\n",
+							"commentRange": {
+								"start": 4,
+								"end": 12
+							},
+							"context": {
+								"type": "function",
+								"name": "calc-gutter-width",
+								"code": "\n  $_gutter: map-get($grid, gutter);\n  $_width: map-get($grid, width);\n  // Get target gutter percentage\n  @return (strip-unit($_gutter) / strip-unit($_width)) * 100;\n",
+								"line": {
+									"start": 13,
+									"end": 18
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"return": {
+								"type": "integer",
+								"description": "value of percentage ( add `+ %`)"
+							},
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "strip-unit"
+								},
+								{
+									"type": "function",
+									"name": "strip-unit"
+								}
+							],
+							"file": {
+								"path": "parts/_functions__grid.scss",
+								"name": "_functions__grid.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCalculate single column width\n\n",
+									"context": {
+										"type": "function",
+										"name": "calc-single-col-width",
+										"code": "\n\n  $_gutter-width: calc-gutter-width($grid);\n  $_gutter-area:  ($_gutter-width * (map-get($grid, cols) - 1));\n  $_remains:      (100 - $_gutter-area);\n\n  @return ($_remains / map-get($grid, cols));\n\n",
+										"line": {
+											"start": 29,
+											"end": 37
+										}
+									}
+								},
+								{
+									"description": "\nCalculate the width of X columns\n\n",
+									"context": {
+										"type": "function",
+										"name": "calc-grid-col-width",
+										"code": "\n\n  $_gutter-width: calc-gutter-width($grid);\n  $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));\n\n  @if $include-gutter {\n    $_width: $_width + $_gutter-width;\n  }\n\n  @return $_width * 1%;\n\n",
+										"line": {
+											"start": 51,
+											"end": 62
+										}
+									}
+								},
+								{
+									"description": "\nThe amount if columns an element should take up in a grid.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "grid-col",
+										"code": "\n\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  // Attrs\n  width: calc-grid-col-width($columns, $grid);\n  float: left;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
+										"line": {
+											"start": 22,
+											"end": 34
+										}
+									}
+								},
+								{
+									"description": "\nRemove the effects of a `grid-zed` include.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "grid-zed-reset",
+										"code": "\n\n  &:nth-child(#{$nth}) {\n    margin-right: calc-gutter-width($grid) * 1%;\n  }\n\n  &:nth-child(#{$nth}+1) {\n    clear: none;\n  }\n",
+										"line": {
+											"start": 99,
+											"end": 108
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nCalculate single column width\n\n",
+							"commentRange": {
+								"start": 21,
+								"end": 28
+							},
+							"context": {
+								"type": "function",
+								"name": "calc-single-col-width",
+								"code": "\n\n  $_gutter-width: calc-gutter-width($grid);\n  $_gutter-area:  ($_gutter-width * (map-get($grid, cols) - 1));\n  $_remains:      (100 - $_gutter-area);\n\n  @return ($_remains / map-get($grid, cols));\n\n",
+								"line": {
+									"start": 29,
+									"end": 37
+								}
+							},
+							"return": {
+								"type": "integer",
+								"description": "value of percentage ( add `+ %`)\n"
+							},
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-gutter-width"
+								}
+							],
+							"file": {
+								"path": "parts/_functions__grid.scss",
+								"name": "_functions__grid.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCalculate the width of X columns\n\n",
+									"context": {
+										"type": "function",
+										"name": "calc-grid-col-width",
+										"code": "\n\n  $_gutter-width: calc-gutter-width($grid);\n  $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));\n\n  @if $include-gutter {\n    $_width: $_width + $_gutter-width;\n  }\n\n  @return $_width * 1%;\n\n",
+										"line": {
+											"start": 51,
+											"end": 62
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nCalculate the width of X columns\n\n",
+							"commentRange": {
+								"start": 40,
+								"end": 50
+							},
+							"context": {
+								"type": "function",
+								"name": "calc-grid-col-width",
+								"code": "\n\n  $_gutter-width: calc-gutter-width($grid);\n  $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));\n\n  @if $include-gutter {\n    $_width: $_width + $_gutter-width;\n  }\n\n  @return $_width * 1%;\n\n",
+								"line": {
+									"start": 51,
+									"end": 62
+								}
+							},
+							"parameter": [
+								{
+									"type": "integer",
+									"name": "columns",
+									"description": "Number of columns to take up"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"return": {
+								"type": "integer",
+								"description": "value of percentage ( add `+ %`)\n"
+							},
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-gutter-width"
+								},
+								{
+									"type": "function",
+									"name": "calc-single-col-width"
+								}
+							],
+							"file": {
+								"path": "parts/_functions__grid.scss",
+								"name": "_functions__grid.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "flex-grid-col",
+										"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n",
+										"line": {
+											"start": 23,
+											"end": 26
+										}
+									}
+								},
+								{
+									"description": "\nThe amount if columns an element should take up in a grid.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "grid-col",
+										"code": "\n\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  // Attrs\n  width: calc-grid-col-width($columns, $grid);\n  float: left;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
+										"line": {
+											"start": 22,
+											"end": 34
+										}
+									}
+								},
+								{
+									"description": "\nShift an element by a number of grid elements\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "grid-shift",
+										"code": "\n\n  margin-left: calc-grid-col-width($columns, $grid, true);\n\n",
+										"line": {
+											"start": 131,
+											"end": 135
+										}
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"typeName": "mixin",
+					"items": [
+						{
+							"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+							"commentRange": {
+								"start": 4,
+								"end": 22
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-grid-col",
+								"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n",
+								"line": {
+									"start": 23,
+									"end": 26
+								}
+							},
+							"parameter": [
+								{
+									"type": "integer",
+									"name": "columns",
+									"description": "Number of columns to take up"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "div {\n  @include flex-grid-col( 3 );\n}\n\ndiv {\n  @include flex-grid-col( 4, 10px );\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-grid-col-width"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-flex.scss",
+								"name": "_mixins__grid-flex.scss"
+							}
+						},
+						{
+							"description": "\nBreak flex items to a new line. Not always neccessary, but\nuseful in some circumstances, such as a row of two column\nelements in a twelve column grid that should break after\nsix elements.\n\n",
+							"commentRange": {
+								"start": 29,
+								"end": 50
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-grid-zed",
+								"code": "\n\n  &:nth-child(#{$nth}+1) {\n    margin-left: .1px;\n  }\n",
+								"line": {
+									"start": 51,
+									"end": 56
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "nth",
+									"default": "1",
+									"description": "Target `nth-child`\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "/* Span 2 columns in 12 column grid */\n.post {\n\n  @include break($medium) {\n    @include flex-grid-col(2);\n    @include flex-grid-zed(6n);\n  }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "parts/_mixins__grid-flex.scss",
+								"name": "_mixins__grid-flex.scss"
+							}
+						},
+						{
+							"description": "\nBreak flex items to a new line. Not always neccessary, but\nuseful in some circumstances, such as a row of two column\nelements in a twelve column grid that should break after\nsix elements.\n\n",
+							"commentRange": {
+								"start": 59,
+								"end": 86
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-grid-zed-reset",
+								"code": "\n\n  &:nth-child(#{$nth}+1) {\n    margin-left: 0;\n  }\n",
+								"line": {
+									"start": 87,
+									"end": 92
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "nth",
+									"default": "1",
+									"description": "Target `nth-child`\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".post {\n\n  /* Span 2 columns in 12 column grid */\n  @include break($small) {\n    @include flex-grid-col(2);\n    @include flex-grid-zed(6n);\n  }\n\n  /* Span 3 columns in 12 column grid */\n  @include break($medium) {\n    @include flex-grid-zed-reset(6n);\n    @include flex-grid-col(3);\n  }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "parts/_mixins__grid-flex.scss",
+								"name": "_mixins__grid-flex.scss"
+							}
+						},
+						{
+							"description": "\nCreate a new breakpoint. Use in conjunction with breakpoint variables.\n\n",
+							"commentRange": {
+								"start": 4,
+								"end": 45
+							},
+							"context": {
+								"type": "mixin",
+								"name": "break",
+								"code": "\n\n  $_set-point: '';\n\n  @if $size {\n    @if type-of($size) == 'map' { // ex. (max-width: 900px, max-height, 700px)\n\n      @each $attr, $val in $size {\n        $_set-point: $_set-point + 'and (#{$attr}: #{$val})';\n      }\n\n    } @else { // Assume it's a value for default break\n\n      $_set-point: 'and (#{$default-breakpoint-attr}: #{$size})';\n\n    }\n\n    @media #{$media} #{$_set-point} {\n      @content;\n    }\n\n  } @else {\n    @media #{$media} {\n      @content;\n    }\n  }\n",
+								"line": {
+									"start": 46,
+									"end": 72
+								}
+							},
+							"parameter": [
+								{
+									"type": "various",
+									"name": "size",
+									"description": "Either string (900px) or map (min-height: 900px), or false"
+								},
+								{
+									"type": "string",
+									"name": "media",
+									"default": "only screen",
+									"description": "Media type\n"
+								}
+							],
+							"require": [
+								{
+									"type": "variable",
+									"name": "default-breakpoint-attr",
+									"external": false
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "div {\n  font-size: 12px;\n\n  // Use a breakpoint variable\n  @include break($medium) {\n    font-size: 16px;\n  }\n\n  // Use a px, em, or rem value\n  @include break(1024px) {\n    font-size: 16px;\n  }\n}\n\n\ndiv {\n  font-size: 16px;\n\n  // Use a map to include multiple breakpoint queries\n  @include break((min-width: 1024px, min-height: 1031px)) {\n    font-size: 10px;\n  }\n\n  // Set $size to false to only query by media type\n  @include break(false, print) {\n    font-size: 10px;\n  }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.4.0"
+								}
+							],
+							"access": "public",
+							"content": "",
+							"file": {
+								"path": "parts/_mixins__grid-scaffolding.scss",
+								"name": "_mixins__grid-scaffolding.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "base-container",
+										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
+										"line": {
+											"start": 159,
+											"end": 182
+										}
+									}
+								},
+								{
+									"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "base-container",
+										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
+										"line": {
+											"start": 159,
+											"end": 182
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nCreate a wrapper for a row of grid elements\n\n",
+							"commentRange": {
+								"start": 77,
+								"end": 87
+							},
+							"context": {
+								"type": "mixin",
+								"name": "row",
+								"code": "\n  @include clearfix;\n  width: 100%;\n",
+								"line": {
+									"start": 88,
+									"end": 91
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": ".row {\n  @include row;\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "mixin",
+									"name": "clearfix"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-scaffolding.scss",
+								"name": "_mixins__grid-scaffolding.scss"
+							}
+						},
+						{
+							"description": "\nCreate a wrapper for a row of flexbox grid elements\n\n",
+							"commentRange": {
+								"start": 93,
+								"end": 108
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-row",
+								"code": "\n  display: flex;\n  justify-content: $justify;\n  width: 100%;\n\n  @if $align != false {\n    align-items: $align;\n  }\n\n  @if $reverse {\n    flex-direction: row-reverse;\n  }\n\n  @if $wrap {\n    flex-wrap: wrap;\n  }\n\n",
+								"line": {
+									"start": 109,
+									"end": 126
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "align",
+									"default": "false",
+									"description": "Value for align-items"
+								},
+								{
+									"type": "string",
+									"name": "justify",
+									"default": "space-between",
+									"description": "Value for justify-content"
+								},
+								{
+									"type": "bool",
+									"name": "reverse",
+									"default": "false",
+									"description": "Reverse the flexbox content"
+								},
+								{
+									"type": "bool",
+									"name": "wrap",
+									"default": "true",
+									"description": "Should the contents wrap\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".flow-row {\n  @include flex-row;\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "parts/_mixins__grid-scaffolding.scss",
+								"name": "_mixins__grid-scaffolding.scss"
+							}
+						},
+						{
+							"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
+							"commentRange": {
+								"start": 128,
+								"end": 158
+							},
+							"context": {
+								"type": "mixin",
+								"name": "base-container",
+								"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
+								"line": {
+									"start": 159,
+									"end": 182
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "width",
+									"default": "$fluid-container",
+									"description": "Width of the container"
+								},
+								{
+									"type": "bool",
+									"name": "fluid",
+									"default": "true",
+									"description": "Whether the container should always\nbe fluid or be adaptive. If false, max-widths will be set according\nto `$active-breakpoints`"
+								},
+								{
+									"type": "string",
+									"name": "fluid-until",
+									"default": "false",
+									"description": "Allows the container to be\nfluid until a point"
+								},
+								{
+									"type": "map",
+									"name": "breakpoints",
+									"default": "$active-breakpoints",
+									"description": "A sass map of\nbreakpoints and their max-widths. See `$active-breakpoints`\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".container-fluid {\n  @include base-container(90%);\n}\n\n.container-adaptive {\n  @include base-container(90%, false);\n}\n\n.container-fluid-until-medium {\n  @include base-container(90%, false, $small);\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "mixin",
+									"name": "clearfix"
+								},
+								{
+									"type": "mixin",
+									"name": "break"
+								},
+								{
+									"type": "mixin",
+									"name": "break"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-scaffolding.scss",
+								"name": "_mixins__grid-scaffolding.scss"
+							}
+						},
+						{
+							"description": "\nThe amount if columns an element should take up in a grid.\n\n",
+							"commentRange": {
+								"start": 4,
+								"end": 21
+							},
+							"context": {
+								"type": "mixin",
+								"name": "grid-col",
+								"code": "\n\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  // Attrs\n  width: calc-grid-col-width($columns, $grid);\n  float: left;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
+								"line": {
+									"start": 22,
+									"end": 34
+								}
+							},
+							"parameter": [
+								{
+									"type": "integer",
+									"name": "columns",
+									"description": "Number of columns to take up"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "div {\n  @include grid-col( 3 );\n}\n\ndiv {\n  @include grid-col( 4, 15px );\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-gutter-width"
+								},
+								{
+									"type": "function",
+									"name": "calc-grid-col-width"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-standard.scss",
+								"name": "_mixins__grid-standard.scss"
+							}
+						},
+						{
+							"description": "\nRemove margin-right from target element and clear floats on the\nfollowing element of that type. Can be used to target the last\nitem in a row via `nth-child`. Modeled after Bourbon Neats `omega`\n\n",
+							"commentRange": {
+								"start": 37,
+								"end": 59
+							},
+							"context": {
+								"type": "mixin",
+								"name": "grid-zed",
+								"code": "\n  // sass-lint:disable\n  &:nth-child(#{$nth}) {\n    margin-right: 0;\n  }\n\n  &:nth-child(#{$nth}+1) {\n    clear: left;\n  }\n  // sass-lint:enable\n",
+								"line": {
+									"start": 60,
+									"end": 70
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "nth",
+									"default": "1",
+									"description": "Target `nth-child`\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".no-margin {\n  @include grid-col(8);\n  @include grid-zed();\n}\n\n/* Span 3 columns of 12 column grid */\n.three-col {\n  @include grid-col(4);\n  @include grid-zed(3n);\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "parts/_mixins__grid-standard.scss",
+								"name": "_mixins__grid-standard.scss"
+							}
+						},
+						{
+							"description": "\nRemove the effects of a `grid-zed` include.\n\n",
+							"commentRange": {
+								"start": 73,
+								"end": 98
+							},
+							"context": {
+								"type": "mixin",
+								"name": "grid-zed-reset",
+								"code": "\n\n  &:nth-child(#{$nth}) {\n    margin-right: calc-gutter-width($grid) * 1%;\n  }\n\n  &:nth-child(#{$nth}+1) {\n    clear: none;\n  }\n",
+								"line": {
+									"start": 99,
+									"end": 108
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "nth",
+									"default": "1",
+									"description": "Target `nth-child`"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"default": "$target-gutter",
+									"description": "If you are using a different gutter than default\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "/* Span 6 columns than 4 columns of 12 column grid */\n.post {\n\n  @include break($small) {\n    @include grid-col(6);\n    @include grid-zed(2n);\n  }\n\n  @include break($medium) {\n    @include grid-zed-reset(2n);\n    @include grid-col(4);\n    @include grid-zed(3n);\n  }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-gutter-width"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-standard.scss",
+								"name": "_mixins__grid-standard.scss"
+							}
+						},
+						{
+							"description": "\nShift an element by a number of grid elements\n\n",
+							"commentRange": {
+								"start": 111,
+								"end": 130
+							},
+							"context": {
+								"type": "mixin",
+								"name": "grid-shift",
+								"code": "\n\n  margin-left: calc-grid-col-width($columns, $grid, true);\n\n",
+								"line": {
+									"start": 131,
+									"end": 135
+								}
+							},
+							"parameter": [
+								{
+									"type": "integer",
+									"name": "columns",
+									"description": "Number of columns to take up"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".sidebar {\n  @include grid-col( 4 );\n}\n\n// Inset column by one column\n.main-content {\n  @include grid-col( 7 );\n  @include grid-shift( 1 );\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.1.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-grid-col-width"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-standard.scss",
+								"name": "_mixins__grid-standard.scss"
+							}
+						}
+					]
+				},
+				{
+					"typeName": "variable",
+					"items": [
+						{
+							"description": "Total number of columns in grid\n",
+							"commentRange": {
+								"start": 4,
+								"end": 6
+							},
+							"context": {
+								"type": "variable",
+								"name": "total-cols",
+								"value": "12",
+								"scope": "default",
+								"line": {
+									"start": 7,
+									"end": 7
+								}
+							},
+							"type": "Integer",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Target width of grid. When the grid is at this width,\nthe gutter value should match the $target-gutter variable\n",
+							"commentRange": {
+								"start": 9,
+								"end": 12
+							},
+							"context": {
+								"type": "variable",
+								"name": "target-width",
+								"value": "1200px",
+								"scope": "default",
+								"line": {
+									"start": 13,
+									"end": 13
+								}
+							},
+							"type": "String",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Target gutter width the grid. When the grid is at the width\nof $target-width, the gutter values will match this variable.\n",
+							"commentRange": {
+								"start": 15,
+								"end": 18
+							},
+							"context": {
+								"type": "variable",
+								"name": "target-gutter",
+								"value": "20px",
+								"scope": "default",
+								"line": {
+									"start": 19,
+									"end": 19
+								}
+							},
+							"type": "String",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Default Grid Variable\nDefault values of the grid map object. You can match this\nto create a custom grid to be used within `grid-col()`\n",
+							"commentRange": {
+								"start": 22,
+								"end": 27
+							},
+							"context": {
+								"type": "variable",
+								"name": "default-grid",
+								"value": "(\n  cols:   $total-cols,\n  width:  $target-width,\n  gutter: $target-gutter\n)",
+								"scope": "private",
+								"line": {
+									"start": 28,
+									"end": 32
+								}
+							},
+							"type": "Map",
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.4.0"
+								}
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "No Margin Grid Variable\nOptional Grid variable to create a grid without gutters.\n",
+							"commentRange": {
+								"start": 34,
+								"end": 38
+							},
+							"context": {
+								"type": "variable",
+								"name": "no-margin-grid",
+								"value": "(\n  cols:   $total-cols,\n  width:  $target-width,\n  gutter: 0\n)",
+								"scope": "private",
+								"line": {
+									"start": 39,
+									"end": 43
+								}
+							},
+							"type": "Map",
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.4.0"
+								}
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Default Breakpoints\n",
+							"commentRange": {
+								"start": 48,
+								"end": 49
+							},
+							"context": {
+								"type": "variable",
+								"name": "xsmall",
+								"value": "480px",
+								"scope": "default",
+								"line": {
+									"start": 50,
+									"end": 50
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Breakpoint\n",
+							"commentRange": {
+								"start": 52,
+								"end": 53
+							},
+							"context": {
+								"type": "variable",
+								"name": "small",
+								"value": "760px",
+								"scope": "default",
+								"line": {
+									"start": 54,
+									"end": 54
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Breakpoint\n",
+							"commentRange": {
+								"start": 56,
+								"end": 57
+							},
+							"context": {
+								"type": "variable",
+								"name": "medium",
+								"value": "1024px",
+								"scope": "default",
+								"line": {
+									"start": 58,
+									"end": 58
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Breakpoint\n",
+							"commentRange": {
+								"start": 60,
+								"end": 61
+							},
+							"context": {
+								"type": "variable",
+								"name": "large",
+								"value": "1200px",
+								"scope": "default",
+								"line": {
+									"start": 62,
+									"end": 62
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Breakpoint\n",
+							"commentRange": {
+								"start": 64,
+								"end": 65
+							},
+							"context": {
+								"type": "variable",
+								"name": "xlarge",
+								"value": "1500px",
+								"scope": "default",
+								"line": {
+									"start": 66,
+									"end": 66
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Default Breakpoint Attribute\n",
+							"commentRange": {
+								"start": 69,
+								"end": 70
+							},
+							"context": {
+								"type": "variable",
+								"name": "default-breakpoint-attr",
+								"value": "min-width",
+								"scope": "private",
+								"line": {
+									"start": 71,
+									"end": 71
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCreate a new breakpoint. Use in conjunction with breakpoint variables.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "break",
+										"code": "\n\n  $_set-point: '';\n\n  @if $size {\n    @if type-of($size) == 'map' { // ex. (max-width: 900px, max-height, 700px)\n\n      @each $attr, $val in $size {\n        $_set-point: $_set-point + 'and (#{$attr}: #{$val})';\n      }\n\n    } @else { // Assume it's a value for default break\n\n      $_set-point: 'and (#{$default-breakpoint-attr}: #{$size})';\n\n    }\n\n    @media #{$media} #{$_set-point} {\n      @content;\n    }\n\n  } @else {\n    @media #{$media} {\n      @content;\n    }\n  }\n",
+										"line": {
+											"start": 46,
+											"end": 72
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Max Width Breakpoint - for use with break() mixin\n",
+							"commentRange": {
+								"start": 75,
+								"end": 76
+							},
+							"context": {
+								"type": "variable",
+								"name": "xsmall-max",
+								"value": "(max-width: $xsmall)",
+								"scope": "default",
+								"line": {
+									"start": 77,
+									"end": 77
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Max Width Breakpoint - for use with break() mixin\n",
+							"commentRange": {
+								"start": 79,
+								"end": 80
+							},
+							"context": {
+								"type": "variable",
+								"name": "small-max",
+								"value": "(max-width: $small)",
+								"scope": "default",
+								"line": {
+									"start": 81,
+									"end": 81
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Max Width Breakpoint - for use with break() mixin\n",
+							"commentRange": {
+								"start": 83,
+								"end": 84
+							},
+							"context": {
+								"type": "variable",
+								"name": "medium-max",
+								"value": "(max-width: $medium)",
+								"scope": "default",
+								"line": {
+									"start": 85,
+									"end": 85
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Max Width Breakpoint - for use with break() mixin\n",
+							"commentRange": {
+								"start": 87,
+								"end": 88
+							},
+							"context": {
+								"type": "variable",
+								"name": "large-max",
+								"value": "(max-width: $large)",
+								"scope": "default",
+								"line": {
+									"start": 89,
+									"end": 89
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Max Width Breakpoint - for use with break() mixin\n",
+							"commentRange": {
+								"start": 91,
+								"end": 92
+							},
+							"context": {
+								"type": "variable",
+								"name": "xlarge-max",
+								"value": "(max-width: $xlarge)",
+								"scope": "default",
+								"line": {
+									"start": 93,
+									"end": 93
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out breakpoints\n",
+							"commentRange": {
+								"start": 96,
+								"end": 98
+							},
+							"context": {
+								"type": "variable",
+								"name": "default-breakpoint-offset",
+								"value": "$target-gutter",
+								"scope": "default",
+								"line": {
+									"start": 99,
+									"end": 99
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out xsmall breakpoint\n",
+							"commentRange": {
+								"start": 101,
+								"end": 103
+							},
+							"context": {
+								"type": "variable",
+								"name": "breakpoint-offset-xsmall",
+								"value": "$default-breakpoint-offset",
+								"scope": "default",
+								"line": {
+									"start": 104,
+									"end": 104
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out small breakpoint\n",
+							"commentRange": {
+								"start": 106,
+								"end": 108
+							},
+							"context": {
+								"type": "variable",
+								"name": "breakpoint-offset-small",
+								"value": "$default-breakpoint-offset",
+								"scope": "default",
+								"line": {
+									"start": 109,
+									"end": 109
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out medium breakpoint\n",
+							"commentRange": {
+								"start": 111,
+								"end": 113
+							},
+							"context": {
+								"type": "variable",
+								"name": "breakpoint-offset-medium",
+								"value": "$default-breakpoint-offset",
+								"scope": "default",
+								"line": {
+									"start": 114,
+									"end": 114
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out large breakpoint\n",
+							"commentRange": {
+								"start": 116,
+								"end": 118
+							},
+							"context": {
+								"type": "variable",
+								"name": "breakpoint-offset-large",
+								"value": "$default-breakpoint-offset",
+								"scope": "default",
+								"line": {
+									"start": 119,
+									"end": 119
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Extra value to pad out breakpoints\n",
+							"commentRange": {
+								"start": 121,
+								"end": 123
+							},
+							"context": {
+								"type": "variable",
+								"name": "breakpoint-offset-xlarge",
+								"value": "$default-breakpoint-offset",
+								"scope": "default",
+								"line": {
+									"start": 124,
+									"end": 124
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Width of fluid container, percentage\n",
+							"commentRange": {
+								"start": 130,
+								"end": 132
+							},
+							"context": {
+								"type": "variable",
+								"name": "fluid-container",
+								"value": "90%",
+								"scope": "default",
+								"line": {
+									"start": 133,
+									"end": 133
+								}
+							},
+							"type": "String (percentage)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Container width at breakpoint\n",
+							"commentRange": {
+								"start": 135,
+								"end": 137
+							},
+							"context": {
+								"type": "variable",
+								"name": "xsmall-container",
+								"value": "$xsmall - ($breakpoint-offset-xsmall * 2)",
+								"scope": "default",
+								"line": {
+									"start": 138,
+									"end": 138
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Container width at breakpoint\n",
+							"commentRange": {
+								"start": 140,
+								"end": 142
+							},
+							"context": {
+								"type": "variable",
+								"name": "small-container",
+								"value": "$small - ($breakpoint-offset-small * 2)",
+								"scope": "default",
+								"line": {
+									"start": 143,
+									"end": 143
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Container width at breakpoint\n",
+							"commentRange": {
+								"start": 145,
+								"end": 147
+							},
+							"context": {
+								"type": "variable",
+								"name": "medium-container",
+								"value": "$medium - ($breakpoint-offset-medium * 2)",
+								"scope": "default",
+								"line": {
+									"start": 148,
+									"end": 148
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Container width at breakpoint\n",
+							"commentRange": {
+								"start": 150,
+								"end": 152
+							},
+							"context": {
+								"type": "variable",
+								"name": "large-container",
+								"value": "$large - ($breakpoint-offset-large * 2)",
+								"scope": "default",
+								"line": {
+									"start": 153,
+									"end": 153
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Container width at breakpoint\n",
+							"commentRange": {
+								"start": 155,
+								"end": 157
+							},
+							"context": {
+								"type": "variable",
+								"name": "xlarge-container",
+								"value": "$xlarge - ($breakpoint-offset-xlarge * 2)",
+								"scope": "default",
+								"line": {
+									"start": 158,
+									"end": 158
+								}
+							},
+							"type": "String (pixel val)",
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						},
+						{
+							"description": "Sass Map of Breakpoints for adaptive container, mapped as `breakpoint: container-size`\nIf you want to remove a value, set it's -container value to `false`, such as `$xlarge-container: false`\n\n",
+							"commentRange": {
+								"start": 165,
+								"end": 168
+							},
+							"context": {
+								"type": "variable",
+								"name": "active-breakpoints",
+								"value": "(\n  $xsmall: $xsmall-container,\n  $small:  $small-container,\n  $medium: $medium-container,\n  $large:  $large-container,\n  $xlarge: $xlarge-container\n)",
+								"scope": "default",
+								"line": {
+									"start": 169,
+									"end": 175
+								}
+							},
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"file": {
+								"path": "parts/_vars__parts.scss",
+								"name": "_vars__parts.scss"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"groupName": "labor",
+			"groupTypes": [
+				{
+					"typeName": "function",
+					"items": [
+						{
+							"description": "Remove the unit of a length\n",
+							"commentRange": {
+								"start": 1,
+								"end": 6
+							},
+							"context": {
+								"type": "function",
+								"name": "strip-unit",
+								"code": "\n  @if type-of($number) == 'number' and not unitless($number) {\n    @return $number / ($number * 0 + 1);\n  }\n\n  @return $number;\n",
+								"line": {
+									"start": 7,
+									"end": 13
+								}
+							},
+							"parameter": [
+								{
+									"type": "Number",
+									"name": "number",
+									"description": "Number to remove unit from"
+								}
+							],
+							"return": {
+								"type": "Number",
+								"description": "Unitless number"
+							},
+							"link": [
+								{
+									"url": "https://css-tricks.com/snippets/sass/strip-unit-function/",
+									"caption": ""
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"since": [
+								{
+									"version": "1.4.0"
+								}
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCalculate gutter width as a percentage based on target value\n\n",
+									"context": {
+										"type": "function",
+										"name": "calc-gutter-width",
+										"code": "\n  $_gutter: map-get($grid, gutter);\n  $_width: map-get($grid, width);\n  // Get target gutter percentage\n  @return (strip-unit($_gutter) / strip-unit($_width)) * 100;\n",
+										"line": {
+											"start": 13,
+											"end": 18
+										}
+									}
+								},
+								{
+									"description": "\nCalculate gutter width as a percentage based on target value\n\n",
+									"context": {
+										"type": "function",
+										"name": "calc-gutter-width",
+										"code": "\n  $_gutter: map-get($grid, gutter);\n  $_width: map-get($grid, width);\n  // Get target gutter percentage\n  @return (strip-unit($_gutter) / strip-unit($_width)) * 100;\n",
+										"line": {
+											"start": 13,
+											"end": 18
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nString replace\n\n",
+							"commentRange": {
+								"start": 15,
+								"end": 24
+							},
+							"context": {
+								"type": "function",
+								"name": "str-replace",
+								"code": "\n  $index: str-index($string, $search);\n\n  @if $index {\n    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);\n  }\n\n  @return $string;\n",
+								"line": {
+									"start": 25,
+									"end": 33
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "string"
+								},
+								{
+									"type": "string",
+									"name": "search",
+									"description": "Needle"
+								},
+								{
+									"type": "string",
+									"name": "replace",
+									"description": "Haystack\n"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nFont Face\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "font-face",
+										"code": "\n\n  $src: null;\n\n  $extmods: (\n    eot: '?',\n    svg: '#' + str-replace($name, ' ', '_')\n  );\n\n  $formats: (\n    otf: 'opentype',\n    ttf: 'truetype'\n  );\n\n  @each $ext in $exts {\n    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);\n    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);\n    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);\n  }\n\n  @font-face {\n    font-family: quote($name);\n    font-style: $style;\n    font-weight: $weight;\n    src: $src;\n  }\n",
+										"line": {
+											"start": 236,
+											"end": 262
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nConvert px units to em units\n\n",
+							"commentRange": {
+								"start": 36,
+								"end": 51
+							},
+							"context": {
+								"type": "function",
+								"name": "em",
+								"code": "\n\n  @if (unitless($pixels)) {\n    $pixels: $pixels * 1px;\n  }\n\n  @if (unitless($context)) {\n    $context: $context * 1px;\n  }\n\n  @return ($pixels / $context) * 1em;\n\n",
+								"line": {
+									"start": 52,
+									"end": 64
+								}
+							},
+							"parameter": [
+								{
+									"type": "int",
+									"name": "px",
+									"description": "Number representing px"
+								},
+								{
+									"type": "string",
+									"name": "context",
+									"description": "Pixel value\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "h1 {\n  font-size: em(64);\n}"
+								}
+							],
+							"link": [
+								{
+									"url": "https://css-tricks.com/snippets/sass/px-to-em-functions/",
+									"caption": ""
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							}
+						},
+						{
+							"description": "\nConvert unit to REM unit\n\n",
+							"commentRange": {
+								"start": 66,
+								"end": 73
+							},
+							"context": {
+								"type": "function",
+								"name": "rem",
+								"code": "\n\n  @if (unitless($pixels)) {\n    $pixels: $pixels * 1px;\n  }\n\n  @if (unitless($context)) {\n    $context: $context * 1px;\n  }\n\n  @return ($pixels / $context) * 1rem;\n\n",
+								"line": {
+									"start": 74,
+									"end": 86
+								}
+							},
+							"parameter": [
+								{
+									"type": "int",
+									"name": "unit",
+									"description": "Unti to convert\n"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							}
+						},
+						{
+							"description": "\nLighten a color\n\n",
+							"commentRange": {
+								"start": 89,
+								"end": 101
+							},
+							"context": {
+								"type": "function",
+								"name": "tint",
+								"code": "\n\n  @return mix($labor-white, $color, $percentage);\n\n",
+								"line": {
+									"start": 102,
+									"end": 106
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "color",
+									"description": "Valid color value to tint"
+								},
+								{
+									"type": "string",
+									"name": "percentage",
+									"description": "Percentage of `$color` in returned color\n"
+								}
+							],
+							"return": {
+								"type": "string",
+								"description": "Color value\n"
+							},
+							"link": [
+								{
+									"url": "https://css-tricks.com/snippets/sass/tint-shade-functions/",
+									"caption": ""
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							}
+						},
+						{
+							"description": "\nLighten a color\n\n",
+							"commentRange": {
+								"start": 109,
+								"end": 121
+							},
+							"context": {
+								"type": "function",
+								"name": "shade",
+								"code": "\n\n  @return mix($labor-black, $color, $percentage);\n\n",
+								"line": {
+									"start": 122,
+									"end": 126
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "color",
+									"description": "Valid color value to shade"
+								},
+								{
+									"type": "string",
+									"name": "percentage",
+									"description": "Percentage of `$color` in returned color\n"
+								}
+							],
+							"return": {
+								"type": "string",
+								"description": "Color value\n"
+							},
+							"link": [
+								{
+									"url": "https://css-tricks.com/snippets/sass/tint-shade-functions/",
+									"caption": ""
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_functions__utilities.scss",
+								"name": "_functions__utilities.scss"
+							}
+						}
+					]
+				},
+				{
+					"typeName": "mixin",
+					"items": [
+						{
+							"description": "\nList - Style inline\n\n",
+							"commentRange": {
+								"start": 8,
+								"end": 19
+							},
+							"context": {
+								"type": "mixin",
+								"name": "list-inline",
+								"code": "\n  margin: 0;\n  padding-left: 0;\n\n  > li {\n    display: inline-block;\n    padding-left: 0;\n    padding-right: 0;\n  }\n",
+								"line": {
+									"start": 20,
+									"end": 29
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " ul {\n   @include list-inline();\n   margin-bottom: 10px;\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__block-elements.scss",
+								"name": "_mixins__block-elements.scss"
+							}
+						},
+						{
+							"description": "\nList - Style inline\n\n",
+							"commentRange": {
+								"start": 32,
+								"end": 43
+							},
+							"context": {
+								"type": "mixin",
+								"name": "list-unstyled",
+								"code": "\n  list-style: none;\n  margin: 0;\n  padding-left: 0;\n\n  > li {\n    display: block;\n    padding-left: 0;\n    padding-right: 0;\n  }\n",
+								"line": {
+									"start": 44,
+									"end": 54
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " ul {\n   @include list-inline();\n   margin-bottom: 10px;\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__block-elements.scss",
+								"name": "_mixins__block-elements.scss"
+							}
+						},
+						{
+							"description": "\nReset a header to basic body styles\n\n",
+							"commentRange": {
+								"start": 60,
+								"end": 71
+							},
+							"context": {
+								"type": "mixin",
+								"name": "header-reset",
+								"code": "\n  border: 0;\n  font-family: inherit;\n  font-size: 100%;\n  margin: 0;\n  font-style: inherit;\n  padding: 0;\n  font-weight: inherit;\n  outline: 0;\n  vertical-align: baseline;\n",
+								"line": {
+									"start": 72,
+									"end": 82
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " h1 {\n   @include header-reset();\n   margin-bottom: 30px;\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__block-elements.scss",
+								"name": "_mixins__block-elements.scss"
+							}
+						},
+						{
+							"description": "\nStart buttons with a clean slate\n\n",
+							"commentRange": {
+								"start": 8,
+								"end": 22
+							},
+							"context": {
+								"type": "mixin",
+								"name": "button-reset",
+								"code": "\n  box-sizing: inherit;\n  background: none;\n  border: 0;\n  color: inherit;\n  cursor: default;\n  font: inherit;\n  line-height: normal;\n  overflow: visible;\n  display: inline-block;\n  padding: 0;\n  appearance: button;\n  -webkit-appearance: button; // sass-lint:disable-line no-vendor-prefixes\n  user-select: none;\n  text-decoration: none;\n  white-space: pre;\n\n  &:hover,\n  &:focus,\n  &:active {\n    box-shadow: 0;\n    outline: none;\n  }\n",
+								"line": {
+									"start": 23,
+									"end": 46
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": "a[role=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"button\"],\nbutton {\n  @include button-reset();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__inline-elements.scss",
+								"name": "_mixins__inline-elements.scss"
+							}
+						},
+						{
+							"description": "\nStandard Transition\n\n",
+							"commentRange": {
+								"start": 3,
+								"end": 15
+							},
+							"context": {
+								"type": "mixin",
+								"name": "standard-trans",
+								"code": "\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n",
+								"line": {
+									"start": 16,
+									"end": 18
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "attr",
+									"default": "all",
+									"description": "Attribute to be transitioned\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "a {\n  @include standard-trans();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "variable",
+									"name": "standard-trans-time"
+								},
+								{
+									"type": "variable",
+									"name": "standard-trans-timing-func"
+								},
+								{
+									"type": "variable",
+									"name": "standard-trans-time-delay"
+								}
+							],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nLong Transition\n\n",
+							"commentRange": {
+								"start": 20,
+								"end": 32
+							},
+							"context": {
+								"type": "mixin",
+								"name": "long-trans",
+								"code": "\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n",
+								"line": {
+									"start": 33,
+									"end": 35
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "attr",
+									"default": "all",
+									"description": "Attribute to be transitioned\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "a {\n  @include long-trans();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "variable",
+									"name": "long-trans-time"
+								},
+								{
+									"type": "variable",
+									"name": "long-trans-timing-func"
+								},
+								{
+									"type": "variable",
+									"name": "long-trans-time-delay"
+								}
+							],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nClearfix - your run of the mill modern clearfix\n\n",
+							"commentRange": {
+								"start": 40,
+								"end": 52
+							},
+							"context": {
+								"type": "mixin",
+								"name": "clearfix",
+								"code": "\n\n  &::after {\n    clear: both;\n    content: '';\n    display: table;\n  }\n",
+								"line": {
+									"start": 53,
+									"end": 60
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": ".float-container {\n  @include long-trans();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"link": [
+								{
+									"url": "https://css-tricks.com/snippets/css/clear-fix/",
+									"caption": ""
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nCreate a wrapper for a row of grid elements\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "row",
+										"code": "\n  @include clearfix;\n  width: 100%;\n",
+										"line": {
+											"start": 88,
+											"end": 91
+										}
+									}
+								},
+								{
+									"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "base-container",
+										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
+										"line": {
+											"start": 159,
+											"end": 182
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nCover relative parent\n\n",
+							"commentRange": {
+								"start": 62,
+								"end": 72
+							},
+							"context": {
+								"type": "mixin",
+								"name": "cover",
+								"code": "\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n",
+								"line": {
+									"start": 73,
+									"end": 79
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": ".cover {\n  @include cover();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nCenters item in relative parent\n\n",
+							"commentRange": {
+								"start": 81,
+								"end": 98
+							},
+							"context": {
+								"type": "mixin",
+								"name": "center",
+								"code": "\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: $transform;\n",
+								"line": {
+									"start": 99,
+									"end": 104
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "transform",
+									"default": "translate(-50%,-50%)",
+									"description": "transform property\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".centered-element {\n  @include center();\n}",
+									"description": "Basic Usage Sass"
+								},
+								{
+									"type": "scss",
+									"code": ".centered-element-with-rotate {\n  @include center( translate3d(-50%,-50%,0) scale(45deg) );\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nHide an element visually, but allow access to screen readers\n\n",
+							"commentRange": {
+								"start": 106,
+								"end": 118
+							},
+							"context": {
+								"type": "mixin",
+								"name": "visually-hidden",
+								"code": "\n  clip: rect(1px, 1px, 1px, 1px);\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  white-space: nowrap;\n  width: 1px;\n",
+								"line": {
+									"start": 119,
+									"end": 126
+								}
+							},
+							"link": [
+								{
+									"url": "https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.tpuoch56u",
+									"caption": ""
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".screen-reader-text {\n  @include visually-hidden();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nFill background with image\n\n",
+							"commentRange": {
+								"start": 128,
+								"end": 141
+							},
+							"context": {
+								"type": "mixin",
+								"name": "bkg-img",
+								"code": "\n  background-position: $pos;\n  background-repeat: no-repeat;\n  background-size: cover;\n",
+								"line": {
+									"start": 142,
+									"end": 146
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "pos",
+									"default": "center",
+									"description": "A valid background position\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".fill-image {\n  background-image: url('../img/cool-image.jpg');\n  @include bkg-img();\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nPlaceholder - use within input or on its own for global styles\n\n",
+							"commentRange": {
+								"start": 156,
+								"end": 168
+							},
+							"context": {
+								"type": "mixin",
+								"name": "placeholder",
+								"code": "\n  ::placeholder {@content}\n",
+								"line": {
+									"start": 169,
+									"end": 171
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " input {\n   @include placeholder {\n     color: #bada55;\n   }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"content": "",
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nValid - for styling valid form fields\n\n",
+							"commentRange": {
+								"start": 173,
+								"end": 185
+							},
+							"context": {
+								"type": "mixin",
+								"name": "valid",
+								"code": "\n\n  &:valid,\n  &:empty:valid,\n  &:focus:empty:valid {\n    @content;\n  }\n",
+								"line": {
+									"start": 186,
+									"end": 193
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " input {\n   @include valid {\n     border: 2px solid #bada55;\n   }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"content": "",
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nInvalid - for styling invalid form fields\n\n",
+							"commentRange": {
+								"start": 195,
+								"end": 207
+							},
+							"context": {
+								"type": "mixin",
+								"name": "invalid",
+								"code": "\n  &:invalid,\n  &:focus:invalid {\n    @content;\n  }\n",
+								"line": {
+									"start": 208,
+									"end": 213
+								}
+							},
+							"example": [
+								{
+									"type": "scss",
+									"code": " input {\n   @include invalid {\n     border: 2px solid #badbad;\n   }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"content": "",
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						},
+						{
+							"description": "\nFont Face\n\n",
+							"commentRange": {
+								"start": 217,
+								"end": 235
+							},
+							"context": {
+								"type": "mixin",
+								"name": "font-face",
+								"code": "\n\n  $src: null;\n\n  $extmods: (\n    eot: '?',\n    svg: '#' + str-replace($name, ' ', '_')\n  );\n\n  $formats: (\n    otf: 'opentype',\n    ttf: 'truetype'\n  );\n\n  @each $ext in $exts {\n    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);\n    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);\n    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);\n  }\n\n  @font-face {\n    font-family: quote($name);\n    font-style: $style;\n    font-weight: $weight;\n    src: $src;\n  }\n",
+								"line": {
+									"start": 236,
+									"end": 262
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "name",
+									"description": "Name for font-family"
+								},
+								{
+									"type": "string",
+									"name": "path",
+									"description": "Relative path to files from output css sheet"
+								},
+								{
+									"type": "string",
+									"name": "weight",
+									"default": "normal",
+									"description": "`font-weight`"
+								},
+								{
+									"type": "string",
+									"name": "style",
+									"default": "normal",
+									"description": "'font-style'"
+								},
+								{
+									"type": "string",
+									"name": "exts",
+									"default": "eot woff2 woff ttf svg",
+									"description": "List of file extensions to include, sep with a space\n"
+								}
+							],
+							"link": [
+								{
+									"url": "https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6",
+									"caption": ""
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "@include font-face { 'Circular', '../fonts/circular-book' }\n@include font-face { 'Circular', '../fonts/circular-bold', 600 }\n@include font-face { 'Circular', '../fonts/circular-book-italic', 400, italic }",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "str-replace"
+								}
+							],
+							"file": {
+								"path": "labor/_mixins__utilities.scss",
+								"name": "_mixins__utilities.scss"
+							}
+						}
+					]
+				},
+				{
+					"typeName": "variable",
+					"items": [
+						{
+							"description": "Basic Systems Font stack\n",
+							"commentRange": {
+								"start": 4,
+								"end": 5
+							},
+							"context": {
+								"type": "variable",
+								"name": "system-fonts",
+								"value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+								"scope": "default",
+								"line": {
+									"start": 6,
+									"end": 6
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							}
+						},
+						{
+							"description": "Basic Sans Font stack\n",
+							"commentRange": {
+								"start": 7,
+								"end": 8
+							},
+							"context": {
+								"type": "variable",
+								"name": "sans",
+								"value": "'Arial', $system-fonts, sans-serif",
+								"scope": "default",
+								"line": {
+									"start": 9,
+									"end": 9
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							}
+						},
+						{
+							"description": "Basic Serif Font stack\n",
+							"commentRange": {
+								"start": 10,
+								"end": 11
+							},
+							"context": {
+								"type": "variable",
+								"name": "serif",
+								"value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+								"scope": "default",
+								"line": {
+									"start": 12,
+									"end": 12
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							}
+						},
+						{
+							"description": "Time for `standard-trans` mixin\n",
+							"commentRange": {
+								"start": 18,
+								"end": 19
+							},
+							"context": {
+								"type": "variable",
+								"name": "standard-trans-time",
+								"value": ".35s",
+								"scope": "default",
+								"line": {
+									"start": 20,
+									"end": 20
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nStandard Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "standard-trans",
+										"code": "\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n",
+										"line": {
+											"start": 16,
+											"end": 18
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Timing function for `standard-trans` mixin\n",
+							"commentRange": {
+								"start": 21,
+								"end": 22
+							},
+							"context": {
+								"type": "variable",
+								"name": "standard-trans-timing-func",
+								"value": "ease",
+								"scope": "default",
+								"line": {
+									"start": 23,
+									"end": 23
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nStandard Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "standard-trans",
+										"code": "\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n",
+										"line": {
+											"start": 16,
+											"end": 18
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Time delay for `standard-trans` mixin\n",
+							"commentRange": {
+								"start": 24,
+								"end": 25
+							},
+							"context": {
+								"type": "variable",
+								"name": "standard-trans-time-delay",
+								"value": "0s",
+								"scope": "default",
+								"line": {
+									"start": 26,
+									"end": 26
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nStandard Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "standard-trans",
+										"code": "\n  transition: $attr $standard-trans-time $standard-trans-timing-func $standard-trans-time-delay;\n",
+										"line": {
+											"start": 16,
+											"end": 18
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Time for `long-trans` mixin\n",
+							"commentRange": {
+								"start": 27,
+								"end": 28
+							},
+							"context": {
+								"type": "variable",
+								"name": "long-trans-time",
+								"value": ".35s",
+								"scope": "default",
+								"line": {
+									"start": 29,
+									"end": 29
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nLong Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "long-trans",
+										"code": "\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n",
+										"line": {
+											"start": 33,
+											"end": 35
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Timing function for `long-trans` mixin\n",
+							"commentRange": {
+								"start": 30,
+								"end": 31
+							},
+							"context": {
+								"type": "variable",
+								"name": "long-trans-timing-func",
+								"value": "ease",
+								"scope": "default",
+								"line": {
+									"start": 32,
+									"end": 32
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nLong Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "long-trans",
+										"code": "\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n",
+										"line": {
+											"start": 33,
+											"end": 35
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Time delay for `long-trans` mixin\n",
+							"commentRange": {
+								"start": 33,
+								"end": 34
+							},
+							"context": {
+								"type": "variable",
+								"name": "long-trans-time-delay",
+								"value": "0s",
+								"scope": "default",
+								"line": {
+									"start": 35,
+									"end": 35
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nLong Transition\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "long-trans",
+										"code": "\n  transition: $attr $long-trans-time $long-trans-timing-func $long-trans-time-delay;\n",
+										"line": {
+											"start": 33,
+											"end": 35
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "Base value for em calulations (best practice = 16px)\n",
+							"commentRange": {
+								"start": 40,
+								"end": 41
+							},
+							"context": {
+								"type": "variable",
+								"name": "em-base",
+								"value": "16px",
+								"scope": "default",
+								"line": {
+									"start": 42,
+									"end": 42
+								}
+							},
+							"group": [
+								"labor"
+							],
+							"access": "public",
+							"file": {
+								"path": "labor/_vars__labor.scss",
+								"name": "_vars__labor.scss"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"groups": [
+		"labor",
+		"parts"
+	],
+	"types": [
+		"function",
+		"mixin",
+		"variable"
+	],
+	"items": []
+}

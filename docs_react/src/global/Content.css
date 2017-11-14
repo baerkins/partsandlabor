@@ -1,0 +1,27 @@
+.docs__group {
+  padding-top: 100px;
+}
+
+.docs__group-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  border: 3px black;
+  padding-bottom: 8px;
+  border-bottom-style: double;
+}
+
+.docs__type {
+  margin: 25px 0 0;
+}
+
+.docs__type-title {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
+}
+
+.docs__type-title:after {
+  content: 's';
+}
