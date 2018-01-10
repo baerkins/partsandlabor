@@ -116,7 +116,7 @@ gulp.task('build_docs_json_raw', function () {
         sorted: [],
         groups: [],
         types: [],
-        items: [],
+        items: []
       };
 
       var d = data;
@@ -201,7 +201,7 @@ gulp.task('build_docs_json_raw', function () {
  * Full build to ship
  *
  */
-gulp.task('build', sequence( ['build_sass', 'build_docs'] ) );
+gulp.task('build', sequence( ['build_sass', 'build_docs_json_raw'] ) );
 
 
 /**

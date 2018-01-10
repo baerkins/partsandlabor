@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Hack', monospace;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 h1,
@@ -63,6 +63,7 @@ pre,
 code {
   background-color: #e0e0e0;
   font-family: 'Hack';
+  font-size: 0.9em;
 }
 
 pre {
@@ -70,7 +71,8 @@ pre {
 }
 
 /* Code Hightlighting */
-.hljs-selector-class {
+.hljs-selector-class,
+.hljs-selector-tag {
   font-weight: 600;
 }
 
@@ -86,4 +88,38 @@ pre {
 .hljs-variable {
   font-weight: 600;
   font-style: italic;
+}
+
+
+table {
+  width: 100%;
+  margin: 0 auto 30px;
+  border: 1px solid black;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #e0e0e0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px 15px;
+  border-right: 1px solid black;
+}
+
+td:first-child {
+  font-weight: 600;
+}
+
+td:first-child::before {
+  content: '$';
+}
+
+tbody tr {
+  border-top: 1px solid black;
 }

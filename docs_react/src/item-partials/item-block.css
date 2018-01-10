@@ -7,15 +7,17 @@
   margin: 0 0 20px 0;
   position: relative;
   border: 1px solid black;
+  background-color: #e0e0e0;
+  font-weight: bold;
 }
 
 .item__block-title span {
   border-right: 1px solid black;
-  padding: 11px 10px;
+  padding: 10px 10px;
   background-color: gray;
   position: relative;
-  z-index: -1;
   color: white;
+  font-weight: 400;
 }
 
 .item__block-subtitle {
@@ -29,12 +31,12 @@
 
 .item__meta {
   margin-top: 20px;
+  font-size: 0.7em;
 }
 
 .item__meta span {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 10px;
 }
 
 .item__meta span + span {

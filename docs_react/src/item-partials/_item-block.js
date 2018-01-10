@@ -19,7 +19,7 @@ export default class ItemBlock extends Component {
     return (
       <article id={'item-' + encodeURI(this.props.name)} className="item__block">
 
-        <h3 className="item__block-title"><span>&#x000B6; {this.props.count}</span> {this.props.name}</h3>
+        <h3 className="item__block-title"><span>&#x000B6;{this.props.count}</span> {this.props.name}</h3>
         <h4 className="item__block-subtitle">Description</h4>
         <p className="item__block-description">{ this.props.itemData.description }</p>
 
