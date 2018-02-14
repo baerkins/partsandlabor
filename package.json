@@ -5,7 +5,7 @@
   "main": "main.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamhexcoder/partsandlabor.git"
+    "url": "git+https://github.com/baerkins/partsandlabor.git"
   },
   "keywords": [
     "sass",
@@ -17,9 +17,9 @@
   "author": "Shaun M Baer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamhexcoder/partsandlabor/issues"
+    "url": "https://github.com/baerkins/partsandlabor/issues"
   },
-  "homepage": "https://github.com/iamhexcoder/partsandlabor",
+  "homepage": "https://github.com/baerkins/partsandlabor",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
