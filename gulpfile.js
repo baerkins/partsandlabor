@@ -222,7 +222,8 @@ gulp.task('demo_sass', function () {
  */
 gulp.task('serve', function() {
   bSync.init( {
-    server: "./demo"
+    server: "./demo",
+    port: 3003
   } );
   gulp.watch( '**/*.scss', ['demo_sass', 'build_sass'] );
   gulp.watch( 'demo/*.html' ).on( 'change', bSync.reload );

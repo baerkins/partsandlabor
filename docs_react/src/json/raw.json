@@ -82,6 +82,18 @@
 									}
 								},
 								{
+									"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "flex-grid-col",
+										"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
+										"line": {
+											"start": 23,
+											"end": 32
+										}
+									}
+								},
+								{
 									"description": "\nThe amount if columns an element should take up in a grid.\n\n",
 									"context": {
 										"type": "mixin",
@@ -220,10 +232,22 @@
 									"context": {
 										"type": "mixin",
 										"name": "flex-grid-col",
-										"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n",
+										"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
 										"line": {
 											"start": 23,
-											"end": 26
+											"end": 32
+										}
+									}
+								},
+								{
+									"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "flex-grid-col-auto",
+										"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n\n",
+										"line": {
+											"start": 54,
+											"end": 58
 										}
 									}
 								},
@@ -267,10 +291,68 @@
 							"context": {
 								"type": "mixin",
 								"name": "flex-grid-col",
-								"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n",
+								"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n  margin-right: calc-gutter-width($grid) * 1%;\n\n  &:last-child {\n    margin-right: 0;\n  }\n\n",
 								"line": {
 									"start": 23,
-									"end": 26
+									"end": 32
+								}
+							},
+							"parameter": [
+								{
+									"type": "integer",
+									"name": "columns",
+									"description": "Number of columns to take up"
+								},
+								{
+									"type": "string",
+									"name": "gutter-value",
+									"description": "Width of gutter\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": "div {\n  @include flex-grid-col( 3 );\n}\n\ndiv {\n  @include flex-grid-col( 4, 10px );\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "function",
+									"name": "calc-grid-col-width"
+								},
+								{
+									"type": "function",
+									"name": "calc-gutter-width"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-flex.scss",
+								"name": "_mixins__grid-flex.scss"
+							}
+						},
+						{
+							"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+							"commentRange": {
+								"start": 35,
+								"end": 53
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-grid-col-auto",
+								"code": "\n\n  width: calc-grid-col-width($columns, $grid);\n\n",
+								"line": {
+									"start": 54,
+									"end": 58
 								}
 							},
 							"parameter": [
@@ -315,16 +397,16 @@
 						{
 							"description": "\nBreak flex items to a new line. Not always neccessary, but\nuseful in some circumstances, such as a row of two column\nelements in a twelve column grid that should break after\nsix elements.\n\n",
 							"commentRange": {
-								"start": 29,
-								"end": 50
+								"start": 61,
+								"end": 81
 							},
 							"context": {
 								"type": "mixin",
 								"name": "flex-grid-zed",
-								"code": "\n\n  &:nth-child(#{$nth}+1) {\n    margin-left: .1px;\n  }\n",
+								"code": "\n  &:nth-child(#{$nth}) {\n    margin-right: 0;\n  }\n\n  // &:nth-child(#{$nth}+1) {\n  //   // margin-left: .1px;\n  // }\n",
 								"line": {
-									"start": 51,
-									"end": 56
+									"start": 82,
+									"end": 90
 								}
 							},
 							"parameter": [
@@ -332,7 +414,7 @@
 									"type": "string",
 									"name": "nth",
 									"default": "1",
-									"description": "Target `nth-child`\n"
+									"description": "Target `nth-child`"
 								}
 							],
 							"example": [
@@ -360,16 +442,16 @@
 						{
 							"description": "\nBreak flex items to a new line. Not always neccessary, but\nuseful in some circumstances, such as a row of two column\nelements in a twelve column grid that should break after\nsix elements.\n\n",
 							"commentRange": {
-								"start": 59,
-								"end": 86
+								"start": 93,
+								"end": 120
 							},
 							"context": {
 								"type": "mixin",
 								"name": "flex-grid-zed-reset",
 								"code": "\n\n  &:nth-child(#{$nth}+1) {\n    margin-left: 0;\n  }\n",
 								"line": {
-									"start": 87,
-									"end": 92
+									"start": 121,
+									"end": 126
 								}
 							},
 							"parameter": [
@@ -466,8 +548,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 159,
-											"end": 182
+											"start": 188,
+											"end": 211
 										}
 									}
 								},
@@ -478,8 +560,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 159,
-											"end": 182
+											"start": 188,
+											"end": 211
 										}
 									}
 								}
@@ -552,7 +634,7 @@
 								{
 									"type": "string",
 									"name": "justify",
-									"default": "space-between",
+									"default": "start",
 									"description": "Value for justify-content"
 								},
 								{
@@ -588,21 +670,103 @@
 							"file": {
 								"path": "parts/_mixins__grid-scaffolding.scss",
 								"name": "_mixins__grid-scaffolding.scss"
+							},
+							"usedBy": [
+								{
+									"description": "\nShortcut mixin to create a wrapper for a row of flexbox grid\nelements for columns that use the `flex-grid-col-auto` mixin\nto determine column width. This simply calls `flex-grid-col`\nbut with `justify` set to `space-bewteen` by default.\n\n",
+									"context": {
+										"type": "mixin",
+										"name": "flex-row-auto",
+										"code": "\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
+										"line": {
+											"start": 152,
+											"end": 155
+										}
+									}
+								}
+							]
+						},
+						{
+							"description": "\nShortcut mixin to create a wrapper for a row of flexbox grid\nelements for columns that use the `flex-grid-col-auto` mixin\nto determine column width. This simply calls `flex-grid-col`\nbut with `justify` set to `space-bewteen` by default.\n\n",
+							"commentRange": {
+								"start": 129,
+								"end": 151
+							},
+							"context": {
+								"type": "mixin",
+								"name": "flex-row-auto",
+								"code": "\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
+								"line": {
+									"start": 152,
+									"end": 155
+								}
+							},
+							"parameter": [
+								{
+									"type": "string",
+									"name": "align",
+									"default": "false",
+									"description": "Value for align-items"
+								},
+								{
+									"type": "string",
+									"name": "justify",
+									"default": "space-between",
+									"description": "Value for justify-content"
+								},
+								{
+									"type": "bool",
+									"name": "reverse",
+									"default": "false",
+									"description": "Reverse the flexbox content"
+								},
+								{
+									"type": "bool",
+									"name": "wrap",
+									"default": "true",
+									"description": "Should the contents wrap\n"
+								}
+							],
+							"example": [
+								{
+									"type": "scss",
+									"code": ".flow-row-auto {\n  @include flex-row-auto;\n\n  .flow-col-10 {\n    @include flex-grid-col-auto(10);\n  }\n}",
+									"description": "Basic Usage Sass"
+								}
+							],
+							"group": [
+								"parts"
+							],
+							"since": [
+								{
+									"version": "1.0.0"
+								}
+							],
+							"access": "public",
+							"require": [
+								{
+									"type": "mixin",
+									"name": "flex-row"
+								}
+							],
+							"file": {
+								"path": "parts/_mixins__grid-scaffolding.scss",
+								"name": "_mixins__grid-scaffolding.scss"
 							}
 						},
 						{
 							"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
 							"commentRange": {
-								"start": 128,
-								"end": 158
+								"start": 157,
+								"end": 187
 							},
 							"context": {
 								"type": "mixin",
 								"name": "base-container",
 								"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 								"line": {
-									"start": 159,
-									"end": 182
+									"start": 188,
+									"end": 211
 								}
 							},
 							"parameter": [
@@ -2110,7 +2274,7 @@
 							"context": {
 								"type": "mixin",
 								"name": "button-reset",
-								"code": "\n  box-sizing: inherit;\n  background: none;\n  border: 0;\n  color: inherit;\n  cursor: default;\n  font: inherit;\n  line-height: normal;\n  overflow: visible;\n  display: inline-block;\n  padding: 0;\n  appearance: button;\n  -webkit-appearance: button; // sass-lint:disable-line no-vendor-prefixes\n  user-select: none;\n  text-decoration: none;\n  white-space: pre;\n\n  &:hover,\n  &:focus,\n  &:active {\n    box-shadow: 0;\n    outline: none;\n  }\n",
+								"code": "\n  box-sizing: inherit;\n  background: none;\n  border: 0;\n  color: inherit;\n  cursor: default;\n  font: inherit;\n  line-height: normal;\n  overflow: visible;\n  display: inline-block;\n  padding: 0;\n  appearance: none;\n  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes\n  user-select: none;\n  text-decoration: none;\n  white-space: pre;\n\n  &:hover,\n  &:focus,\n  &:active {\n    box-shadow: 0;\n    outline: none;\n  }\n",
 								"line": {
 									"start": 23,
 									"end": 46
@@ -2314,8 +2478,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 159,
-											"end": 182
+											"start": 188,
+											"end": 211
 										}
 									}
 								}

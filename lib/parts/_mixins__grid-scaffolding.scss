@@ -94,7 +94,7 @@
 /// Create a wrapper for a row of flexbox grid elements
 ///
 /// @param {string}  $align   [false] - Value for align-items
-/// @param {string}  $justify [space-between] - Value for justify-content
+/// @param {string}  $justify [start] - Value for justify-content
 /// @param {bool}    $reverse [false] - Reverse the flexbox content
 /// @param {bool}    $wrap [true] - Should the contents wrap
 ///
@@ -106,7 +106,7 @@
 /// @group parts
 /// @since 1.0.0
 ///
-@mixin flex-row($align: false, $justify: space-between, $reverse: false, $wrap: true) {
+@mixin flex-row($align: false, $justify: start, $reverse: false, $wrap: true) {
   display: flex;
   justify-content: $justify;
   width: 100%;
@@ -122,6 +122,35 @@
   @if $wrap {
     flex-wrap: wrap;
   }
+
+}
+
+
+///
+/// Shortcut mixin to create a wrapper for a row of flexbox grid
+/// elements for columns that use the `flex-grid-col-auto` mixin
+/// to determine column width. This simply calls `flex-grid-col`
+/// but with `justify` set to `space-bewteen` by default.
+///
+/// @param {string}  $align   [false] - Value for align-items
+/// @param {string}  $justify [space-between] - Value for justify-content
+/// @param {bool}    $reverse [false] - Reverse the flexbox content
+/// @param {bool}    $wrap [true] - Should the contents wrap
+///
+/// @example scss - Basic Usage Sass
+///   .flow-row-auto {
+///     @include flex-row-auto;
+///
+///     .flow-col-10 {
+///       @include flex-grid-col-auto(10);
+///     }
+///   }
+///
+/// @group parts
+/// @since 1.0.0
+///
+@mixin flex-row-auto($align: false, $justify: space-between, $reverse: false, $wrap: true) {
+  @include flex-row($align, $justify, $reverse, $wrap);
 
 }
 
