@@ -150,6 +150,7 @@
 /// @since 1.0.0
 ///
 @mixin flex-row-auto($align: false, $justify: space-between, $reverse: false, $wrap: true) {
+
   @include flex-row($align, $justify, $reverse, $wrap);
 
 }
