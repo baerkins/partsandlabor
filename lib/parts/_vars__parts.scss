@@ -19,6 +19,13 @@ $target-width:  1200px !default;
 $target-gutter: 20px !default;
 
 
+/// Target gutter width the grid. When the grid is at the width
+/// of $target-width, the gutter values will match this variable.
+/// @type Boolean
+/// @group parts
+$use-fixed-gutter: false !default;
+
+
 /// Default Grid Variable
 /// Default values of the grid map object. You can match this
 /// to create a custom grid to be used within `grid-col()`
@@ -28,7 +35,8 @@ $target-gutter: 20px !default;
 $default-grid: (
   cols:   $total-cols,
   width:  $target-width,
-  gutter: $target-gutter
+  gutter: $target-gutter,
+  fixed-gutter: $use-fixed-gutter
 );
 
 /// No Margin Grid Variable

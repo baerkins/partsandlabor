@@ -11,6 +11,7 @@
 /// @group parts
 ///
 @function calc-gutter-width($grid) {
+
   $_gutter: map-get($grid, gutter);
   $_width: map-get($grid, width);
   // Get target gutter percentage
@@ -49,6 +50,13 @@
 /// @group parts
 ///
 @function calc-grid-col-width($columns, $grid, $include-gutter: false) {
+
+  @if map-has-key($grid, fixed-gutter) {
+    @if map-get($grid, fixed-gutter) == true {
+      $_gutter-width: calc-gutter-width($grid);
+      $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));
+    }
+  }
 
   $_gutter-width: calc-gutter-width($grid);
   $_width:        ((calc-single-col-width($grid) * $columns) + ($_gutter-width * ($columns - 1)));
