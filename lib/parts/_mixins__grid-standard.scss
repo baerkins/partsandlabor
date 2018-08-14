@@ -5,7 +5,7 @@
 /// The amount if columns an element should take up in a grid.
 ///
 /// @param {integer} $columns - Number of columns to take up
-/// @param {string} $gutter-value - Width of gutter
+/// @param {string} $grid [$default-grid] - Grid variable (map) that should process values
 ///
 /// @example scss - Basic Usage Sass
 ///   div {

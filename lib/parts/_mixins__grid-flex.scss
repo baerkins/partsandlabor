@@ -6,7 +6,7 @@
 /// grid. Element should be a child of an element with `@flex-row`.
 ///
 /// @param {integer} $columns - Number of columns to take up
-/// @param {string} $gutter-value - Width of gutter
+/// @param {string} $grid [$default-grid] - Grid variable (map) that should process values
 ///
 /// @example scss - Basic Usage Sass
 ///   div {
@@ -34,14 +34,14 @@
 
 ///
 /// The amount of columns an element should take up in a flexbox
-/// grid. Element should be a child of an element with `@flex-row`.
+/// grid *without margins*. Element should be a child of an element with `@flex-row`.
 ///
 /// @param {integer} $columns - Number of columns to take up
-/// @param {string} $gutter-value - Width of gutter
+/// @param {string}  $grid [$default-grid] - Grid variable (map) that should process values
 ///
 /// @example scss - Basic Usage Sass
 ///   div {
-///     @include flex-grid-col( 3 );
+///     @include flex-grid-col-auto( 3 );
 ///   }
 ///
 ///   div {

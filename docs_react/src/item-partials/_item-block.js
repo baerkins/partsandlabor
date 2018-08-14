@@ -40,7 +40,7 @@ export default class ItemBlock extends Component {
         {/* Parameters */}
 
         <h4 className="item__block-subtitle">File Reference</h4>
-        <p className="item__block-fileref"><a href={'https://github.com/iamhexcoder/partsandlabor/blob/master/lib/' + this.props.itemData.file.path + '#L' + this.props.itemData.commentRange.start } target="_blank" rel="noopener">../lib/{this.props.itemData.file.path}</a> on line {this.props.itemData.commentRange.start}</p>
+        <p className="item__block-fileref"><a href={'https://github.com/baerkins/partsandlabor/blob/master/lib/' + this.props.itemData.file.path + '#L' + this.props.itemData.commentRange.start } target="_blank" rel="noopener">../lib/{this.props.itemData.file.path}</a> on line {this.props.itemData.commentRange.start}</p>
 
         <ItemMeta group={this.props.itemData.group} access={this.props.itemData.access} since={sinceVal} />
 

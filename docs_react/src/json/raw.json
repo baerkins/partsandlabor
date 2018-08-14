@@ -1,5 +1,5 @@
 {
-	"ver": "1.5.2",
+	"ver": "1.6.2",
 	"sorted": [
 		{
 			"groupName": "parts",
@@ -240,7 +240,7 @@
 									}
 								},
 								{
-									"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+									"description": "\nThe amount of columns an element should take up in a flexbox\ngrid *without margins*. Element should be a child of an element with `@flex-row`.\n\n",
 									"context": {
 										"type": "mixin",
 										"name": "flex-grid-col-auto",
@@ -305,8 +305,9 @@
 								},
 								{
 									"type": "string",
-									"name": "gutter-value",
-									"description": "Width of gutter\n"
+									"name": "grid",
+									"default": "$default-grid",
+									"description": "Grid variable (map) that should process values\n"
 								}
 							],
 							"example": [
@@ -341,7 +342,7 @@
 							}
 						},
 						{
-							"description": "\nThe amount of columns an element should take up in a flexbox\ngrid. Element should be a child of an element with `@flex-row`.\n\n",
+							"description": "\nThe amount of columns an element should take up in a flexbox\ngrid *without margins*. Element should be a child of an element with `@flex-row`.\n\n",
 							"commentRange": {
 								"start": 35,
 								"end": 53
@@ -363,14 +364,15 @@
 								},
 								{
 									"type": "string",
-									"name": "gutter-value",
-									"description": "Width of gutter\n"
+									"name": "grid",
+									"default": "$default-grid",
+									"description": "Grid variable (map) that should process values\n"
 								}
 							],
 							"example": [
 								{
 									"type": "scss",
-									"code": "div {\n  @include flex-grid-col( 3 );\n}\n\ndiv {\n  @include flex-grid-col( 4, 10px );\n}",
+									"code": "div {\n  @include flex-grid-col-auto( 3 );\n}\n\ndiv {\n  @include flex-grid-col( 4, 10px );\n}",
 									"description": "Basic Usage Sass"
 								}
 							],
@@ -548,8 +550,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 188,
-											"end": 211
+											"start": 189,
+											"end": 212
 										}
 									}
 								},
@@ -560,8 +562,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 188,
-											"end": 211
+											"start": 189,
+											"end": 212
 										}
 									}
 								}
@@ -677,10 +679,10 @@
 									"context": {
 										"type": "mixin",
 										"name": "flex-row-auto",
-										"code": "\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
+										"code": "\n\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
 										"line": {
 											"start": 152,
-											"end": 155
+											"end": 156
 										}
 									}
 								}
@@ -695,10 +697,10 @@
 							"context": {
 								"type": "mixin",
 								"name": "flex-row-auto",
-								"code": "\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
+								"code": "\n\n  @include flex-row($align, $justify, $reverse, $wrap);\n\n",
 								"line": {
 									"start": 152,
-									"end": 155
+									"end": 156
 								}
 							},
 							"parameter": [
@@ -757,16 +759,16 @@
 						{
 							"description": "\nCreate a container for content. If you wish not to use a breakpoint,\nset that breakpoint variable to false. You can also pass a custom\nmap with specific custom breakpoints, just match the mapping of\nthe default, `$active-breakpoints`\n\n",
 							"commentRange": {
-								"start": 157,
-								"end": 187
+								"start": 158,
+								"end": 188
 							},
 							"context": {
 								"type": "mixin",
 								"name": "base-container",
 								"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 								"line": {
-									"start": 188,
-									"end": 211
+									"start": 189,
+									"end": 212
 								}
 							},
 							"parameter": [
@@ -853,8 +855,9 @@
 								},
 								{
 									"type": "string",
-									"name": "gutter-value",
-									"description": "Width of gutter\n"
+									"name": "grid",
+									"default": "$default-grid",
+									"description": "Grid variable (map) that should process values\n"
 								}
 							],
 							"example": [
@@ -2478,8 +2481,8 @@
 										"name": "base-container",
 										"code": "\n  @include clearfix;\n  margin-left: auto;\n  margin-right: auto;\n  width: $width;\n\n  @if $fluid == false {\n    @each $bp, $bpc in $breakpoints {\n      @if $fluid-until {\n        @if $bp and $bp >= $fluid-until {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      } @else {\n        @if $bp {\n          @include break($bp) {\n            max-width: $bpc;\n          }\n        }\n      }\n    }\n  }\n",
 										"line": {
-											"start": 188,
-											"end": 211
+											"start": 189,
+											"end": 212
 										}
 									}
 								}
